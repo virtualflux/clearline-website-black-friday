@@ -10,7 +10,7 @@ export default function Banner() {
         <p className="w-fit text-[16px] text-green border border-green bg-sugarCane px-[40px] max-lg:px-[30px] py-3 rounded-lg">
           Health insurance
         </p>
-        <p className="text-ebonyClay font-extrabold text-[50px] max-[1200px]:text-[40px] max-lg:text-[32px]">
+        <p className="typing text-ebonyClay font-extrabold text-[50px] max-[1200px]:text-[40px] max-lg:text-[32px]">
           Health Empowered,
           <br /> <span className="text-gradient">Tomorrow Secured.</span>
           <br /> ClearlineHMO
