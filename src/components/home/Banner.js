@@ -1,7 +1,7 @@
 import Button from "@/shared/Button";
 import Image from "next/image";
-import { HomeBanner } from "../../public/assets/images";
-import { ArrowRight, ChatCircle } from "../../public/assets/svgs";
+import { HomeBanner } from "../../../public/assets/images";
+import { ArrowRight, ChatCircle } from "../../../public/assets/svgs";
 
 export default function Banner() {
   return (

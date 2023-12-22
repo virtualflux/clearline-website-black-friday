@@ -4,7 +4,7 @@ import {
   BlueArrowRight,
   LightTickCircle,
   TickCircle,
-} from "../../../public/assets/svgs";
+} from "../../../../public/assets/svgs";
 import Image from "next/image";
 
 const Card = ({ title, list, superb }) => {

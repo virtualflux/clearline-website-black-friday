@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { healthData } from "@/utils/data";
-import Sample from "./HealthPlanComps/Sample";
+import Sample from "./Sample";
 
 export default function HealthPlans() {
   const [activeTab, setActiveTab] = useState(0);

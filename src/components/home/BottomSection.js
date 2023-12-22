@@ -2,13 +2,13 @@ import Image from "next/image";
 import {
   tripleGreenArrowLeft,
   tripleGreenArrowRight,
-} from "../../public/assets/svgs";
+} from "../../../public/assets/svgs";
 import Button from "@/shared/Button";
 import {
   AppleLogo,
   PhonesImage,
   PlayStoreLogo,
-} from "../../public/assets/images";
+} from "../../../public/assets/images";
 
 export default function BottomSection() {
   return (

@@ -1,11 +1,16 @@
+"use client";
+
 import Button from "@/shared/Button";
 import Logo from "@/shared/Logo";
 import { navLinks } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, Phone } from "../../public/assets/svgs";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <div className="z-20 fixed bg-white w-full px-16 max-lg:px-12 max-md:px-8 py-3 flex justify-between items-center gap-5 shadow-lg">
       <div>
@@ -17,9 +22,10 @@ const Navbar = () => {
             <Link
               key={idx}
               href={link.path}
-              className="transition-all delay-300 duration-300 ease-in hover:text-redDevil"
+              className={`transition-all delay-300 duration-300 ease-in hover:text-redDevil`}
             >
               <p className="text-[16px]">{link.title}</p>
+              {pathname === link.path && <div className="activeLink"></div>}
             </Link>
           ))}
         </div>

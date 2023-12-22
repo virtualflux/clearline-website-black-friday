@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { DoctorSmiling } from "../../public/assets/images";
+import { DoctorSmiling } from "../../../public/assets/images";
 import Button from "@/shared/Button";
-import { BlueArrowRight } from "../../public/assets/svgs";
+import { BlueArrowRight } from "../../../public/assets/svgs";
 
 export default function Network() {
   return (

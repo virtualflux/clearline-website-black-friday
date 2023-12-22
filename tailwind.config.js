@@ -23,7 +23,9 @@ module.exports = {
         solitude: "#E9F4FF",
         pigeonPost: "#BACCDF",
       },
-      backgroundImage: {},
+      backgroundImage: {
+        aboutBottomBg: "url('/public/AboutBottomBg.png')",
+      },
     },
   },
   plugins: [],

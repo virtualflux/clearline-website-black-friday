@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Add, Minus } from "../../public/assets/svgs";
+import { Add, Minus } from "../../../public/assets/svgs";
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);

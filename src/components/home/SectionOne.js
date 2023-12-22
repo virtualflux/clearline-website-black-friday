@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SectionOneImage } from "../../public/assets/images";
+import { SectionOneImage } from "../../../public/assets/images";
 
 export default function SectionOne() {
   return (

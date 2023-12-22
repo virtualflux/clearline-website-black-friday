@@ -4,7 +4,7 @@ import { ArrowRight } from "../../public/assets/svgs";
 
 export default function Footer() {
   return (
-    <div className="text-white bg-catalineBlue px-16 max-lg:px-12 max-md:px-8 pt-12 pb-36 flex justify-between flex-wrap gap-8">
+    <div className="text-white bg-catalineBlue px-16 max-lg:px-12 max-md:px-8 pt-12 mt-12 pb-36 flex justify-between flex-wrap gap-8">
       <div className="w-1/5 max-lg:w-fit flex flex-col gap-5 mb-4">
         <p className="text-[28px] max-md:text-[18px] font-bold mb-4">
           Quick Links

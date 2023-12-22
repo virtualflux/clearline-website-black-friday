@@ -5,7 +5,7 @@ import {
   CWAY,
   Greenlife,
   Vitafoam,
-} from "../../public/assets/images";
+} from "../../../public/assets/images";
 
 export default function Sponsors() {
   return (
