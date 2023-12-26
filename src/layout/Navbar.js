@@ -31,12 +31,14 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex gap-3 max-[1135px]:hidden">
-        <Button className={"!rounded-lg px-4 !text-white bg-catalineBlue"}>
-          <div className="flex gap-2 items-center">
-            <Image src={Phone} alt="contact us" />
-            <p className="text-[14px] max-md:text-[12px]">Contact</p>
-          </div>
-        </Button>
+        <Link href={"/contact"}>
+          <Button className={"!rounded-lg px-4 !text-white bg-catalineBlue"}>
+            <div className="flex gap-2 items-center">
+              <Image src={Phone} alt="contact us" />
+              <p className="text-[14px] max-md:text-[12px]">Contact</p>
+            </div>
+          </Button>
+        </Link>
       </div>
       <div className="hidden max-[1135px]:block">
         <Image src={Menu} alt="menu" />

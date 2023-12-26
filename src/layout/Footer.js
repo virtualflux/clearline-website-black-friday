@@ -9,7 +9,7 @@ export default function Footer() {
         <p className="text-[28px] max-md:text-[18px] font-bold mb-4">
           Quick Links
         </p>
-        <Link href={"/hospital"} className="text-[20px] max-md:text-[13px]">
+        <Link href={"/resources"} className="text-[20px] max-md:text-[13px]">
           Hospital Directory old
         </Link>
         <Link href={"/about"} className="text-[20px] max-md:text-[13px]">
@@ -23,7 +23,10 @@ export default function Footer() {
         <p className="text-[28px] max-md:text-[18px] font-bold mb-4">
           Our Health Plans
         </p>
-        <Link href={"/hospital"} className="text-[20px] max-md:text-[13px]">
+        <Link
+          href={"/hosresourcespital"}
+          className="text-[20px] max-md:text-[13px]"
+        >
           Corporate Health insurance Scheme
         </Link>
         <Link href={"/about"} className="text-[20px] max-md:text-[13px]">

@@ -15,6 +15,15 @@ import MissionImage from "./missionImage.png";
 import director1 from "./director1.png";
 import director2 from "./director2.png";
 import AboutBottomBg from "./AboutBottomBg.png";
+import ResourcesImage from "./resource-food.png";
+import ResAlcohol from "./resAlcohol.png";
+import ResChildhood from "./resChildhood.png";
+import ResCovid from "./resCovid.png";
+import ResHandWashing from "./resHandWashing.png";
+import ResHepatitis from "./resHepatitis.png";
+import ResImmune from "./resImmune.png";
+import ResSuperFood from "./resSuperFood.png";
+import ResWorkplace from "./resWorkplace.png";
 
 export {
   ClearlineLogo,
@@ -34,4 +43,13 @@ export {
   director1,
   director2,
   AboutBottomBg,
+  ResourcesImage,
+  ResAlcohol,
+  ResChildhood,
+  ResCovid,
+  ResHandWashing,
+  ResHepatitis,
+  ResImmune,
+  ResSuperFood,
+  ResWorkplace,
 };

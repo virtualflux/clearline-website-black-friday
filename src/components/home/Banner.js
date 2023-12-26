@@ -2,6 +2,7 @@ import Button from "@/shared/Button";
 import Image from "next/image";
 import { HomeBanner } from "../../../public/assets/images";
 import { ArrowRight, ChatCircle } from "../../../public/assets/svgs";
+import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -36,9 +37,15 @@ export default function Banner() {
           alt="Health Unleashed"
           className="w-full h-full object-cover"
         />
-        <div className="cursor-pointer absolute bottom-3 right-4 w-[70px] h-[70px] max-md:w-[50px] max-md:h-[50px] rounded-full flex justify-center items-center bg-catalineBlue">
-          <Image src={ChatCircle} alt="Elevate Your Health" className="w-3/5" />
-        </div>
+        <Link href={"/contact"}>
+          <div className="cursor-pointer absolute bottom-3 right-4 w-[70px] h-[70px] max-md:w-[50px] max-md:h-[50px] rounded-full flex justify-center items-center bg-catalineBlue">
+            <Image
+              src={ChatCircle}
+              alt="Elevate Your Health"
+              className="w-3/5"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );
