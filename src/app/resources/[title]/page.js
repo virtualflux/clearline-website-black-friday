@@ -1,12 +1,10 @@
-import Footer from "@/layout/Footer";
-import Navbar from "@/layout/Navbar";
 import Image from "next/image";
 import { ResourcesImage } from "../../../../public/assets/images";
+import PageLayout from "@/layout";
 
-export default function Page({ params }) {
+export default function Page() {
   return (
-    <div>
-      <Navbar />
+    <PageLayout>
       <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24 mb-3">
         <p className="text-[48px] max-lg:text-[32px] max-md:text-[24px] font-semibold">
           Clearline HMO Newsletter
@@ -132,7 +130,6 @@ export default function Page({ params }) {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }

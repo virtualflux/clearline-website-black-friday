@@ -7,11 +7,11 @@ import Network from "../components/home/Network";
 import Sponsors from "../components/home/Sponsors";
 import FAQ from "../components/home/FAQs";
 import BottomSection from "../components/home/BottomSection";
+import PageLayout from "@/layout";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
+    <PageLayout>
       <Banner />
       <SectionOne />
       <HealthPlans />
@@ -19,7 +19,6 @@ export default function Home() {
       <Sponsors />
       <FAQ />
       <BottomSection />
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }

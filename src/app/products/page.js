@@ -1,14 +1,11 @@
 import Banner from "@/components/product/Banner";
-import Footer from "@/layout/Footer";
-import Navbar from "@/layout/Navbar";
+import PageLayout from "@/layout";
 
 const page = () => {
   return (
-    <div>
-      <Navbar />
+    <PageLayout>
       <Banner />
-      <Footer />
-    </div>
+    </PageLayout>
   );
 };
 

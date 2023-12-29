@@ -1,7 +1,6 @@
-import Footer from "@/layout/Footer";
-import Navbar from "@/layout/Navbar";
 import Link from "next/link";
 import Button from "@/shared/Button";
+import PageLayout from "@/layout";
 
 const Resources = () => {
   const resourcesData = [
@@ -48,8 +47,7 @@ const Resources = () => {
   ];
 
   return (
-    <div>
-      <Navbar />
+    <PageLayout>
       <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24 mb-12">
         <div className="mb-6">
           <p className="text-[48px] max-lg:text-[32px] max-md:text-[24px] font-semibold">
@@ -89,8 +87,7 @@ const Resources = () => {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 };
 

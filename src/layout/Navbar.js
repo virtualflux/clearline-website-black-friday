@@ -5,14 +5,14 @@ import Logo from "@/shared/Logo";
 import { navLinks } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, Phone } from "../../public/assets/svgs";
+import { Close, Menu, Phone } from "../../public/assets/svgs";
 import { usePathname } from "next/navigation";
 
-const Navbar = () => {
+const Navbar = ({ sidebarOpen, handleSidebar }) => {
   const pathname = usePathname();
 
   return (
-    <div className="z-20 fixed bg-white w-full px-16 max-lg:px-12 max-md:px-8 py-3 flex justify-between items-center gap-5 shadow-lg">
+    <div className=" z-20 fixed bg-white w-full px-16 max-lg:px-12 max-md:px-8 py-3 flex justify-between items-center gap-5 shadow-lg">
       <div>
         <Logo />
       </div>
@@ -40,8 +40,12 @@ const Navbar = () => {
           </Button>
         </Link>
       </div>
-      <div className="hidden max-[1135px]:block">
-        <Image src={Menu} alt="menu" />
+      <div onClick={handleSidebar} className="hidden max-[1135px]:block">
+        {sidebarOpen ? (
+          <Image src={Close} alt="close" />
+        ) : (
+          <Image src={Menu} alt="menu" />
+        )}
       </div>
     </div>
   );

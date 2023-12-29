@@ -10,6 +10,7 @@ import Add from "./add.svg";
 import tripleGreenArrowRight from "./tripleGreenArrowRight.svg";
 import tripleGreenArrowLeft from "./tripleGreenArrowLeft.svg";
 import SearchIcon from "./search-icon.svg";
+import Close from "./close.svg";
 
 export {
   Menu,
@@ -24,4 +25,5 @@ export {
   tripleGreenArrowRight,
   tripleGreenArrowLeft,
   SearchIcon,
+  Close,
 };

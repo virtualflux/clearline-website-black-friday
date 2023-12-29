@@ -1,15 +1,12 @@
 import Banner from "@/components/providers/Banner";
 import SearchHospitals from "@/components/providers/SearchHospitals";
-import Footer from "@/layout/Footer";
-import Navbar from "@/layout/Navbar";
+import PageLayout from "@/layout";
 
 export default function Providers() {
   return (
-    <div>
-      <Navbar />
+    <PageLayout>
       <Banner />
       <SearchHospitals />
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }
