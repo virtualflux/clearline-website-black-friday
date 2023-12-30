@@ -1,10 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import { SearchIcon } from "../../../public/assets/svgs";
 import Button from "@/shared/Button";
+import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import { HomeLocation } from "../../../public/assets/images";
 
 const SearchHospitals = () => {
+  const icons = {
+    house: {
+      icon: HomeLocation,
+    },
+  };
+
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+  });
+
+  const center = {
+    lat: 6.534347899999999,
+    lng: 3.3848981,
+  };
+
   return (
-    <div className="">
+    <div className="mb-8">
       <form className="px-16 max-[970px]:px-0">
         <div className="w-full max-[970px]:mb-10 relative -top-[60px] max-[970px]:top-0 bg-white rounded-lg shadow-lg flex max-[970px]:flex-col max-[970px]:items-start items-end gap-3 p-8">
           <div className="w-1/5 max-[970px]:w-full">
@@ -77,6 +97,42 @@ const SearchHospitals = () => {
         <p className="text-[32px] max-md:text-[24px] font-bold">
           Hospitals near you
         </p>
+        <div className="w-full h-[800px] max-md:h-[500px]">
+          {isLoaded ? (
+            <GoogleMap
+              mapContainerStyle={{ width: "100%", height: "100%" }}
+              center={center}
+              zoom={12}
+              options={{
+                zoomControl: false,
+                streetViewControl: false,
+                mapTypeControl: false,
+                fullscreenControl: false,
+              }}
+            >
+              {[
+                {
+                  title: "hospital 1",
+                  location: { lat: 6.634347899999999, lng: 3.3848981 },
+                },
+                {
+                  title: "hospital 2",
+                  location: { lat: 6.534347, lng: 3.4848981 },
+                },
+              ].map((hospital, idx) => (
+                <Marker
+                  key={idx}
+                  position={hospital.location}
+                  icon={<Image src={icons.house.icon} alt="hmm" />}
+                />
+              ))}
+            </GoogleMap>
+          ) : (
+            <div className="h-full flex justify-center items-center">
+              <p className="text-black">Invalid Longtitude/Latitude</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

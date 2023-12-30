@@ -24,6 +24,8 @@ import ResHepatitis from "./resHepatitis.png";
 import ResImmune from "./resImmune.png";
 import ResSuperFood from "./resSuperFood.png";
 import ResWorkplace from "./resWorkplace.png";
+import HomeLocation from "./home_loc.png";
+import DummyHospital from "./dummyhospital.png";
 
 export {
   ClearlineLogo,
@@ -52,4 +54,6 @@ export {
   ResImmune,
   ResSuperFood,
   ResWorkplace,
+  HomeLocation,
+  DummyHospital,
 };
