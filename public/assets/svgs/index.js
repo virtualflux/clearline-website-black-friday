@@ -11,6 +11,7 @@ import tripleGreenArrowRight from "./tripleGreenArrowRight.svg";
 import tripleGreenArrowLeft from "./tripleGreenArrowLeft.svg";
 import SearchIcon from "./search-icon.svg";
 import Close from "./close.svg";
+import Star from "./star.svg";
 
 export {
   Menu,
@@ -26,4 +27,5 @@ export {
   tripleGreenArrowLeft,
   SearchIcon,
   Close,
+  Star,
 };

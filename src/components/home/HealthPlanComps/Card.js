@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "@/shared/Button";
 import {
   ArrowRight,
@@ -6,14 +8,19 @@ import {
   TickCircle,
 } from "../../../../public/assets/svgs";
 import Image from "next/image";
+import { useState } from "react";
+import BuyPlanModal from "@/components/Modal/BuyPlan";
 
 const Card = ({ title, list, superb }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div
       className={`flex flex-col gap-2 border border-[#BACCDF] rounded-[30px] px-16 max-md:px-12 py-8 ${
         superb && "bg-catalineBlue"
       }`}
     >
+      <BuyPlanModal isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />;
       <div
         className={`rounded-[30px] border ${
           superb
@@ -38,6 +45,7 @@ const Card = ({ title, list, superb }) => {
         ))}
       </div>
       <Button
+        onClick={() => setIsOpen(true)}
         className={`!w-fit !rounded-lg px-4 ${
           superb ? "bg-white" : "bg-catalineBlue"
         }`}

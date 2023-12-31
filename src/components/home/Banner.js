@@ -1,12 +1,19 @@
+"use client";
+
 import Button from "@/shared/Button";
 import Image from "next/image";
 import { HomeBanner } from "../../../public/assets/images";
 import { ArrowRight, ChatCircle } from "../../../public/assets/svgs";
 import Link from "next/link";
+import { useState } from "react";
+import BuyPlanModal from "../Modal/BuyPlan";
 
 export default function Banner() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="flex gap-8 justify-between max-lg:flex-col max-md:gap-6 px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24">
+      <BuyPlanModal isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />
       <div className="w-1/2 max-lg:w-full flex flex-col gap-4">
         <p className="w-fit text-[16px] text-green border border-green bg-sugarCane px-[40px] max-lg:px-[30px] py-3 rounded-lg">
           Health insurance
@@ -21,7 +28,10 @@ export default function Banner() {
           Where Comprehensive Coverage Meets Peace of Mind
         </p>
         <div className="flex gap-3">
-          <Button className={"!rounded-lg px-4 bg-catalineBlue"}>
+          <Button
+            onClick={() => setIsOpen(true)}
+            className={"!rounded-lg px-4 bg-catalineBlue"}
+          >
             <div className="flex gap-4 items-center">
               <p className="text-[14px] max-md:text-[12px] text-white">
                 Buy a plan

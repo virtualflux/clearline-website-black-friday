@@ -1,10 +1,17 @@
+"use client";
+
 import Button from "@/shared/Button";
 import Image from "next/image";
 import { AboutBottomBg } from "../../../public/assets/images";
+import { useState } from "react";
+import BuyPlanModal from "../Modal/BuyPlan";
 
 const AboutBottom = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="px-16 max-lg:px-12 max-md:px-8 pt-12 max-md:mt-8">
+      <BuyPlanModal isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />;
       <div className="relative text-white rounded-lg h-[424px] max-md:h-[270px] flex justify-center items-center">
         <Image
           src={AboutBottomBg}
@@ -16,6 +23,7 @@ const AboutBottom = () => {
             Get started on your path to redefined healthcare with us
           </p>
           <Button
+            onClick={() => setIsOpen(true)}
             className={
               "!rounded-lg px-4 bg-white !w-[140px] flex justify-center items-center"
             }

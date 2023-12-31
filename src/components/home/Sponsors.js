@@ -14,7 +14,7 @@ export default function Sponsors() {
         <p className="text-[20px] max-md:text-[14px] text-center mb-8">
           Here are some of our happy clients
         </p>
-        <div className="w-full flex justify-between gap-4 flex-wrap">
+        <div className="w-full flex justify-between gap-4 overflow-x-auto">
           <Image src={CDK} alt="Sponsors" />
           <Image src={Greenlife} alt="Sponsors" />
           <Image src={AirPeace} alt="Sponsors" />

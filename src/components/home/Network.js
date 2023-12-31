@@ -2,6 +2,7 @@ import Image from "next/image";
 import { DoctorSmiling } from "../../../public/assets/images";
 import Button from "@/shared/Button";
 import { BlueArrowRight } from "../../../public/assets/svgs";
+import Link from "next/link";
 
 export default function Network() {
   return (
@@ -23,14 +24,16 @@ export default function Network() {
             Partner Hospitals
           </p>
           <Button className={`!w-fit !rounded-lg px-4 bg-white`}>
-            <div className="flex gap-4 items-center">
-              <p
-                className={`text-[18px] max-md:text-[14px] !text-catalineBlue`}
-              >
-                See our Hospital Network
-              </p>
-              <Image src={BlueArrowRight} alt="buy a plan" />
-            </div>
+            <Link href={"/providers"}>
+              <div className="flex gap-4 items-center">
+                <p
+                  className={`text-[18px] max-md:text-[14px] !text-catalineBlue`}
+                >
+                  See our Hospital Network
+                </p>
+                <Image src={BlueArrowRight} alt="buy a plan" />
+              </div>
+            </Link>
           </Button>
         </div>
         <div className="w-2/5 max-lg:w-full max-lg:h-[450px] bg-pigeonPost flex justify-center">

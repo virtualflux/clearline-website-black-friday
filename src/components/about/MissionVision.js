@@ -3,7 +3,7 @@ import { MissionImage } from "../../../public/assets/images";
 
 const MissionVision = () => {
   return (
-    <div className="mt-[300px] max-[1300px]:mt-[400px] max-[900px]:mt-[500px] max-[780px]:mt-[600px] max-[768px]:mt-[300px] max-[570px]:mt-[400px] max-[490px]:mt-[480px] max-[450px]:mt-[520px] max-[410px]:mt-[580px] max-[400px]:mt-[650px] px-16 max-lg:px-12 max-md:px-8 flex max-[900px]:flex-wrap justify-between gap-8 max-md:gap-4">
+    <div className="mt-[300px] max-[1300px]:mt-[420px] max-[900px]:mt-[520px] max-[780px]:mt-[620px] max-[768px]:mt-[320px] max-[570px]:mt-[420px] max-[490px]:mt-[500px] max-[450px]:mt-[540px] max-[410px]:mt-[600px] max-[400px]:mt-[680px] px-16 max-lg:px-12 max-md:px-8 flex max-[900px]:flex-wrap justify-between gap-8 max-md:gap-4">
       <div>
         <Image
           src={MissionImage}

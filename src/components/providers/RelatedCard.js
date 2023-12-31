@@ -1,6 +1,12 @@
 import Image from "next/image";
-import { DummyHospital } from "../../../public/assets/images";
+import {
+  DummyHospital,
+  Ellipse,
+  LocationPointer,
+} from "../../../public/assets/images";
 import Button from "@/shared/Button";
+import Link from "next/link";
+import { Star } from "../../../public/assets/svgs";
 
 const RelatedCard = () => {
   return (
@@ -9,7 +15,7 @@ const RelatedCard = () => {
         <Image
           src={DummyHospital}
           alt={"hospital"}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-lg"
         />
       </div>
       <div className="p-4">
@@ -18,21 +24,48 @@ const RelatedCard = () => {
             <p className="text-[16px] max-md:text-[12px] font-semibold mb-2">
               Jama Medical Center
             </p>
-            <p className="text-[12px] max-md:text-[10px] text-catalineBlue">
-              101 Newton Road Ikeja
-            </p>
+            <div className="flex items-center gap-2">
+              <div className="w-[14px] h-[14px] rounded-full flex justify-center items-center bg-[#E7EEFF]">
+                <Image src={LocationPointer} alt="location" />
+              </div>
+              <p className="text-[12px] max-md:text-[10px]">
+                101 Newton Road Ikeja, Lagos
+              </p>
+            </div>
           </div>
           <p className="text-[12px] max-md:text-[10px] text-catalineBlue underline">
             copy address
           </p>
         </div>
+        <div className="flex mb-6 mt-2">
+          <div className="flex gap-1">
+            <Image src={Ellipse} alt="ellipse" />
+            <div className="flex gap-1">
+              {Array.from({ length: 2 }).map((item, idx) => (
+                <Image
+                  src={Ellipse}
+                  alt="ellipse"
+                  key={idx}
+                  className={`relative -left-[${idx + 1}0px]`}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="flex gap-1">
+            {Array.from({ length: 5 }).map((item, idx) => (
+              <Image src={Star} alt="rating" key={idx} />
+            ))}
+          </div>
+        </div>
         <div>
-          <Button
-            type={"button"}
-            className={"!w-full !rounded-lg px-4 !text-white bg-catalineBlue"}
-          >
-            <p className="text-[14px] max-md:text-[12px]">Full details</p>
-          </Button>
+          <Link href={"/providers/Jama Medical Center"}>
+            <Button
+              type={"button"}
+              className={"!w-full !rounded-lg px-4 !text-white bg-catalineBlue"}
+            >
+              <p className="text-[14px] max-md:text-[12px]">Full details</p>
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

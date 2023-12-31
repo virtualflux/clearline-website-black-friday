@@ -26,6 +26,10 @@ import ResSuperFood from "./resSuperFood.png";
 import ResWorkplace from "./resWorkplace.png";
 import HomeLocation from "./home_loc.png";
 import DummyHospital from "./dummyhospital.png";
+import BlankStar from "./blank-star.png";
+import LocationPointer from "./location.png";
+import Calling from "./calling.png";
+import Ellipse from "./ellipse.png";
 
 export {
   ClearlineLogo,
@@ -56,4 +60,8 @@ export {
   ResWorkplace,
   HomeLocation,
   DummyHospital,
+  BlankStar,
+  LocationPointer,
+  Calling,
+  Ellipse,
 };
