@@ -4,6 +4,7 @@ import ArrowRight from "./arrow-right.svg";
 import BlueArrowRight from "./blue-arrow-right.svg";
 import ChatCircle from "./chat-circle.svg";
 import TickCircle from "./tick-circle.svg";
+import GreenTickCircle from "./green-tick-circle.svg";
 import LightTickCircle from "./light-tick-circle.svg";
 import Minus from "./minus.svg";
 import Add from "./add.svg";
@@ -28,4 +29,5 @@ export {
   SearchIcon,
   Close,
   Star,
+  GreenTickCircle,
 };

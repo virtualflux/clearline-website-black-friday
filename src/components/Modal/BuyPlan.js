@@ -1,4 +1,5 @@
 import CLearlineModal from "@/layout/Modal";
+import { Button } from "@mui/material";
 
 const BuyPlanModal = ({ isOpen, setIsOpen }) => {
   return (
@@ -37,7 +38,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
         </div>
       </div>
       <form>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 mb-3">
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
               Surname
@@ -64,12 +65,331 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
               Gender
             </p>
+            <select className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]">
+              {[
+                { title: "-Select gender-" },
+                { title: "Male" },
+                { title: "Female" },
+              ].map((item, idx) => (
+                <option key={idx} className="" value={item.title}>
+                  {item.title}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-3 mb-3">
+          <div className="w-[30%] max-md:w-full">
+            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
+              Title
+            </p>
+            <select className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]">
+              {[
+                { title: "-Select title-" },
+                { title: "Mr" },
+                { title: "Mrs" },
+              ].map((item, idx) => (
+                <option key={idx} className="" value={item.title}>
+                  {item.title}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="w-[30%] max-md:w-full">
+            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
+              Phone number
+            </p>
             <input
               type="text"
-              name="mailAddress"
-              placeholder="Eg ...John"
+              name="phoneNumber"
+              placeholder="+23494888992938"
               className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
             />
+          </div>
+          <div className="w-[30%] max-md:w-full">
+            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
+              Date of Birth
+            </p>
+            <input
+              type="date"
+              name="dob"
+              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
+            />
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-3 mb-3">
+          <div className="w-[30%] max-md:w-full">
+            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
+              Email
+            </p>
+            <input
+              type="email"
+              name="email"
+              placeholder="you@company.com"
+              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
+            />
+          </div>
+          <div className="w-[30%] max-md:w-full">
+            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
+              Identification
+            </p>
+            <input
+              type="text"
+              name="identification"
+              placeholder="NIN/Passport"
+              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
+            />
+          </div>
+          <div className="w-[30%] max-md:w-full">
+            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
+              Address
+            </p>
+            <input
+              type="text"
+              name="address"
+              placeholder="Enter address"
+              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
+            />
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-3 mb-3">
+          <div className="w-[30%] max-md:w-full">
+            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
+              State of residence
+            </p>
+            <select className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]">
+              {[
+                {
+                  title: "-Select state-",
+                  value: "",
+                },
+                {
+                  title: "Abia",
+                  value: "abia",
+                },
+                {
+                  title: "Adamawa",
+                  value: "adamawa",
+                },
+                {
+                  title: "Akwa Ibom",
+                  value: "akwa_ibom",
+                },
+                {
+                  title: "Anambra",
+                  value: "anambra",
+                },
+                {
+                  title: "Bauchi",
+                  value: "bauchi",
+                },
+                {
+                  title: "Bayelsa",
+                  value: "bayelsa",
+                },
+                {
+                  title: "Benue",
+                  value: "benue",
+                },
+                {
+                  title: "Borno",
+                  value: "borno",
+                },
+                {
+                  title: "Cross River",
+                  value: "cross_river",
+                },
+                {
+                  title: "Delta",
+                  value: "delta",
+                },
+                {
+                  title: "Ebonyi",
+                  value: "ebonyi",
+                },
+                {
+                  title: "Edo",
+                  value: "edo",
+                },
+                {
+                  title: "Ekiti",
+                  value: "ekiti",
+                },
+                {
+                  title: "Enugu",
+                  value: "enugu",
+                },
+                {
+                  title: "Gombe",
+                  value: "gombe",
+                },
+                {
+                  title: "Imo",
+                  value: "imo",
+                },
+                {
+                  title: "Jigawa",
+                  value: "jigawa",
+                },
+                {
+                  title: "Kaduna",
+                  value: "kaduna",
+                },
+                {
+                  title: "Kano",
+                  value: "kano",
+                },
+                {
+                  title: "Katsina",
+                  value: "katsina",
+                },
+                {
+                  title: "Kebbi",
+                  value: "kebbi",
+                },
+                {
+                  title: "Kogi",
+                  value: "kogi",
+                },
+                {
+                  title: "Kwara",
+                  value: "kwara",
+                },
+                {
+                  title: "Lagos",
+                  value: "lagos",
+                },
+                {
+                  title: "Nasarawa",
+                  value: "nasarawa",
+                },
+                {
+                  title: "Niger",
+                  value: "niger",
+                },
+                {
+                  title: "Ogun",
+                  value: "ogun",
+                },
+                {
+                  title: "Ondo",
+                  value: "ondo",
+                },
+                {
+                  title: "Osun",
+                  value: "osun",
+                },
+                {
+                  title: "Oyo",
+                  value: "oyo",
+                },
+                {
+                  title: "Plateau",
+                  value: "plateau",
+                },
+                {
+                  title: "Rivers",
+                  value: "rivers",
+                },
+                {
+                  title: "Sokoto",
+                  value: "sokoto",
+                },
+                {
+                  title: "Taraba",
+                  value: "taraba",
+                },
+                {
+                  title: "Yobe",
+                  value: "yobe",
+                },
+                {
+                  title: "Zamfara",
+                  value: "zamfara",
+                },
+              ].map((item, idx) => (
+                <option key={idx} className="" value={item.title}>
+                  {item.title}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="w-[30%] max-md:w-full">
+            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
+              Local Govt Area
+            </p>
+            <select className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]">
+              {[,].map((item, idx) => (
+                <option key={idx} className="" value={item.title}>
+                  {item.title}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="w-[30%] max-md:w-full">
+            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
+              Hospital
+            </p>
+            <select className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]">
+              {[].map((item, idx) => (
+                <option key={idx} className="" value={item.title}>
+                  {item.title}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-3 mb-3">
+          <div className="w-[30%] max-md:w-full">
+            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
+              Any Chronic Illness?
+            </p>
+            <div className="flex gap-12">
+              <div>
+                <input
+                  type="radio"
+                  id="illness1"
+                  name="illness"
+                  value="yes"
+                  className="mr-2"
+                />
+                <label for="illness1">Yes</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="illness2"
+                  name="illness"
+                  value="no"
+                  className="mr-2"
+                />
+                <label for="illness2">No</label>
+              </div>
+            </div>
+          </div>
+          <div className="w-[30%] max-md:w-full">
+            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
+              If yes, please state
+            </p>
+            <input
+              type="text"
+              name="illnessState"
+              placeholder="Enter illness"
+              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
+            />
+          </div>
+        </div>
+
+        <div className="flex justify-center pt-6">
+          <div className="w-1/2">
+            <Button
+              type={"button"}
+              className={
+                "!w-full !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
+              }
+            >
+              Proceed
+            </Button>
           </div>
         </div>
       </form>
