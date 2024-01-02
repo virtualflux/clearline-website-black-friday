@@ -14,13 +14,13 @@ import {
 export default function BottomSection() {
   return (
     <div>
-      <div className="bg-catalineBlue h-[350px] max-[900px]:h-fit px-16 max-lg:px-12 max-md:px-8 mb-12 min-[900px]:mt-[200px] mt-12">
+      <div className="bg-catalineBlue h-[350px] max-[1000px]:h-fit px-16 max-lg:px-12 max-md:px-8 mb-12 min-[900px]:mt-[300px] mt-12">
         <div className="h-full flex max-[900px]:flex-col gap-8 max-md:gap-0">
           <div className="w-1/2 max-[900px]:w-full relative">
             <Image
               src={PhonesImage}
               alt="Clearline app"
-              className="min-[900px]:absolute bottom-0 h-[500px] max-md:h-[350px] w-full object-auto"
+              className="min-[900px]:absolute bottom-0 h-[600px] max-md:h-[350px] w-full object-auto"
             />
           </div>
           <div className="w-1/2 max-[900px]:w-full py-8 text-white">
@@ -29,7 +29,7 @@ export default function BottomSection() {
                 src={tripleGreenArrowRight}
                 alt="Introducing Our Revamped Mobile App"
               />
-              <p className="text-[20px] max-md:text-[16px]">
+              <p className="text-[20px] max-md:text-[16px] text-center">
                 Introducing Our Revamped Mobile App
               </p>
               <Image
@@ -75,8 +75,7 @@ export default function BottomSection() {
           </div>
           <div className="relative left-8 -top-8 max-md:-top-4 max-md:left-4 w-2/5 h-fit max-[900px]:w-full py-8 text-white rounded-3xl bg-catalineBlue p-8">
             <p className="text-[46px] max-lg:text-[32px] max-md:text-[24px] font-bold mb-4">
-              Your Health is <br />
-              our Priority
+              Your Health is our Priority
             </p>
             <p className="text-[24px] max-md:text-[14px] mb-6">
               Sign up for our Health Newsletter to get health tips & Benefits,

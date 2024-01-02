@@ -34,7 +34,7 @@ body {
 }
 
 .activeLink {
-  width: 70%;
+  width: 50%;
   height: 2px;
   background: var(--blue, #082b82);
 }

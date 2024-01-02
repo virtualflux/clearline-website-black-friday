@@ -20,7 +20,7 @@ const Card = ({ title, list, superb }) => {
         superb && "bg-catalineBlue"
       }`}
     >
-      <BuyPlanModal isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />;
+      <BuyPlanModal isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />
       <div
         className={`rounded-[30px] border ${
           superb

@@ -42,11 +42,11 @@ export default function Page() {
           </div>
         </div>
         <div>
-          <div className="mb-10">
+          <div className="mb-12">
             <p className="text-[40px] max-md:text-[24px] font-semibold">
               Super Foods
             </p>
-            <p className="text-boulder text-[32px] max-md:text-[16px] mb-6">
+            <p className="text-boulder text-[32px] max-md:text-[16px] mb-10">
               Why you should eat them
             </p>
             <p className="text-[28px] max-md:text-[14px]">
@@ -58,69 +58,69 @@ export default function Page() {
             </p>
           </div>
           <div>
-            <p className="text-[24px] max-md:text-[12px] mb-3">
+            <p className="text-[24px] max-md:text-[12px] mb-6">
               Blueberries:{" "}
               <span className="text-boulder">
                 Packed with antioxidants and vitamins, they are low in calories
                 and high in fiber.
               </span>
             </p>
-            <p className="text-[24px] max-md:text-[12px] mb-3">
+            <p className="text-[24px] max-md:text-[12px] mb-6">
               Avocado:{" "}
               <span className="text-boulder">
                 Rich in healthy monounsaturated fats, avocados offer a creamy
                 texture and essential nutrients.
               </span>
             </p>
-            <p className="text-[24px] max-md:text-[12px] mb-3">
+            <p className="text-[24px] max-md:text-[12px] mb-6">
               Spinach:{" "}
               <span className="text-boulder">
                 A nutrient powerhouse, low in calories and high in vitamins like
                 A, C, and K, as well as minerals.
               </span>
             </p>
-            <p className="text-[24px] max-md:text-[12px] mb-3">
+            <p className="text-[24px] max-md:text-[12px] mb-6">
               Quinoa:{" "}
               <span className="text-boulder">
                 A complete protein source, quinoa is high in fiber, vitamins,
                 and minerals.
               </span>
             </p>
-            <p className="text-[24px] max-md:text-[12px] mb-3">
+            <p className="text-[24px] max-md:text-[12px] mb-6">
               Salmon:{" "}
               <span className="text-boulder">
                 A fatty fish that provides omega-3 fatty acids and high-quality
                 protein.
               </span>
             </p>
-            <p className="text-[24px] max-md:text-[12px] mb-3">
+            <p className="text-[24px] max-md:text-[12px] mb-6">
               Kale:{" "}
               <span className="text-boulder">
                 A leafy green loaded with vitamins, minerals, and antioxidants,
                 while being low in calories.
               </span>
             </p>
-            <p className="text-[24px] max-md:text-[12px] mb-3">
+            <p className="text-[24px] max-md:text-[12px] mb-6">
               Chia Seeds:{" "}
               <span className="text-boulder">
                 Packed with fiber, omega-3 fatty acids, and various
                 micronutrients.
               </span>
             </p>
-            <p className="text-[24px] max-md:text-[12px] mb-3">
+            <p className="text-[24px] max-md:text-[12px] mb-6">
               Broccoli:{" "}
               <span className="text-boulder">
                 A cruciferous vegetable rich in vitamins, minerals, and
                 antioxidants.
               </span>
             </p>
-            <p className="text-[24px] max-md:text-[12px] mb-3">
+            <p className="text-[24px] max-md:text-[12px] mb-6">
               Sweet Potatoes:{" "}
               <span className="text-boulder">
                 A nutrient-dense source of carbohydrates, vitamins, and fiber.
               </span>
             </p>
-            <p className="text-[24px] max-md:text-[12px] mb-3">
+            <p className="text-[24px] max-md:text-[12px] mb-6">
               Greek Yogurt:{" "}
               <span className="text-boulder">
                 High in protein, probiotics, and calcium, with relatively fewer

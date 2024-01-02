@@ -1,5 +1,7 @@
 import ClearlineLogo from "./ClearlineLogo.png";
 import HomeBanner from "./homeBanner.png";
+import HomeBanner2 from "./homebanner2.png";
+import HomeBanner3 from "./homeBanner3.png";
 import SectionOneImage from "./SectionOne.png";
 import DoctorSmiling from "./portrait-smiling-doctor.png";
 import AirPeace from "./air-peace.png";
@@ -31,6 +33,11 @@ import LocationPointer from "./location.png";
 import Calling from "./calling.png";
 import Ellipse from "./ellipse.png";
 import Healthpriority from "./healthpriority.png";
+import evercare from "./evercare.png";
+import isalu from "./isalu.png";
+import lagoon from "./lagoon.png";
+import lifeline from "./lifeline.png";
+import rjolad from "./rjolad.png";
 
 export {
   ClearlineLogo,
@@ -66,4 +73,11 @@ export {
   Calling,
   Ellipse,
   Healthpriority,
+  HomeBanner2,
+  HomeBanner3,
+  evercare,
+  isalu,
+  lagoon,
+  lifeline,
+  rjolad,
 };

@@ -8,7 +8,7 @@ const Logo = () => {
       <Link href="/">
         <div className="flex items-center gap-1">
           <Image src={ClearlineLogo} alt="Clearline HMO" />
-          <div className="text-catalineBlue text-[20px] max-md:text-[14px] font-semibold">
+          <div className="text-catalineBlue text-[24px] max-md:text-[16px]">
             <p>Clearline</p>
           </div>
         </div>

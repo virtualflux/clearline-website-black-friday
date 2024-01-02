@@ -2,14 +2,73 @@
 
 import Button from "@/shared/Button";
 import Image from "next/image";
-import { HomeBanner } from "../../../public/assets/images";
+import {
+  HomeBanner,
+  HomeBanner3,
+  HomeBanner2,
+} from "../../../public/assets/images";
 import { ArrowRight, ChatCircle } from "../../../public/assets/svgs";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import BuyPlanModal from "../Modal/BuyPlan";
 
 export default function Banner() {
+  const bannerData = useMemo(
+    () => [
+      {
+        text1: "Health Empowered,",
+        text2: "Tomorrow Secured.",
+        text3: "Clearline HMO",
+        subtext:
+          "Elevate Your Health, Secure Your Future: Welcome to ClearlineHMO, Where Comprehensive Coverage Meets Peace of Mind",
+        img: HomeBanner,
+      },
+      {
+        text1: "Fostering the Health,",
+        text2: "And Happiness.",
+        text3: "Of Your Family",
+        subtext:
+          "Where comprehensive healthcare meets peace of mind, ensuring your loved ones thrive in a world of well-being",
+        img: HomeBanner2,
+      },
+      {
+        text1: "Fostering Student",
+        text2: "Wellness with",
+        text3: "ClearLine HMO",
+        subtext:
+          "ClearLineHMO promotes student wellness by offering access to a healthcare network, empowering academic success with comprehensive health support.",
+        img: HomeBanner3,
+      },
+    ],
+    []
+  );
+
   const [isOpen, setIsOpen] = useState(false);
+  const [currentData, setCurrentData] = useState(0);
+
+  const timeoutRef = useRef(null);
+
+  const delay = 3000;
+
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setCurrentData(() =>
+          currentData === bannerData.length - 1 ? 0 : currentData + 1
+        ),
+      delay
+    );
+    return () => {
+      resetTimeout();
+    };
+  }, [bannerData, currentData]);
 
   return (
     <div className="flex gap-8 justify-between max-lg:flex-col max-md:gap-6 px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24">
@@ -18,14 +77,14 @@ export default function Banner() {
         <p className="w-fit text-[16px] text-green border border-green bg-sugarCane px-[40px] max-lg:px-[30px] py-3 rounded-lg">
           Health insurance
         </p>
-        <p className="typing text-ebonyClay font-extrabold text-[50px] max-[1200px]:text-[40px] max-lg:text-[32px]">
-          Health Empowered,
-          <br /> <span className="text-gradient">Tomorrow Secured.</span>
-          <br /> ClearlineHMO
+        <p className="text-ebonyClay font-extrabold text-[50px] max-[1200px]:text-[40px] max-lg:text-[32px]">
+          {bannerData[currentData].text1}
+          <br />{" "}
+          <span className="text-gradient">{bannerData[currentData].text2}</span>
+          <br /> {bannerData[currentData].text3}
         </p>
-        <p className="text-boulder text-[24px] max-md:text-[16px] mb-4">
-          Elevate Your Health, Secure Your Future: Welcome to ClearlineHMO,
-          Where Comprehensive Coverage Meets Peace of Mind
+        <p className="h-[90px] text-boulder text-[24px] max-md:text-[16px] mb-4">
+          {bannerData[currentData].subtext}
         </p>
         <div className="flex gap-3">
           <Button
@@ -43,19 +102,24 @@ export default function Banner() {
       </div>
       <div className="w-1/2 relative max-lg:w-full">
         <Image
-          src={HomeBanner}
+          src={bannerData[currentData].img}
           alt="Health Unleashed"
           className="w-full h-full max-lg:h-[400px] object-cover"
         />
-        <Link href={"/contact"}>
-          <div className="cursor-pointer absolute bottom-3 right-4 w-[70px] h-[70px] max-md:w-[50px] max-md:h-[50px] rounded-full flex justify-center items-center bg-catalineBlue">
-            <Image
-              src={ChatCircle}
-              alt="Elevate Your Health"
-              className="w-3/5"
-            />
+        <div className="cursor-pointer absolute bottom-3 right-4">
+          <p className="text-[24px] max-lg:text-[16px] max-md:text-[12px] text-black bg-white p-2 rounded-lg shadow-xl mb-2">
+            Hey, we’re here to help!
+          </p>
+          <div className="flex justify-end">
+            <div className="w-[70px] h-[70px] max-md:w-[50px] max-md:h-[50px] rounded-full flex justify-center items-center bg-catalineBlue">
+              <Image
+                src={ChatCircle}
+                alt="Elevate Your Health"
+                className="w-3/5"
+              />
+            </div>
           </div>
-        </Link>
+        </div>
       </div>
     </div>
   );

@@ -3,15 +3,15 @@ import { MissionImage } from "../../../public/assets/images";
 
 const MissionVision = () => {
   return (
-    <div className="mt-[300px] max-[1300px]:mt-[420px] max-[900px]:mt-[520px] max-[780px]:mt-[620px] max-[768px]:mt-[320px] max-[570px]:mt-[420px] max-[490px]:mt-[500px] max-[450px]:mt-[540px] max-[410px]:mt-[600px] max-[400px]:mt-[680px] px-16 max-lg:px-12 max-md:px-8 flex max-[900px]:flex-wrap justify-between gap-8 max-md:gap-4">
-      <div>
+    <div className="mt-[400px] max-[1300px]:mt-[570px] max-[900px]:mt-[670px] max-[780px]:mt-[670px] max-[768px]:mt-[350px] max-[570px]:mt-[420px] max-[490px]:mt-[500px] max-[450px]:mt-[540px] max-[410px]:mt-[600px] max-[400px]:mt-[680px] px-16 max-lg:px-12 max-md:px-8 flex max-[950px]:flex-col justify-between gap-16 max-md:gap-4">
+      <div className="w-2/5 max-[950px]:w-full">
         <Image
           src={MissionImage}
           alt="Mission vision"
-          className="h-[450px] max-md:h-[258px] object-cover"
+          className="h-[450px] max-md:h-[258px] object-cover rounded-lg"
         />
       </div>
-      <div>
+      <div className="w-3/5 max-[950px]:w-full">
         <p className="text-catalineBlue font-bold text-[40px] max-lg:text-[30px] max-md:text-[24px]">
           Our Mission
         </p>

@@ -26,7 +26,7 @@ const Individual = () => {
         <Button
           type={"button"}
           className={
-            "!rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
+            "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
           }
         >
           Consult an Expert
@@ -35,7 +35,7 @@ const Individual = () => {
           onClick={() => setIsOpen(true)}
           type={"button"}
           className={
-            "!rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
+            "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
           }
         >
           Buy a plan online
@@ -44,11 +44,11 @@ const Individual = () => {
       <div className="w-full mb-8">
         <PackageTable />
       </div>
-      <div className="flex gap-4 flex-wrap mb-12">
+      <div className="flex gap-4 max-sm:flex-col mb-12">
         <Button
           type={"button"}
           className={
-            "!rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
+            "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
           }
         >
           View full plan
@@ -57,7 +57,7 @@ const Individual = () => {
           onClick={() => setIsOpen(true)}
           type={"button"}
           className={
-            "!rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
+            "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
           }
         >
           Buy a plan

@@ -30,7 +30,7 @@ export const Package = () => {
               key={idx}
               className={`${
                 activeTab === idx && "!bg-catalineBlue text-white"
-              } flex justify-center whitespace-nowrap py-2 px-16 max-[1350px]:px-4 cursor-pointer text-catalineBlue bg-white text-[18px] max-md:text-[10px] rounded-[60px]`}
+              } flex justify-center whitespace-nowrap py-4 max-md:py-2 px-16 max-[1350px]:px-4 cursor-pointer text-catalineBlue text-[18px] max-md:text-[10px] rounded-[60px]`}
             >
               {tab.title}
             </p>

@@ -28,7 +28,7 @@ export default function HealthPlans() {
               key={idx}
               className={`${
                 activeTab === idx && "!bg-catalineBlue text-white"
-              } flex justify-center whitespace-nowrap py-2 px-16 max-[1350px]:px-4 cursor-pointer text-catalineBlue bg-white text-[18px] max-md:text-[12px] rounded-lg`}
+              } flex justify-center whitespace-nowrap font-medium py-4 px-16 max-[1350px]:px-4 cursor-pointer text-catalineBlue bg-white text-[18px] max-md:text-[12px] rounded-lg`}
             >
               {tab.title}
             </p>

@@ -9,7 +9,7 @@ import {
 
 export default function Sponsors() {
   return (
-    <div className="bg-zircon px-16 max-lg:px-12 max-md:px-8 py-8 my-12">
+    <div className="bg-zircon px-16 max-lg:px-12 max-md:px-8 py-16 my-24">
       <div className="flex flex-col items-center">
         <p className="text-[20px] max-md:text-[14px] text-center mb-8">
           Here are some of our happy clients

@@ -15,8 +15,8 @@ export default function SectionOne() {
         <p className="font-bold text-[32px] max-lg:text-[24px]">
           Here is why Clearline is the Best for you
         </p>
-        <div className="min-h-3/5  max-lg:min-h-4/5 flex gap-4">
-          <div className="mt-5 relative w-[18px] bg-zircon min-h-full py-4 ">
+        <div className="min-h-3/5 max-lg:min-h-4/5 flex gap-4">
+          <div className="mt-5 relative w-[30px] bg-zircon min-h-full py-4 ">
             <div className="absolute top-[20px] -left-[8px] w-[20px] h-[20px] rounded-full bg-catalineBlue"></div>
             <div className="absolute top-1/2 -left-[8px] w-[20px] h-[20px] rounded-full bg-catalineBlue"></div>
             <div className="absolute bottom-[20px] -left-[8px] w-[20px] h-[20px] rounded-full bg-catalineBlue"></div>
