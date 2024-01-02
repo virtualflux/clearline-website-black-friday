@@ -8,7 +8,7 @@ export default function SectionOne() {
         <Image
           src={SectionOneImage}
           alt="Here is why Clearline is the Best for you"
-          className="object-cover"
+          className="object-cover rounded-lg max-md:h-[400px] w-full h-[500px]"
         />
       </div>
       <div className="w-1/2 max-lg:w-full">

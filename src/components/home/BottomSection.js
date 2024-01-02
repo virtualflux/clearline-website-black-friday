@@ -13,10 +13,14 @@ import {
 export default function BottomSection() {
   return (
     <div>
-      <div className="bg-catalineBlue px-16 max-lg:px-12 max-md:px-8 my-12">
-        <div className="flex max-[900px]:flex-col gap-8 max-md:gap-0">
-          <div className="w-1/2 max-[900px]:w-full">
-            <Image src={PhonesImage} alt="Clearline app" className="" />
+      <div className="bg-catalineBlue h-[350px] max-[900px]:h-fit px-16 max-lg:px-12 max-md:px-8 mb-12 min-[900px]:mt-[200px] mt-12">
+        <div className="h-full flex max-[900px]:flex-col gap-8 max-md:gap-0">
+          <div className="w-1/2 max-[900px]:w-full relative">
+            <Image
+              src={PhonesImage}
+              alt="Clearline app"
+              className="min-[900px]:absolute bottom-0 h-[500px] max-md:h-[350px] w-full object-auto"
+            />
           </div>
           <div className="w-1/2 max-[900px]:w-full py-8 text-white">
             <div className="flex items-center gap-2 mb-2">
