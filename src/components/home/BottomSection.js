@@ -6,6 +6,7 @@ import {
 import Button from "@/shared/Button";
 import {
   AppleLogo,
+  Healthpriority,
   PhonesImage,
   PlayStoreLogo,
 } from "../../../public/assets/images";
@@ -63,7 +64,42 @@ export default function BottomSection() {
           </div>
         </div>
       </div>
-      <div>hmm</div>
+      <div className="px-24 max-lg:px-16 max-md:px-12 mt-32 max-md:mt-16">
+        <div className="flex max-[900px]:flex-col gap-8 rounded-3xl bg-[#5F81D5] h-[400px] max-[900px]:h-fit">
+          <div className="max-lg:hidden w-3/5 max-[900px]:w-full relative">
+            <Image
+              src={Healthpriority}
+              alt="Clearline app"
+              className="min-[900px]:absolute bottom-0 h-[500px] max-md:h-[350px] object-auto"
+            />
+          </div>
+          <div className="relative left-8 -top-8 max-md:-top-4 max-md:left-4 w-2/5 h-fit max-[900px]:w-full py-8 text-white rounded-3xl bg-catalineBlue p-8">
+            <p className="text-[46px] max-lg:text-[32px] max-md:text-[24px] font-bold mb-4">
+              Your Health is <br />
+              our Priority
+            </p>
+            <p className="text-[24px] max-md:text-[14px] mb-6">
+              Sign up for our Health Newsletter to get health tips & Benefits,
+              Directly in your Inbox
+            </p>
+            <div>
+              <form>
+                <div className="relative w-full">
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="Email address"
+                    className="w-full rounded-lg text-[14px] h-[60px] focus:outline-none text-black placeholder:text-xs placeholder:text-black pl-2 pr-12"
+                  />
+                  <div className="absolute right-4 bottom-3 bg-catalineBlue flex justify-center items-center rounded-lg p-2">
+                    <p className="text-[16px] max-md:text-[12px]">Subscribe</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

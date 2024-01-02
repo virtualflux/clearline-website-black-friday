@@ -30,6 +30,7 @@ import BlankStar from "./blank-star.png";
 import LocationPointer from "./location.png";
 import Calling from "./calling.png";
 import Ellipse from "./ellipse.png";
+import Healthpriority from "./healthpriority.png";
 
 export {
   ClearlineLogo,
@@ -64,4 +65,5 @@ export {
   LocationPointer,
   Calling,
   Ellipse,
+  Healthpriority,
 };
