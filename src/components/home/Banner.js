@@ -45,7 +45,7 @@ export default function Banner() {
         <Image
           src={HomeBanner}
           alt="Health Unleashed"
-          className="w-full h-full object-cover"
+          className="w-full h-full max-lg:h-[400px] object-cover"
         />
         <Link href={"/contact"}>
           <div className="cursor-pointer absolute bottom-3 right-4 w-[70px] h-[70px] max-md:w-[50px] max-md:h-[50px] rounded-full flex justify-center items-center bg-catalineBlue">
