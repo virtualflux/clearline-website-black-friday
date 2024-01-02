@@ -8,9 +8,9 @@ import {
   HomeBanner2,
 } from "../../../public/assets/images";
 import { ArrowRight, ChatCircle } from "../../../public/assets/svgs";
-import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import BuyPlanModal from "../Modal/BuyPlan";
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
 export default function Banner() {
   const bannerData = useMemo(
@@ -105,6 +105,10 @@ export default function Banner() {
           src={bannerData[currentData].img}
           alt="Health Unleashed"
           className="w-full h-full max-lg:h-[400px] object-cover"
+        />
+        <TawkMessengerReact
+          propertyId={process.env.NEXT_PUBLIC_TAWK_PROPERTYID}
+          widgetId={process.env.NEXT_PUBLIC_TAWK_WIDGETID}
         />
         <div className="cursor-pointer absolute bottom-3 right-4">
           <p className="text-[24px] max-lg:text-[16px] max-md:text-[12px] text-black bg-white p-2 rounded-lg shadow-xl mb-2">
