@@ -65,15 +65,10 @@ export default function BottomSection() {
         </div>
       </div>
       <div className="px-24 max-lg:px-16 max-md:px-12 mt-32 max-md:mt-16">
-        <div className="flex max-[900px]:flex-col gap-8 rounded-3xl bg-[#5F81D5] h-[400px] max-[900px]:h-fit">
-          <div className="max-lg:hidden w-3/5 max-[900px]:w-full relative">
-            <Image
-              src={Healthpriority}
-              alt="Clearline app"
-              className="min-[900px]:absolute bottom-0 h-[500px] max-md:h-[350px] object-auto"
-            />
-          </div>
-          <div className="relative left-8 -top-8 max-md:-top-4 max-md:left-4 w-2/5 h-fit max-[900px]:w-full py-8 text-white rounded-3xl bg-catalineBlue p-8">
+        <div className="relative flex max-[900px]:flex-col gap-8 rounded-3xl bg-[#5F81D5] h-[400px] w-[90%] max-[900px]:h-fit shadow-lg">
+          <div className="absolute h-[300px] max-[900px]:h-fit w-full rounded-3xl bg-[#7092E6] top-[50px] -right-[40px] -z-10 shadow-lg"></div>
+          <div className="absolute h-[220px] max-[900px]:h-fit w-full rounded-3xl bg-[#92B4FF] top-[80px] -right-[80px] -z-30"></div>
+          <div className="relative right-8 -top-8 max-md:-top-4 max-md:left-4 w-2/5 h-fit max-[900px]:w-full py-8 text-white rounded-3xl bg-catalineBlue p-8">
             <p className="text-[46px] max-lg:text-[32px] max-md:text-[24px] font-bold mb-4">
               Your Health is our Priority
             </p>
@@ -96,6 +91,13 @@ export default function BottomSection() {
                 </div>
               </form>
             </div>
+          </div>
+          <div className="max-[900px]:hidden w-3/5 max-[900px]:w-full relative">
+            <Image
+              src={Healthpriority}
+              alt="Clearline app"
+              className="min-[900px]:absolute bottom-0 h-[500px] max-md:h-[350px] object-auto"
+            />
           </div>
         </div>
       </div>

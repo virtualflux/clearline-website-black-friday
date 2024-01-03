@@ -7,7 +7,7 @@ import {
   HomeBanner3,
   HomeBanner2,
 } from "../../../public/assets/images";
-import { ArrowRight, ChatCircle } from "../../../public/assets/svgs";
+import { ArrowRight } from "../../../public/assets/svgs";
 import { useEffect, useMemo, useRef, useState } from "react";
 import BuyPlanModal from "../Modal/BuyPlan";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
@@ -110,20 +110,6 @@ export default function Banner() {
           propertyId={process.env.NEXT_PUBLIC_TAWK_PROPERTYID}
           widgetId={process.env.NEXT_PUBLIC_TAWK_WIDGETID}
         />
-        <div className="cursor-pointer absolute bottom-3 right-4">
-          <p className="text-[24px] max-lg:text-[16px] max-md:text-[12px] text-black bg-white p-2 rounded-lg shadow-xl mb-2">
-            Hey, we’re here to help!
-          </p>
-          <div className="flex justify-end">
-            <div className="w-[70px] h-[70px] max-md:w-[50px] max-md:h-[50px] rounded-full flex justify-center items-center bg-catalineBlue">
-              <Image
-                src={ChatCircle}
-                alt="Elevate Your Health"
-                className="w-3/5"
-              />
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

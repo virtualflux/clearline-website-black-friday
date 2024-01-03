@@ -38,6 +38,8 @@ import isalu from "./isalu.png";
 import lagoon from "./lagoon.png";
 import lifeline from "./lifeline.png";
 import rjolad from "./rjolad.png";
+import QuotationLeft from "./quotation-mark-left.png";
+import QuotationRight from "./quotation-mark-right.png";
 
 export {
   ClearlineLogo,
@@ -80,4 +82,6 @@ export {
   lagoon,
   lifeline,
   rjolad,
+  QuotationLeft,
+  QuotationRight,
 };

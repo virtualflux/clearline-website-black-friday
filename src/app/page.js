@@ -8,6 +8,7 @@ import Sponsors from "../components/home/Sponsors";
 import FAQ from "../components/home/FAQs";
 import BottomSection from "../components/home/BottomSection";
 import PageLayout from "@/layout";
+import Testimonial from "@/components/home/Testimonial";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <SectionOne />
       <HealthPlans />
       <Network />
+      <Testimonial />
       <Sponsors />
       <FAQ />
       <BottomSection />

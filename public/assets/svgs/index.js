@@ -13,6 +13,8 @@ import tripleGreenArrowLeft from "./tripleGreenArrowLeft.svg";
 import SearchIcon from "./search-icon.svg";
 import Close from "./close.svg";
 import Star from "./star.svg";
+import GreenArrowLeft from "./green-arrow-right.svg";
+import GreenArrowRight from "./green-arrow-left.svg";
 
 export {
   Menu,
@@ -30,4 +32,6 @@ export {
   Close,
   Star,
   GreenTickCircle,
+  GreenArrowLeft,
+  GreenArrowRight,
 };
