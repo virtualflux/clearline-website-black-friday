@@ -15,7 +15,7 @@ const RelatedCard = () => {
         <Image
           src={DummyHospital}
           alt={"hospital"}
-          className="w-full h-full object-cover rounded-lg"
+          className="w-full h-full object-cover rounded-t-lg"
         />
       </div>
       <div className="p-4">
@@ -33,7 +33,7 @@ const RelatedCard = () => {
               </p>
             </div>
           </div>
-          <p className="text-[12px] max-md:text-[10px] text-catalineBlue underline">
+          <p className="cursor-pointer text-[12px] max-md:text-[10px] text-catalineBlue underline">
             copy address
           </p>
         </div>
@@ -41,12 +41,12 @@ const RelatedCard = () => {
           <div className="flex gap-1">
             <Image src={Ellipse} alt="ellipse" />
             <div className="flex gap-1">
-              {Array.from({ length: 2 }).map((item, idx) => (
+              {["-left-[10px]", "-left-[20px]"].map((item, idx) => (
                 <Image
                   src={Ellipse}
                   alt="ellipse"
                   key={idx}
-                  className={`relative -left-[${idx + 1}0px]`}
+                  className={`relative ${item}`}
                 />
               ))}
             </div>

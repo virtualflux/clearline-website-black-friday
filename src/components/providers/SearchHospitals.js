@@ -4,15 +4,8 @@ import Image from "next/image";
 import { SearchIcon } from "../../../public/assets/svgs";
 import Button from "@/shared/Button";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
-import { HomeLocation } from "../../../public/assets/images";
 
 const SearchHospitals = () => {
-  const icons = {
-    house: {
-      icon: HomeLocation,
-    },
-  };
-
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
@@ -104,10 +97,20 @@ const SearchHospitals = () => {
               center={center}
               zoom={12}
               options={{
-                zoomControl: false,
-                streetViewControl: false,
-                mapTypeControl: false,
-                fullscreenControl: false,
+                styles: [
+                  {
+                    featureType: "poi",
+                    elementType: "labels",
+                    stylers: [{ visibility: "off" }],
+                  },
+                  {
+                    featureType: "transit",
+                    elementType: "labels",
+                    stylers: [{ visibility: "off" }],
+                  },
+                ],
+                disableDefaultUI: true,
+                zoomControl: true,
               }}
             >
               {[
@@ -123,13 +126,13 @@ const SearchHospitals = () => {
                 <Marker
                   key={idx}
                   position={hospital.location}
-                  icon={<Image src={icons.house.icon} alt="hmm" />}
+                  // icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALUAAACUCAMAAADifZgIAAAAY1BMVEX///8AAACYmJhubm42Njb7+/tQUFDs7OyUlJRfX1/R0dHz8/Po6OjMzMxmZmZcXFyvr68vLy/a2tq1tbUlJSWFhYUZGRm7u7t9fX1JSUmMjIzi4uJVVVXFxcURERGhoaE/Pz9caTHPAAAEY0lEQVR4nO2c6ZKqMBCFRYwooKAisgj6/k95XUbTwkkgKMut6vNvZgJ+hs5Jd5Oa2YzFYrFYLBaLxWKx+pHYNwzw3Yr8Qbj0TFl0ENoRmVXRaiA0tfbLG0bi6YasqtTzoeBUujw5YlczZmrU/laSqKd7YtSnlKDYykU5Lepj9MFyDRXjpkSdB1UYK8FeMh1qcYhr0JaVbtDYyVA7R8B8U3wBg6dC7a4x9D1K6hvfRKjDUgltWYtalEyC2jlrmO/KKtY9AWpRLBqgLWv7ad3jU4ssQpwVLT6se3Rq0TzRD5Xr6VCLEE7sEU1/KfOpcal9aNJ2PiuW4PfxO58alXoDvSP0lN9nm49PfYHL8M8txAn98VqMTJ3D3fAo0yXs4okzJnWxA0iLAx3izdGOeXZHo/bmaB7X1aoL7j9ROKtdPQi1Dx/+ql5y5Vs08JiMQX1AKFeZI3mujO4LiqSa+qdWmJrzHrAPrJX8yW1KrQahhiYdXeTshvdgDmSIO7WezfDUc2TSEVmG9tM4drKGwdY9ILVfL2hv2soBrnQNEjPiOib1CTkZSUK9C3Xo9CSvhI9oEGqvtjk8plQm/HnF0cqVjPZNii7un3oPvZeYdFEHe6VLNzn2GNTQpEkh60GriMkeH6KGSa/UuN1Bmga5KgKOxMjh0+qPusmkxUG92s7kecCV0Rc1zKRJM0wkun5IRNpPJ7zB90At4MMnjce9Bvn5BUnWDdPy88+ZC7SIqEnDrPVTcSG552i6I9jF7CwvQ9DEpPc6R3urJO0nvEjm+hdQRsphxkZeXsDtEmlJrBsaUvCz13fYGmSu5NXye7UiYt0wn9qdAIG5qjv0UzZ51tptuqZETrePa+UfTDdkKkNp0rDxpFNavG/uXdCA87eLUkCTvsro8A2i4yVaPWygl6BXC+3lwN03IZVVm1ZqXWt5Bx+6j+0gnFYSLrohaXe0MWmFiHWHcKd0O3qgA5moSSvzoBaipTBclPNO072HdRYx6bCtSWOdm0rhoOmoBhB8cRiT1d1qN9SppPkUSrziQx1LK1hzlIEcsPluop/aSmcWS8Rttihhdk8zadz/NRYphfEt0xzyKahBEyCVcZh/HR0vxZn8UBd86NWEGtSHZAsvmhobJiJR4tUnwzCyK1USyWna9L6MRI5HVYsc05NQ4sP3yNEUbIhfiaRLn3l6YLzT5ORqadICb2RfipbCdGszCuqn3qEdyRzt1XX8tehJjOLtJaZ2/ZjWv9C2DQra7krlYn8tyqxTJuLfX3LuZLn/Ra7UQrtqKbzsWBy4pbWUEfdVrtRC0ZGUR0ur7FwarIhJz8zqrC4iwe3ZPzr++YvEQ68+OmZMzdRMzdRMzdRMzdRMzdRMPSj1Yq1UoD6qMDZ15gmVHHQ+eBrUK3UvgKmZmqmZmqmZmqmZmqmZmqmZmqmZmqmZmqmZmqmZmqmZmqn/d+oWRz111C2OqPVBndhN2mr++aGXtbi8B2oWi8VisVgsFmtI/QNrC0wOWQNzPAAAAABJRU5ErkJggg=="
                 />
               ))}
             </GoogleMap>
           ) : (
             <div className="h-full flex justify-center items-center">
-              <p className="text-black">Invalid Longtitude/Latitude</p>
+              <p>Loading...</p>
             </div>
           )}
         </div>

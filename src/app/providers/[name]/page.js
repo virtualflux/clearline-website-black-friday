@@ -1,12 +1,12 @@
 import PageLayout from "@/layout";
 import Image from "next/image";
 import {
-  BlankStar,
   Calling,
   DummyHospital,
   LocationPointer,
 } from "../../../../public/assets/images";
 import RelatedHealthCare from "@/components/providers/Related";
+import { Rating } from "@mui/material";
 
 export default function Page() {
   return (
@@ -43,16 +43,14 @@ export default function Page() {
             <p className="text-boulder text-[20px] max-md:text-[12px] font-light mb-4">
               Only users of this hospitals can give ratings
             </p>
-            <div className="flex gap-3">
-              {Array.from({ length: 5 }).map((item, idx) => (
-                <Image
-                  key={idx}
-                  src={BlankStar}
-                  alt="rate this"
-                  className="cursor-pointer"
-                />
-              ))}
-            </div>
+            <Rating
+              name="simple-controlled"
+              size="large"
+              // value={value}
+              // onChange={(event, newValue) => {
+              //   setValue(newValue);
+              // }}
+            />
           </div>
         </div>
         <p className="text-[32px] max-md:text-[24px] font-bold mb-3">
