@@ -40,6 +40,8 @@ import lifeline from "./lifeline.png";
 import rjolad from "./rjolad.png";
 import QuotationLeft from "./quotation-mark-left.png";
 import QuotationRight from "./quotation-mark-right.png";
+import EbereNwosu from "./EbereNwosu.png";
+import AhmedYakasai from "./AhmedYakasai.png";
 
 export {
   ClearlineLogo,
@@ -84,4 +86,6 @@ export {
   rjolad,
   QuotationLeft,
   QuotationRight,
+  EbereNwosu,
+  AhmedYakasai,
 };

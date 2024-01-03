@@ -20,7 +20,6 @@ body {
 .typing {
   overflow: hidden;
   white-space: nowrap;
-  /* margin: 0 auto; */
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
@@ -37,4 +36,21 @@ body {
   width: 50%;
   height: 2px;
   background: var(--blue, #082b82);
+}
+
+.animate {
+  animation: 10s linear 0s infinite alternate sunrise;
+  width: 400%;
+}
+.animate:hover {
+  animation-play-state: paused;
+}
+
+@keyframes sunrise {
+  from {
+    transform: translateX(30px);
+  }
+  to {
+    transform: translateX(-1200px);
+  }
 }

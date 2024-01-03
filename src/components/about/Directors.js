@@ -1,4 +1,9 @@
-import { director1, director2 } from "../../../public/assets/images";
+import {
+  AhmedYakasai,
+  EbereNwosu,
+  director1,
+  director2,
+} from "../../../public/assets/images";
 import DirectorCard from "./DirectorCard";
 
 const Directors = () => {
@@ -9,17 +14,60 @@ const Directors = () => {
           Board of Directors
         </p>
         <p className="text-catalineBlue text-[48px] max-md:text-[24px] font-bold mb-4">
-          Meet our directors
+          Meet our Directors
         </p>
-        <div className="flex gap-3 max-sm:overflow-x-auto">
-          {Array.from({ length: 4 }).map((item, index) => (
-            <DirectorCard
-              imageUrl={director1}
-              name="Ife Oyedele"
-              role="Director"
-              key={index}
-            />
-          ))}
+        <div className="w-full overflow-x-hidden">
+          <div className="flex gap-3 overflow-x-auto animate">
+            {[
+              {
+                imageUrl: director1,
+                name: "Pastor Ituah Ighadalo",
+                role: "Director",
+              },
+              {
+                imageUrl: director2,
+                name: "Ife Oyedele II",
+                role: "MD/Chief Executive Officer",
+              },
+              {
+                imageUrl: EbereNwosu,
+                name: "Ebere Nwosu",
+                role: "Director",
+              },
+              {
+                imageUrl: AhmedYakasai,
+                name: "Pharm, Ahmed I Yakasai",
+                role: "Director",
+              },
+              {
+                imageUrl: director1,
+                name: "Pastor Ituah Ighadalo",
+                role: "Director",
+              },
+              {
+                imageUrl: director2,
+                name: "Ife Oyedele II",
+                role: "MD/Chief Executive Officer",
+              },
+              {
+                imageUrl: EbereNwosu,
+                name: "Ebere Nwosu",
+                role: "Director",
+              },
+              {
+                imageUrl: AhmedYakasai,
+                name: "Pharm, Ahmed I Yakasai",
+                role: "Director",
+              },
+            ].map(({ imageUrl, name, role }, index) => (
+              <DirectorCard
+                imageUrl={imageUrl}
+                name={name}
+                role={role}
+                key={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <div>
@@ -29,15 +77,58 @@ const Directors = () => {
         <p className="text-catalineBlue text-[48px] max-md:text-[24px] font-bold mb-4">
           Meet our Team
         </p>
-        <div className="flex gap-3 max-sm:overflow-x-auto">
-          {Array.from({ length: 4 }).map((item, index) => (
-            <DirectorCard
-              imageUrl={director2}
-              name="Ebere Nwosu"
-              role="MD/Chief Executive Officer"
-              key={index}
-            />
-          ))}
+        <div className="w-full overflow-x-hidden">
+          <div className="flex gap-3 overflow-x-auto animate">
+            {[
+              {
+                imageUrl: director1,
+                name: "Pastor Ituah Ighadalo",
+                role: "Director",
+              },
+              {
+                imageUrl: director2,
+                name: "Ife Oyedele II",
+                role: "MD/Chief Executive Officer",
+              },
+              {
+                imageUrl: EbereNwosu,
+                name: "Ebere Nwosu",
+                role: "Director",
+              },
+              {
+                imageUrl: AhmedYakasai,
+                name: "Pharm, Ahmed I Yakasai",
+                role: "Director",
+              },
+              {
+                imageUrl: director1,
+                name: "Pastor Ituah Ighadalo",
+                role: "Director",
+              },
+              {
+                imageUrl: director2,
+                name: "Ife Oyedele II",
+                role: "MD/Chief Executive Officer",
+              },
+              {
+                imageUrl: EbereNwosu,
+                name: "Ebere Nwosu",
+                role: "Director",
+              },
+              {
+                imageUrl: AhmedYakasai,
+                name: "Pharm, Ahmed I Yakasai",
+                role: "Director",
+              },
+            ].map(({ imageUrl, name, role }, index) => (
+              <DirectorCard
+                imageUrl={imageUrl}
+                name={name}
+                role={role}
+                key={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
