@@ -41,7 +41,13 @@ import rjolad from "./rjolad.png";
 import QuotationLeft from "./quotation-mark-left.png";
 import QuotationRight from "./quotation-mark-right.png";
 import EbereNwosu from "./EbereNwosu.png";
+import Amaka from "./Amaka-Nwosisi.jpg";
 import AhmedYakasai from "./AhmedYakasai.png";
+import Chukwuka from "./Chukwuka-Ebuka.jpg";
+import chukwudalu from "./chukwudalu-nwosu.jpg";
+import Ituah from "./Pastor-Ituah-Ighodalo.jpg";
+import YAKASAI from "./PHARM.-AHMED-I.-YAKASAI.png";
+import Shailesh from "./Shailesh-Kumar.jpg";
 
 export {
   ClearlineLogo,
@@ -88,4 +94,10 @@ export {
   QuotationRight,
   EbereNwosu,
   AhmedYakasai,
+  Amaka,
+  Chukwuka,
+  chukwudalu,
+  Ituah,
+  YAKASAI,
+  Shailesh,
 };

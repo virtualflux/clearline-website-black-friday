@@ -97,20 +97,22 @@ const Testimonial = () => {
         >
           {testi.map(({ component }, idx) => (
             <div key={idx} className="inline-block w-full whitespace-normal">
-              <div className="flex justify-between">
-                <Image
-                  src={GreenArrowLeft}
-                  alt="green arrow left"
-                  className="cursor-pointer"
-                  onClick={handlePrevClick}
-                />
-                {component}
-                <Image
-                  src={GreenArrowRight}
-                  alt="green arrow right"
-                  className="cursor-pointer"
-                  onClick={handleNextClick}
-                />
+              <div className="flex justify-center">
+                <div className="w-4/5 flex justify-between max-md:w-full">
+                  <Image
+                    src={GreenArrowLeft}
+                    alt="green arrow left"
+                    className="cursor-pointer"
+                    onClick={handlePrevClick}
+                  />
+                  {component}
+                  <Image
+                    src={GreenArrowRight}
+                    alt="green arrow right"
+                    className="cursor-pointer"
+                    onClick={handleNextClick}
+                  />
+                </div>
               </div>
             </div>
           ))}

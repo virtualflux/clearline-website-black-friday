@@ -3,7 +3,7 @@ import { QuotationLeft, QuotationRight } from "../../../public/assets/images";
 
 const TestimonialCard = ({ text, name, title }) => {
   return (
-    <div className="w-[650px] max-md:h-[320px] max-lg:w-[400px] max-md:w-[350px] px-10 py-10 max-md:px-6 shadow-lg rounded-xl flex flex-col items-center">
+    <div className="w-[650px] max-md:h-[320px] max-lg:w-[400px] max-md:w-[320px] px-10 py-10 max-md:px-6 shadow-lg rounded-xl flex flex-col items-center">
       <div className="flex">
         <div className="w-[50px]">
           <Image

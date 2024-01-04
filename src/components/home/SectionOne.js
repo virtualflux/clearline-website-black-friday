@@ -3,7 +3,7 @@ import { SectionOneImage } from "../../../public/assets/images";
 
 export default function SectionOne() {
   return (
-    <div className="flex gap-8 max-lg:flex-col-reverse max-md:gap-6 px-16 max-lg:px-12 max-md:px-8 pt-24 max-md:pt-12">
+    <div className="flex gap-8 max-lg:flex-col-reverse px-16 max-lg:px-12 max-md:px-8 pt-24 max-md:pt-12">
       <div className="w-1/2 max-lg:w-full">
         <Image
           src={SectionOneImage}

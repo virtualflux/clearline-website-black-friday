@@ -20,12 +20,12 @@ const AboutBanner = () => {
           alt="about image"
           className="h-full w-full object-cover"
         />
-        <div className="absolute top-[200px] max-md:top-[110px] w-4/5 px-24 py-12 max-lg:px-12 max-lg:py-6 max-md:px-6 max-md:py-3  bg-catalineBlue text-white">
+        <div className="rounded-md absolute top-[200px] max-md:top-[110px] w-4/5 px-24 py-12 max-lg:px-12 max-lg:py-6 max-md:px-6 max-md:py-3  bg-catalineBlue text-white">
           <p className="text-[40px] max-lg:text-[30px] max-md:text-[24px] mb-4 font-medium">
             Partnering with you to provide robust and affordable healthcare to
             you and your loved ones
           </p>
-          <p className="text-[24px] max-md:text-[14px]">
+          <p className="text-[20px] max-md:text-[12px] font-light">
             At Clear Line HMO, we take pride in our commitment to being your
             trusted partner in healthcare. Our mission is to provide not just
             healthcare coverage but a comprehensive and affordable solution for
@@ -33,7 +33,8 @@ const AboutBanner = () => {
             you&apos;re gaining access to a network of top-notch healthcare
             providers without the hefty price tag.
           </p>
-          <p className="text-[24px] max-md:text-[14px]">
+          <br />
+          <p className="text-[20px] max-md:text-[12px] font-light">
             We understand the importance of robust healthcare that doesn&apos;t
             break the bank. Our plans are designed to be not only cost-effective
             but also inclusive, ensuring that you and your family receive the

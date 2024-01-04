@@ -1,6 +1,12 @@
 import {
   AhmedYakasai,
+  Amaka,
+  Chukwuka,
   EbereNwosu,
+  Ituah,
+  Shailesh,
+  YAKASAI,
+  chukwudalu,
   director1,
   director2,
 } from "../../../public/assets/images";
@@ -20,43 +26,48 @@ const Directors = () => {
           <div className="flex gap-3 overflow-x-auto animate">
             {[
               {
-                imageUrl: director1,
-                name: "Pastor Ituah Ighadalo",
+                imageUrl: AhmedYakasai,
+                name: "Dr. Chukwuma Obiora",
                 role: "Director",
               },
               {
                 imageUrl: director2,
-                name: "Ife Oyedele II",
-                role: "MD/Chief Executive Officer",
-              },
-              {
-                imageUrl: EbereNwosu,
                 name: "Ebere Nwosu",
                 role: "Director",
               },
               {
-                imageUrl: AhmedYakasai,
-                name: "Pharm, Ahmed I Yakasai",
-                role: "Director",
-              },
-              {
-                imageUrl: director1,
+                imageUrl: Ituah,
                 name: "Pastor Ituah Ighadalo",
                 role: "Director",
               },
               {
-                imageUrl: director2,
-                name: "Ife Oyedele II",
-                role: "MD/Chief Executive Officer",
-              },
-              {
-                imageUrl: EbereNwosu,
-                name: "Ebere Nwosu",
+                imageUrl: YAKASAI,
+                name: "Pharm, Ahmed I Yakasai",
                 role: "Director",
               },
               {
-                imageUrl: AhmedYakasai,
-                name: "Pharm, Ahmed I Yakasai",
+                imageUrl: Shailesh,
+                name: "Shailesh Kumar",
+                role: "Director",
+              },
+              {
+                imageUrl: EbereNwosu,
+                name: "Dr. Mrs. Uche Ejiofor",
+                role: "Director",
+              },
+              {
+                imageUrl: Chukwuka,
+                name: "Chukwuka Ebuka",
+                role: "Director",
+              },
+              {
+                imageUrl: chukwudalu,
+                name: "Chukwudalu Nwosu",
+                role: "Director",
+              },
+              {
+                imageUrl: Amaka,
+                name: "Barr. Amaka Lilea Nwosisi",
                 role: "Director",
               },
             ].map(({ imageUrl, name, role }, index) => (
@@ -81,43 +92,48 @@ const Directors = () => {
           <div className="flex gap-3 overflow-x-auto animate">
             {[
               {
-                imageUrl: director1,
-                name: "Pastor Ituah Ighadalo",
+                imageUrl: AhmedYakasai,
+                name: "Dr. Chukwuma Obiora",
                 role: "Director",
               },
               {
                 imageUrl: director2,
-                name: "Ife Oyedele II",
-                role: "MD/Chief Executive Officer",
-              },
-              {
-                imageUrl: EbereNwosu,
                 name: "Ebere Nwosu",
                 role: "Director",
               },
               {
-                imageUrl: AhmedYakasai,
-                name: "Pharm, Ahmed I Yakasai",
-                role: "Director",
-              },
-              {
-                imageUrl: director1,
+                imageUrl: Ituah,
                 name: "Pastor Ituah Ighadalo",
                 role: "Director",
               },
               {
-                imageUrl: director2,
-                name: "Ife Oyedele II",
-                role: "MD/Chief Executive Officer",
-              },
-              {
-                imageUrl: EbereNwosu,
-                name: "Ebere Nwosu",
+                imageUrl: YAKASAI,
+                name: "Pharm, Ahmed I Yakasai",
                 role: "Director",
               },
               {
-                imageUrl: AhmedYakasai,
-                name: "Pharm, Ahmed I Yakasai",
+                imageUrl: Shailesh,
+                name: "Shailesh Kumar",
+                role: "Director",
+              },
+              {
+                imageUrl: EbereNwosu,
+                name: "Dr. Mrs. Uche Ejiofor",
+                role: "Director",
+              },
+              {
+                imageUrl: Chukwuka,
+                name: "Chukwuka Ebuka",
+                role: "Director",
+              },
+              {
+                imageUrl: chukwudalu,
+                name: "Chukwudalu Nwosu",
+                role: "Director",
+              },
+              {
+                imageUrl: Amaka,
+                name: "Barr. Amaka Lilea Nwosisi",
                 role: "Director",
               },
             ].map(({ imageUrl, name, role }, index) => (

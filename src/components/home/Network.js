@@ -8,7 +8,7 @@ export default function Network() {
   return (
     <div className="px-16 max-lg:px-12 max-md:px-8 pt-16">
       <div className="flex max-lg:flex-col-reverse">
-        <div className="w-3/5 max-lg:w-full p-24 max-lg:p-16 max-md:p-8 bg-catalineBlue text-white">
+        <div className="w-1/2 max-lg:w-full p-24 max-lg:p-16 max-md:p-8 bg-catalineBlue text-white">
           <p className="text-[50px] max-lg:text-[35px] max-md:text-[20px] font-bold text-white mb-6">
             Our wide Hospital <br /> Network.
           </p>
@@ -36,11 +36,11 @@ export default function Network() {
             </Link>
           </Button>
         </div>
-        <div className="w-2/5 max-lg:w-full max-lg:h-[450px] bg-pigeonPost flex justify-center">
+        <div className="w-1/2 max-lg:w-full max-lg:h-[450px] bg-pigeonPost flex justify-center">
           <Image
             src={DoctorSmiling}
             alt="our wide hospital"
-            className="object-fill"
+            className="object-contain"
           />
         </div>
       </div>

@@ -64,35 +64,39 @@ export default function BottomSection() {
           </div>
         </div>
       </div>
-      <div className="px-24 max-lg:px-16 max-md:px-12 mt-32 max-md:mt-16">
-        <div className="relative flex max-[900px]:flex-col gap-8 rounded-3xl bg-[#5F81D5] h-[400px] w-[90%] max-[900px]:h-fit shadow-lg">
+      <div className="px-24 max-lg:px-16 max-md:px-12 mt-48 max-lg:mt-24">
+        <div className="relative flex max-[900px]:flex-col gap-8 rounded-3xl bg-[#5F81D5] h-[400px] w-full max-[900px]:h-fit shadow-lg">
           <div className="absolute h-[300px] max-[900px]:h-fit w-full rounded-3xl bg-[#7092E6] top-[50px] -right-[40px] -z-10 shadow-lg"></div>
-          <div className="absolute h-[220px] max-[900px]:h-fit w-full rounded-3xl bg-[#92B4FF] top-[80px] -right-[80px] -z-30"></div>
-          <div className="relative right-8 -top-8 max-md:-top-4 max-md:left-4 w-2/5 h-fit max-[900px]:w-full py-8 text-white rounded-3xl bg-catalineBlue p-8">
-            <p className="text-[46px] max-lg:text-[32px] max-md:text-[24px] font-bold mb-4">
-              Your Health is our Priority
-            </p>
-            <p className="text-[24px] max-md:text-[14px] mb-6">
-              Sign up for our Health Newsletter to get health tips & Benefits,
-              Directly in your Inbox
-            </p>
-            <div>
-              <form>
-                <div className="relative w-full">
-                  <input
-                    type="text"
-                    name="email"
-                    placeholder="Email address"
-                    className="w-full rounded-lg text-[14px] h-[60px] focus:outline-none text-black placeholder:text-xs placeholder:text-black pl-2 pr-12"
-                  />
-                  <div className="absolute right-4 bottom-3 bg-catalineBlue flex justify-center items-center rounded-lg p-2">
-                    <p className="text-[16px] max-md:text-[12px]">Subscribe</p>
+          <div className="w-1/2 max-[900px]:w-full">
+            <div className="relative bottom-4 -left-12 max-lg:-left-4 w-4/5 h-full max-[900px]:w-full py-8 text-white rounded-3xl bg-catalineBlue p-6">
+              <p className="text-[32px] max-md:text-[24px] font-bold my-4">
+                Your Health is our
+                <br /> Priority
+              </p>
+              <p className="text-[20px] max-md:text-[12px] mb-8">
+                Sign up for our Health Newsletter to get health tips & Benefits,
+                Directly in your Inbox
+              </p>
+              <div>
+                <form>
+                  <div className="relative w-full">
+                    <input
+                      type="text"
+                      name="email"
+                      placeholder="Email address"
+                      className="w-full rounded-lg text-[14px] h-[60px] focus:outline-none text-black placeholder:text-xs placeholder:text-black pl-2 pr-12"
+                    />
+                    <div className="absolute right-4 bottom-3 bg-catalineBlue flex justify-center items-center rounded-lg p-2">
+                      <p className="text-[16px] max-md:text-[12px]">
+                        Subscribe
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
-          <div className="max-[900px]:hidden w-3/5 max-[900px]:w-full relative">
+          <div className="max-[900px]:hidden w-1/2 max-[900px]:w-full relative">
             <Image
               src={Healthpriority}
               alt="Clearline app"
