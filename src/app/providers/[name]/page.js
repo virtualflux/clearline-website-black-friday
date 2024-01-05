@@ -8,6 +8,14 @@ import {
 import RelatedHealthCare from "@/components/providers/Related";
 import { Rating } from "@mui/material";
 
+export async function generateMetadata({ params }) {
+  const name = params.name;
+
+  return {
+    title: `${name} hospital - Clearline HMO`,
+  };
+}
+
 export default function Page() {
   return (
     <PageLayout>

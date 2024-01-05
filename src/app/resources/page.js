@@ -2,6 +2,13 @@ import Link from "next/link";
 import Button from "@/shared/Button";
 import PageLayout from "@/layout";
 
+export const metadata = {
+  title: "Our Resources - Clearline HMO",
+  alternates: {
+    canonical: "/resources",
+  },
+};
+
 const Resources = () => {
   const resourcesData = [
     {

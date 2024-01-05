@@ -64,7 +64,7 @@ const RelatedCard = () => {
           />
         </div>
         <div>
-          <Link href={"/providers/Jama Medical Center"}>
+          <Link href={"/providers/Jama-Medical-Center"}>
             <Button
               type={"button"}
               className={"!w-full !rounded-lg px-4 !text-white bg-catalineBlue"}

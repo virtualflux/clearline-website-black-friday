@@ -12,6 +12,13 @@ import {
 } from "../../../public/assets/images";
 import Image from "next/image";
 
+export const metadata = {
+  title: "About us - Clearline HMO",
+  alternates: {
+    canonical: "/about/",
+  },
+};
+
 export default function About() {
   const clients = [rjolad, lagoon, lifeline, evercare, isalu];
   return (

@@ -116,6 +116,7 @@ export default function Banner() {
                   src={img}
                   alt="Health Unleashed"
                   className="w-full h-full max-lg:h-[400px] object-cover"
+                  priority={true}
                 />
               </div>
             ))}

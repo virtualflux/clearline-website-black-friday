@@ -2,6 +2,14 @@ import Image from "next/image";
 import { ResourcesImage } from "../../../../public/assets/images";
 import PageLayout from "@/layout";
 
+export async function generateMetadata({ params }) {
+  const title = params.title;
+
+  return {
+    title: `${title} article - Clearline HMO`,
+  };
+}
+
 export default function Page() {
   return (
     <PageLayout>

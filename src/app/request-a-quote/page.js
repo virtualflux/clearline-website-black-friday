@@ -3,6 +3,13 @@ import QuoteForm from "@/components/requestAQuote/QuoteForm";
 import Footer from "@/layout/Footer";
 import Navbar from "@/layout/Navbar";
 
+export const metadata = {
+  title: "Request a Quote - Clearline HMO",
+  alternates: {
+    canonical: "/request-a-quote/",
+  },
+};
+
 const RequestAQuote = () => {
   return (
     <div>

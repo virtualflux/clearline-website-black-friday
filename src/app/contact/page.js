@@ -2,6 +2,13 @@ import Footer from "@/layout/Footer";
 import Navbar from "@/layout/Navbar";
 import Button from "@/shared/Button";
 
+export const metadata = {
+  title: "Contact - Clearline HMO",
+  alternates: {
+    canonical: "/contact/",
+  },
+};
+
 export default function Contact() {
   return (
     <div>

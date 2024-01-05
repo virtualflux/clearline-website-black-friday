@@ -19,6 +19,7 @@ const AboutBanner = () => {
           src={AboutBannerImage}
           alt="about image"
           className="h-full w-full object-cover"
+          priority={true}
         />
         <div className="rounded-md absolute top-[200px] max-md:top-[110px] w-4/5 px-24 py-12 max-lg:px-12 max-lg:py-6 max-md:px-6 max-md:py-3  bg-catalineBlue text-white">
           <p className="text-[40px] max-lg:text-[30px] max-md:text-[24px] mb-4 font-medium">
