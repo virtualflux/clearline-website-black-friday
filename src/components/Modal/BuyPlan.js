@@ -9,10 +9,10 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
           <p className="w-fit text-catalineBlue text-[20px] max-md:text-[12px] font-medium mb-3 border border-catalineBlue rounded-[30px] p-2">
             BUY PLAN
           </p>
-          <p className="font-bold text-[48px] max-lg:text-[32px] max-md:text-[24px] text-center mb-2">
+          <p className="font-bold text-[32px] max-md:text-[24px] text-center mb-2">
             Fill in the form
           </p>
-          <p className="text-boulder text-[32px] max-lg:text-[24px] max-md:text-[16px] text-center">
+          <p className="text-boulder text-[24px] max-md:text-[16px] text-center">
             Make sure you input the correct information in these sections
           </p>
           <div className="my-4">

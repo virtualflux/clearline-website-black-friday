@@ -4,6 +4,7 @@ import { Button } from "@mui/base";
 import PackageTable from "../components/PackageTable";
 import { useState } from "react";
 import BuyPlanModal from "@/components/Modal/BuyPlan";
+import Link from "next/link";
 
 const Individual = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,14 +46,16 @@ const Individual = () => {
         <PackageTable />
       </div>
       <div className="flex gap-4 max-sm:flex-col mb-12">
-        <Button
-          type={"button"}
-          className={
-            "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
-          }
-        >
-          View full plan
-        </Button>
+        <Link href="/public/plan.pdf" target="_blank">
+          <Button
+            type={"button"}
+            className={
+              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
+            }
+          >
+            View full plan
+          </Button>
+        </Link>
         <Button
           onClick={() => setIsOpen(true)}
           type={"button"}

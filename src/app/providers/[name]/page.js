@@ -106,7 +106,7 @@ export default function Page() {
                 name="mailAddress"
                 className="w-full rounded-lg text-[14px] h-[60px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 bg-[#F6F7FF] border border-[#BACCDF]"
                 disabled
-                value="thispeople@gmail.com"
+                value="+23480548294029"
               />
             </div>
           </div>

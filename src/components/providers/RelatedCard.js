@@ -7,6 +7,7 @@ import {
 import Button from "@/shared/Button";
 import Link from "next/link";
 import { Star } from "../../../public/assets/svgs";
+import { Rating } from "@mui/material";
 
 const RelatedCard = () => {
   return (
@@ -37,7 +38,7 @@ const RelatedCard = () => {
             copy address
           </p>
         </div>
-        <div className="flex mb-6 mt-2">
+        <div className="flex items-center mb-6 mt-2">
           <div className="flex gap-1">
             <Image src={Ellipse} alt="ellipse" />
             <div className="flex gap-1">
@@ -51,11 +52,16 @@ const RelatedCard = () => {
               ))}
             </div>
           </div>
-          <div className="flex gap-1">
-            {Array.from({ length: 5 }).map((item, idx) => (
-              <Image src={Star} alt="rating" key={idx} />
-            ))}
-          </div>
+          <Rating
+            name="simple-controlled"
+            size="small"
+            readOnly
+            value={5}
+            // value={value}
+            // onChange={(event, newValue) => {
+            //   setValue(newValue);
+            // }}
+          />
         </div>
         <div>
           <Link href={"/providers/Jama Medical Center"}>

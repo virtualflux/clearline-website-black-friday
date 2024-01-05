@@ -10,7 +10,7 @@ const CLearlineModal = ({ isOpen, onClose, children, className }) => {
         initial={{ opacity: 0, y: 200 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="overflow-y-auto outline-0 w-3/4 mt-[15%] lg:mt-[5%] mx-auto p-4 md:p-6 px-4 lg:px-7 border-0 rounded-lg shadow-lg flex flex-col bg-white outline-none focus:outline-0"
+        className="overflow-y-auto outline-0 w-[90%] mt-[15%] lg:mt-[5%] mx-auto p-4 md:p-6 px-4 lg:px-7 border-0 rounded-lg shadow-lg flex flex-col bg-white outline-none focus:outline-0"
       >
         <div className="flex justify-end">
           <Image
@@ -20,7 +20,7 @@ const CLearlineModal = ({ isOpen, onClose, children, className }) => {
             onClick={onClose}
           />
         </div>
-        <div className={`overflow-y-auto max-h-[500px] ${className}`}>
+        <div className={`overflow-y-auto max-h-[600px] ${className}`}>
           {children}
         </div>
       </motion.div>

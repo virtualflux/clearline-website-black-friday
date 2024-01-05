@@ -1,4 +1,5 @@
 import Button from "@/shared/Button";
+import { countryList } from "@/utils/data";
 
 const QuoteForm = () => {
   return (
@@ -11,7 +12,7 @@ const QuoteForm = () => {
               type="text"
               name="companyName"
               placeholder="Company Name"
-              className="w-full text-[18px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border border-pigeonPost"
+              className="w-full text-[14px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border border-pigeonPost"
             />
           </div>
           <div className="w-1/2 max-sm:w-full">
@@ -20,19 +21,28 @@ const QuoteForm = () => {
               type="email"
               name="email"
               placeholder="Company Email"
-              className="w-full text-[18px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border border-pigeonPost"
+              className="w-full text-[14px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border border-pigeonPost"
             />
           </div>
         </div>
+
         <div className="flex max-sm:flex-col gap-4 mb-12 max-sm:mb-4">
           <div className="w-1/2 max-sm:w-full">
             <p className="text-[14px] font-bold mb-2">Country</p>
-            <input
-              type="text"
-              name="country"
-              placeholder="hmm"
-              className="w-full text-[18px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border border-pigeonPost"
-            />
+            <select className="w-full text-[14px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border border-pigeonPost">
+              <option className="font-semibold text-catalineBlue" value={""}>
+                -Select country-
+              </option>
+              {countryList.map((item, idx) => (
+                <option
+                  key={idx}
+                  className="font-semibold text-catalineBlue"
+                  value={item.name}
+                >
+                  {item.name}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="w-1/2 max-sm:w-full">
             <p className="text-[14px] font-bold mb-2">Phone Number</p>
@@ -40,7 +50,7 @@ const QuoteForm = () => {
               type="text"
               name="mobile"
               placeholder="Phone number"
-              className="w-full text-[18px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border border-pigeonPost"
+              className="w-full text-[14px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border border-pigeonPost"
             />
           </div>
         </div>
@@ -50,7 +60,7 @@ const QuoteForm = () => {
             type="number"
             name="budget"
             placeholder="Budget"
-            className="w-full text-[18px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border border-pigeonPost"
+            className="w-full text-[14px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border border-pigeonPost"
           />
         </div>
         <div className="mb-12">
@@ -60,7 +70,7 @@ const QuoteForm = () => {
             type="text"
             name="message"
             placeholder="Leave us a message..."
-            className="w-full text-[18px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] p-2 rounded-md border border-pigeonPost"
+            className="w-full text-[14px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] p-2 rounded-md border border-pigeonPost"
           />
         </div>
         <div className="flex justify-center">
