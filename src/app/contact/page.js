@@ -1,19 +1,16 @@
 "use client";
-
-import Footer from "@/layout/Footer";
-import Navbar from "@/layout/Navbar";
 import Button from "@/shared/Button";
 import useIsVisible from "@/hooks/useIsVisible";
 import { useRef } from "react";
 import "animate.css";
+import PageLayout from "@/layout";
 
 export default function Contact() {
   const elemRef = useRef();
   const isVisible = useIsVisible(elemRef);
 
   return (
-    <div>
-      <Navbar />
+    <PageLayout>
       <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 flex flex-col items-center">
         <div className="w-3/5 max-md:w-full">
           <div
@@ -87,7 +84,6 @@ export default function Contact() {
           </form>
         </div>
       </div>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }

@@ -12,7 +12,7 @@ const AboutBottom = () => {
   return (
     <div className="px-16 max-lg:px-12 max-md:px-8 pt-12 max-md:mt-8">
       <BuyPlanModal isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />
-      <div className="relative text-white rounded-lg h-[424px] max-md:h-[270px] flex justify-center items-center">
+      <div className="relative text-white rounded-lg h-[424px] max-md:h-[270px] max-[330px]:h-[300px] flex justify-center items-center">
         <Image
           src={AboutBottomBg}
           alt="Get started on your path"

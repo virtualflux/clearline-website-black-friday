@@ -11,16 +11,18 @@ const Sidebar = ({ sidebarOpen, handleSidebar }) => {
     <div className="fixed top-[45px] right-0 z-50 bg-white w-1/2 p-3 shadow-lg rounded-md">
       <div className="fixed inset-0 -z-10" onClick={handleSidebar}></div>
       <div className="flex flex-col gap-4">
-        {navLinks.map((link, idx) => (
-          <Link
-            key={idx}
-            href={link.path}
-            className={`transition-all delay-300 duration-300 ease-in hover:text-redDevil`}
-          >
-            <p className="text-[16px]">{link.title}</p>
-            {pathname === link.path && <div className="activeLink"></div>}
-          </Link>
-        ))}
+        {[...navLinks, { title: "Contact us", path: "/contact" }].map(
+          (link, idx) => (
+            <Link
+              key={idx}
+              href={link.path}
+              className={`transition-all delay-300 duration-300 ease-in hover:text-redDevil`}
+            >
+              <p className="text-[16px]">{link.title}</p>
+              {pathname === link.path && <div className="activeLink"></div>}
+            </Link>
+          )
+        )}
       </div>
     </div>
   );
