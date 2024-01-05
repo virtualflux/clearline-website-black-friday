@@ -1,15 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import {
   DummyHospital,
   Ellipse,
   LocationPointer,
 } from "../../../public/assets/images";
-import Button from "@/shared/Button";
-import Link from "next/link";
-import { Star } from "../../../public/assets/svgs";
 import { Rating } from "@mui/material";
+import { useState } from "react";
 
 const RelatedCard = () => {
+  const [copyText, setCopyText] = useState("Copy to clipboard");
+
   return (
     <div className="w-[400px] max-md:w-[280px] flex-shrink-0 rounded-lg border border-pigeonPost">
       <div className="h-[186px] w-full">
@@ -29,14 +31,22 @@ const RelatedCard = () => {
               <div className="w-[14px] h-[14px] rounded-full flex justify-center items-center bg-[#E7EEFF]">
                 <Image src={LocationPointer} alt="location" />
               </div>
-              <p className="text-[12px] max-md:text-[10px]">
-                101 Newton Road Ikeja, Lagos
-              </p>
+              <p className="text-[12px] max-md:text-[10px]">Nigeria</p>
             </div>
           </div>
-          <p className="cursor-pointer text-[12px] max-md:text-[10px] text-catalineBlue underline">
-            copy address
-          </p>
+          <div className="tooltip">
+            <p className="tooltiptext">{copyText}</p>
+            <p
+              onClick={() => {
+                navigator.clipboard.writeText("Nigeria");
+                setCopyText("Copied: Nigeria");
+              }}
+              onMouseOut={() => setCopyText("Copy to clipboard")}
+              className="cursor-pointer text-[12px] max-md:text-[10px] text-catalineBlue underline"
+            >
+              copy address
+            </p>
+          </div>
         </div>
         <div className="flex items-center mb-6 mt-2">
           <div className="flex gap-1">
@@ -63,7 +73,7 @@ const RelatedCard = () => {
             // }}
           />
         </div>
-        <div>
+        {/* <div>
           <Link href={"/providers/Jama-Medical-Center"}>
             <Button
               type={"button"}
@@ -72,7 +82,7 @@ const RelatedCard = () => {
               <p className="text-[14px] max-md:text-[12px]">Full details</p>
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

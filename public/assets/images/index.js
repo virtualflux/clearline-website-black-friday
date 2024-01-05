@@ -48,6 +48,7 @@ import chukwudalu from "./chukwudalu-nwosu.jpg";
 import Ituah from "./Pastor-Ituah-Ighodalo.jpg";
 import YAKASAI from "./PHARM.-AHMED-I.-YAKASAI.png";
 import Shailesh from "./Shailesh-Kumar.jpg";
+import ClearlineWhiteLogo from "./clearline-white-logo.png";
 
 export {
   ClearlineLogo,
@@ -100,4 +101,5 @@ export {
   Ituah,
   YAKASAI,
   Shailesh,
+  ClearlineWhiteLogo,
 };

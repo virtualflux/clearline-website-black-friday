@@ -36,7 +36,7 @@ export default function Network() {
             </Link>
           </Button>
         </div>
-        <div className="w-1/2 max-lg:w-full max-lg:h-[450px] bg-pigeonPost flex justify-center">
+        <div className="w-1/2 max-lg:w-full max-lg:h-[450px] bg-pigeonPost flex justify-center items-end">
           <Image
             src={DoctorSmiling}
             alt="our wide hospital"
