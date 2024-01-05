@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { MissionImage } from "../../../public/assets/images";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 const MissionVision = () => {
   return (
@@ -28,25 +32,51 @@ const MissionVision = () => {
         </p>
         <div className="flex justify-between gap-8 max-md:gap-4">
           <div className="w-1/3">
-            <p className="text-catalineBlue font-bold text-[24px] max-md:text-[14px]">
-              30 Yrs of experience
-            </p>
+            <CountUp end={30} suffix=" years of experience" redraw={true}>
+              {({ countUpRef, start }) => (
+                <VisibilitySensor onChange={start} delayedCall>
+                  <span
+                    className="text-catalineBlue font-bold text-[24px] max-md:text-[14px]"
+                    ref={countUpRef}
+                  />
+                </VisibilitySensor>
+              )}
+            </CountUp>
             <p className="text-boulder text-[16px] max-md:text-[12px]">
               Almost 3 decades of offering quality and affordable health plans
             </p>
           </div>
           <div className="w-1/3">
-            <p className="text-catalineBlue font-bold text-[24px] max-md:text-[14px]">
-              1,400+ Health providers
-            </p>
+            <CountUp end={1400} suffix="+ Health providers" redraw={true}>
+              {({ countUpRef, start }) => (
+                <VisibilitySensor onChange={start} delayedCall>
+                  <span
+                    className="text-catalineBlue font-bold text-[24px] max-md:text-[14px]"
+                    ref={countUpRef}
+                  />
+                </VisibilitySensor>
+              )}
+            </CountUp>
             <p className="text-boulder text-[16px] max-md:text-[12px]">
               Get access to quality healthcare from any provider of choice
             </p>
           </div>
           <div className="w-1/3">
-            <p className="text-catalineBlue font-bold text-[24px] max-md:text-[14px]">
-              1 Billion Naira Capital Base
-            </p>
+            <CountUp
+              end={1}
+              suffix=" Billion Naira Capital Base"
+              delay={2}
+              redraw={true}
+            >
+              {({ countUpRef, start }) => (
+                <VisibilitySensor onChange={start} delayedCall>
+                  <span
+                    className="text-catalineBlue font-bold text-[24px] max-md:text-[14px]"
+                    ref={countUpRef}
+                  />
+                </VisibilitySensor>
+              )}
+            </CountUp>
             <p className="text-boulder text-[16px] max-md:text-[12px]">
               as against the capital requirement of 400 Million Naira
             </p>

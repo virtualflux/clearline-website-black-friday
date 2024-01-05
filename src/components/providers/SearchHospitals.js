@@ -4,8 +4,14 @@ import Image from "next/image";
 import { SearchIcon } from "../../../public/assets/svgs";
 import Button from "@/shared/Button";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import useIsVisible from "@/hooks/useIsVisible";
+import { useRef } from "react";
+import "animate.css";
 
 const SearchHospitals = () => {
+  const elemRef = useRef();
+  const isVisible = useIsVisible(elemRef);
+
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
@@ -18,7 +24,12 @@ const SearchHospitals = () => {
 
   return (
     <div className="mb-8">
-      <form className="px-16 max-[970px]:px-0">
+      <form
+        ref={elemRef}
+        className={`${
+          isVisible && "animate__animated animate__fadeInRight"
+        } px-16 max-[970px]:px-0`}
+      >
         <div className="w-full max-[970px]:mb-10 relative -top-[60px] max-[970px]:top-0 bg-white rounded-lg shadow-lg flex max-[970px]:flex-col max-[970px]:items-start items-end gap-3 p-8">
           <div className="w-1/5 max-[970px]:w-full">
             <p className="text-[14px] font-bold mb-2">Search</p>
@@ -90,7 +101,12 @@ const SearchHospitals = () => {
           </div>
         </div>
       </form>
-      <div className="px-16 max-lg:px-12 max-md:px-8">
+      <div
+        ref={elemRef}
+        className={`${
+          isVisible && "animate__animated animate__fadeInLeft"
+        } px-16 max-lg:px-12 max-md:px-8`}
+      >
         <p className="text-[32px] max-md:text-[24px] font-bold">
           Hospitals near you
         </p>

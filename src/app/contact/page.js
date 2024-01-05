@@ -1,21 +1,27 @@
+"use client";
+
 import Footer from "@/layout/Footer";
 import Navbar from "@/layout/Navbar";
 import Button from "@/shared/Button";
-
-export const metadata = {
-  title: "Contact - Clearline HMO",
-  alternates: {
-    canonical: "/contact/",
-  },
-};
+import useIsVisible from "@/hooks/useIsVisible";
+import { useRef } from "react";
+import "animate.css";
 
 export default function Contact() {
+  const elemRef = useRef();
+  const isVisible = useIsVisible(elemRef);
+
   return (
     <div>
       <Navbar />
       <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 flex flex-col items-center">
         <div className="w-3/5 max-md:w-full">
-          <div className="flex flex-col items-center">
+          <div
+            ref={elemRef}
+            className={`${
+              isVisible && "animate__animated animate__zoomIn"
+            } flex flex-col items-center`}
+          >
             <p className="text-catalineBlue text-[20px] max-md:text-[12px] font-medium mb-3 border border-catalineBlue rounded-[30px] p-2">
               CONTACT US
             </p>

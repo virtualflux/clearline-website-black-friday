@@ -21,7 +21,7 @@ export default function Network() {
             ensure that our enrollees have access to quality medical care
             wherever they might be.
           </p>
-          <CountUp end={1400} start={0} suffix="+" redraw={true}>
+          <CountUp end={1400} suffix="+" redraw={true}>
             {({ countUpRef, start }) => (
               <VisibilitySensor onChange={start} delayedCall>
                 <span
@@ -51,7 +51,7 @@ export default function Network() {
           <Image
             src={DoctorSmiling}
             alt="our wide hospital"
-            className="object-contain"
+            className="object-contain h-full"
           />
         </div>
       </div>

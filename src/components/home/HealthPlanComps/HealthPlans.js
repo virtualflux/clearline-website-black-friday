@@ -1,11 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { healthData } from "@/utils/data";
 import Sample from "./Sample";
+import "animate.css";
+import useIsVisible from "@/hooks/useIsVisible";
 
 export default function HealthPlans() {
   const [activeTab, setActiveTab] = useState(0);
+  const elemRef = useRef();
+  const isVisible = useIsVisible(elemRef);
 
   const healthTabs = healthData.map((health) => ({
     title: health.title,
@@ -13,7 +17,12 @@ export default function HealthPlans() {
   }));
 
   return (
-    <div className="px-16 max-lg:px-12 max-md:px-8">
+    <div
+      ref={elemRef}
+      className={`${
+        isVisible && "animate__animated animate__zoomIn"
+      } px-16 max-lg:px-12 max-md:px-8`}
+    >
       <div className="flex flex-col items-center pt-32 max-md:pt-12 mb-16">
         <p className="text-catalineBlue text-[32px] max-md:text-[20px]">
           Our Health Plans

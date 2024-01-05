@@ -11,6 +11,7 @@ import { ArrowRight } from "../../../public/assets/svgs";
 import { useEffect, useMemo, useRef, useState } from "react";
 import BuyPlanModal from "../Modal/BuyPlan";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+import "animate.css";
 
 export default function Banner() {
   const bannerData = useMemo(
@@ -74,7 +75,7 @@ export default function Banner() {
     <div className="flex gap-8 justify-between max-lg:flex-col max-md:gap-6 px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24">
       <BuyPlanModal isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />
       <div className="w-1/2 max-lg:w-full flex flex-col gap-4">
-        <p className="w-fit text-[16px] text-green border border-green bg-sugarCane px-[40px] max-lg:px-[30px] py-3 rounded-lg">
+        <p className="animate__animated animate__jackInTheBox w-fit text-[16px] text-green border border-green bg-sugarCane px-[40px] max-lg:px-[30px] py-3 rounded-lg">
           Health insurance
         </p>
         <p className="text-ebonyClay font-extrabold text-[50px] max-[1200px]:text-[40px] max-lg:text-[32px]">
