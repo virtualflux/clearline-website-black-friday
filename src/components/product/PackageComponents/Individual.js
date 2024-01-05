@@ -46,7 +46,7 @@ const Individual = () => {
         <PackageTable />
       </div>
       <div className="flex gap-4 max-sm:flex-col mb-12">
-        <Link href="/public/plan.pdf" target="_blank">
+        <Link href="/plan.pdf" target="_blank">
           <Button
             type={"button"}
             className={

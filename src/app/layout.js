@@ -27,8 +27,18 @@ const Satoshi = localFont({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://clearline.netlify.app"),
   title: "Clearline HMO",
   description: "Health Empowered, Tomorrow Secured.",
+  openGraph: {
+    title: "Clearline HMO",
+    description: "Health Empowered, Tomorrow Secured",
+    images: "/assets/images/ClearlineLogo.png",
+    url: "https://clearline.netlify.app",
+    siteName: "ClearlineHMO",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
