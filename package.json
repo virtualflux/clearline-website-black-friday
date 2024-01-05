@@ -18,7 +18,9 @@
     "next": "14.0.3",
     "react": "^18",
     "react-burger-menu": "^3.0.9",
+    "react-countup": "^6.5.0",
     "react-dom": "^18",
+    "react-visibility-sensor": "^5.1.1",
     "recompose": "^0.30.0"
   },
   "devDependencies": {

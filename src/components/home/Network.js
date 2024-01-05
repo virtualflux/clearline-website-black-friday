@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import { DoctorSmiling } from "../../../public/assets/images";
 import Button from "@/shared/Button";
 import { BlueArrowRight } from "../../../public/assets/svgs";
 import Link from "next/link";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 export default function Network() {
   return (
@@ -17,9 +21,16 @@ export default function Network() {
             ensure that our enrollees have access to quality medical care
             wherever they might be.
           </p>
-          <p className="text-[50px] max-lg:text-[40px] max-md:text-[30px] font-bold">
-            1400+
-          </p>
+          <CountUp end={1400} start={0} suffix="+" redraw={true}>
+            {({ countUpRef, start }) => (
+              <VisibilitySensor onChange={start} delayedCall>
+                <span
+                  className="text-[50px] max-lg:text-[40px] max-md:text-[30px] font-bold"
+                  ref={countUpRef}
+                />
+              </VisibilitySensor>
+            )}
+          </CountUp>
           <p className="text-[24px] max-md:text-[16px] mb-16">
             Partner Hospitals
           </p>

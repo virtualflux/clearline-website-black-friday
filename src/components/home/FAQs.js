@@ -20,17 +20,17 @@ export default function FAQ() {
     {
       question: "How do I enroll in Clearline HMO health insurance?",
       answer:
-        "Clearline HMO is a health maintenance organization that provides comprehensive health insurance plans. We offer a range of coverage options to ensure you have access to quality healthcare services.",
+        "You can enroll to Clearline HMO health insurance by choosing your plan and filling the form. We will get back to you within 24hrs after submission.",
     },
     {
       question: "What services are covered by Clearline HMO?",
       answer:
-        "Clearline HMO is a health maintenance organization that provides comprehensive health insurance plans. We offer a range of coverage options to ensure you have access to quality healthcare services.",
+        "We offer a range of coverage options to ensure you have access to quality healthcare services for Individuals, corporate and students. Kindly take a look at our plan and select the best option for you.",
     },
     {
-      question: "What services are covered by Clearline HMO?",
+      question: "Can I book my insurance physically?",
       answer:
-        "Clearline HMO is a health maintenance organization that provides comprehensive health insurance plans. We offer a range of coverage options to ensure you have access to quality healthcare services.",
+        "Sure! CelarlineHMO has its physical office located at 290 Ikorodu Road, Anthony. Lagos.",
     },
   ];
 
