@@ -100,17 +100,32 @@ export default function Banner() {
           </Button>
         </div>
       </div>
+
       <div className="w-1/2 relative max-lg:w-full">
-        <Image
-          src={bannerData[currentData].img}
-          alt="Health Unleashed"
-          className="w-full h-full max-lg:h-[400px] object-cover"
-        />
-        <TawkMessengerReact
-          propertyId={process.env.NEXT_PUBLIC_TAWK_PROPERTYID}
-          widgetId={process.env.NEXT_PUBLIC_TAWK_WIDGETID}
-        />
+        <div className="overflow-hidden max-w-full mt-0 mx-auto">
+          <div
+            className="whitespace-nowrap"
+            style={{
+              transform: `translate3d(${-currentData * 100}%, 0, 0)`,
+              transition: "ease-in-out 1000ms",
+            }}
+          >
+            {bannerData.map(({ img }, idx) => (
+              <div key={idx} className="inline-block w-full whitespace-normal">
+                <Image
+                  src={img}
+                  alt="Health Unleashed"
+                  className="w-full h-full max-lg:h-[400px] object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+      <TawkMessengerReact
+        propertyId={process.env.NEXT_PUBLIC_TAWK_PROPERTYID}
+        widgetId={process.env.NEXT_PUBLIC_TAWK_WIDGETID}
+      />
     </div>
   );
 }

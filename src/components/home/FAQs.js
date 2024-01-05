@@ -13,24 +13,24 @@ export default function FAQ() {
 
   const FAQs = [
     {
-      question: "What is Clear Line HMO?",
+      question: "What is Clearline HMO?",
       answer:
-        "Clear Line HMO is a health maintenance organization that provides comprehensive health insurance plans. We offer a range of coverage options to ensure you have access to quality healthcare services.",
+        "Clearline HMO is a health maintenance organization that provides comprehensive health insurance plans. We offer a range of coverage options to ensure you have access to quality healthcare services.",
     },
     {
-      question: "How do I enroll in Clear Line HMO health insurance?",
+      question: "How do I enroll in Clearline HMO health insurance?",
       answer:
-        "Clear Line HMO is a health maintenance organization that provides comprehensive health insurance plans. We offer a range of coverage options to ensure you have access to quality healthcare services.",
+        "Clearline HMO is a health maintenance organization that provides comprehensive health insurance plans. We offer a range of coverage options to ensure you have access to quality healthcare services.",
     },
     {
-      question: "What services are covered by Clear Line HMO?",
+      question: "What services are covered by Clearline HMO?",
       answer:
-        "Clear Line HMO is a health maintenance organization that provides comprehensive health insurance plans. We offer a range of coverage options to ensure you have access to quality healthcare services.",
+        "Clearline HMO is a health maintenance organization that provides comprehensive health insurance plans. We offer a range of coverage options to ensure you have access to quality healthcare services.",
     },
     {
-      question: "What services are covered by Clear Line HMO?",
+      question: "What services are covered by Clearline HMO?",
       answer:
-        "Clear Line HMO is a health maintenance organization that provides comprehensive health insurance plans. We offer a range of coverage options to ensure you have access to quality healthcare services.",
+        "Clearline HMO is a health maintenance organization that provides comprehensive health insurance plans. We offer a range of coverage options to ensure you have access to quality healthcare services.",
     },
   ];
 
@@ -58,11 +58,13 @@ export default function FAQ() {
           >
             <div className="flex justify-between">
               <div className="max-w-[90%]">
-                <p className="text-[24px] max-md:text-[14px]">
+                <p className="text-[20px] max-md:text-[12px]">
                   {item.question}
                 </p>
                 {index === activeIndex && (
-                  <p className="pt-4 text-[#DADADA]">{item.answer}</p>
+                  <p className="pt-4 text-[#DADADA] text-[16px] max-md:text-[10px]">
+                    {item.answer}
+                  </p>
                 )}
               </div>
               <div>
