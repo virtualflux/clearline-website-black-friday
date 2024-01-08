@@ -11,9 +11,7 @@ const Family = () => {
   return (
     <div className="flex flex-col items-center">
       <BuyPlanModal isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />
-      <p className="text-[40px] max-md:text-[24px] font-medium">
-        Family package
-      </p>
+      <p className="text-[40px] max-md:text-[24px] font-medium">Family plan</p>
       <p className="text-boulder text-[32px] max-md:text-[16px] text-center font-light mb-6">
         ClearLine HMO understands the importance of family health, and our plans
         reflect this commitment. With access to an extensive network of

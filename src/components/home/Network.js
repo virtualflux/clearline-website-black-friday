@@ -21,7 +21,7 @@ export default function Network() {
             ensure that our enrollees have access to quality medical care
             wherever they might be.
           </p>
-          <CountUp end={1400} suffix="+" redraw={true}>
+          <CountUp end={1800} suffix="+" redraw={true}>
             {({ countUpRef, start }) => (
               <VisibilitySensor onChange={start} delayedCall>
                 <span

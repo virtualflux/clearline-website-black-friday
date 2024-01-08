@@ -5,7 +5,7 @@ const Business = () => {
   return (
     <div className="flex flex-col items-center">
       <p className="text-[40px] max-md:text-[24px] font-medium">
-        Coporate/Business Package
+        Corporate/Business plan
       </p>
       <p className="text-boulder text-[32px] max-md:text-[16px] text-center font-light mb-6">
         Our tailored solutions are designed to elevate not just the health but

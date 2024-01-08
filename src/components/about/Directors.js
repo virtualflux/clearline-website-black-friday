@@ -7,7 +7,6 @@ import {
   Shailesh,
   YAKASAI,
   chukwudalu,
-  director1,
   director2,
 } from "../../../public/assets/images";
 import DirectorCard from "./DirectorCard";
@@ -15,7 +14,7 @@ import DirectorCard from "./DirectorCard";
 const Directors = () => {
   return (
     <div className="px-16 max-lg:px-12 max-md:px-8 pt-12">
-      <div className="mb-16 max-md:mb-8">
+      <div className="mb-12 max-md:mb-6">
         <p className="text-boulder text-[36px] max-md:text-[18px] font-medium">
           Board of Directors
         </p>
@@ -81,7 +80,7 @@ const Directors = () => {
           </div>
         </div>
       </div>
-      <div>
+      {/* <div>
         <p className="text-boulder text-[36px] max-md:text-[18px] font-medium">
           Management
         </p>
@@ -146,7 +145,7 @@ const Directors = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

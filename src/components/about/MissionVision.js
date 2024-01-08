@@ -47,7 +47,7 @@ const MissionVision = () => {
             </p>
           </div>
           <div className="w-1/3">
-            <CountUp end={1400} suffix="+ Health providers" redraw={true}>
+            <CountUp end={1800} suffix="+ Health providers" redraw={true}>
               {({ countUpRef, start }) => (
                 <VisibilitySensor onChange={start} delayedCall>
                   <span
