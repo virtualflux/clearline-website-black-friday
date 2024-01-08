@@ -11,44 +11,62 @@ export default function Footer() {
           <div className="mb-4 w-[200px] max-md:w-[120px]">
             <Image src={ClearlineWhiteLogo} alt="clearline" />
           </div>
-          <p className="text-[28px] max-md:text-[18px] font-bold mb-4">
+          <p className="text-[24px] max-md:text-[16px] font-bold mb-4">
             Quick Links
           </p>
-          <Link href={"/resources"} className="text-[20px] max-md:text-[13px]">
+          <Link
+            href={"/resources"}
+            className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
+          >
             Hospital Directory old
           </Link>
-          <Link href={"/about"} className="text-[20px] max-md:text-[13px]">
+          <Link
+            href={"/about"}
+            className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
+          >
             About us
           </Link>
-          <Link href={"/resources"} className="text-[20px] max-md:text-[13px]">
+          <Link
+            href={"/resources"}
+            className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
+          >
             Resources
           </Link>
         </div>
         <div className="w-1/5 max-lg:w-fit flex flex-col gap-5 mb-4">
-          <p className="text-[28px] max-md:text-[18px] font-bold mb-4">
+          <p className="text-[24px] max-md:text-[16px] font-bold mb-4">
             Our Health Plans
           </p>
           <Link
-            href={"/hosresourcespital"}
-            className="text-[20px] max-md:text-[13px]"
+            href={"/resources"}
+            className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
           >
             Corporate Health insurance Scheme
           </Link>
-          <Link href={"/about"} className="text-[20px] max-md:text-[13px]">
+          <Link
+            href={"/about"}
+            className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
+          >
             Individual Policy
           </Link>
-          <Link href={"/resources"} className="text-[20px] max-md:text-[13px]">
+          <Link
+            href={"/resources"}
+            className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
+          >
             Tertiary Institution Social Health
           </Link>
-          <Link href={"/resources"} className="text-[20px] max-md:text-[13px]">
+          <Link
+            href={"/resources"}
+            className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
+          >
             Insurance Program (TISHIP)
           </Link>
         </div>
         <div className="w-1/5 max-lg:w-fit flex flex-col gap-5 mb-4">
-          <p className="text-[28px] max-md:text-[18px] font-bold mb-4">
+          <p className="text-[24px] max-md:text-[16px] font-bold mb-4">
             Our Health Plans
           </p>
-          <p className="text-[20px] max-md:text-[12px]">
+          <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
             To receive update via our newsletter, kindly input your email
             address in the tab below:
           </p>
@@ -65,18 +83,20 @@ export default function Footer() {
           </div>
         </div>
         <div className="w-1/5 max-lg:w-fit flex flex-col gap-5">
-          <p className="text-[28px] max-md:text-[18px] font-bold">Contact us</p>
-          <p className="text-[20px] max-md:text-[13px]">Clearline House:</p>
+          <p className="text-[24px] max-md:text-[16px] font-bold">Contact us</p>
+          <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
+            Clearline House:
+          </p>
           <div>
-            <p className="text-[20px] max-md:text-[13px]">
+            <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
               290 Ikorodu Road, Anthony. Lagos.
             </p>
-            <p className="text-[20px] max-md:text-[13px]">
+            <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
               TEL: <span className="underline">0700245245245</span>,{" "}
               <span className="underline">01-252-2452</span> or{" "}
               <span className="underline">09087792965</span>
             </p>
-            <p className="text-[20px] max-md:text-[13px]">
+            <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
               Email: <span className="underline">hello@clearlinehmo.com</span>
             </p>
           </div>

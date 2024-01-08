@@ -64,7 +64,7 @@ export default function BottomSection() {
           </div>
         </div>
       </div>
-      <div className="px-24 max-lg:px-16 max-md:px-12 mt-48 max-lg:mt-24">
+      <div className="px-24 max-lg:px-16 max-md:px-12 mt-32 max-lg:mt-16">
         <div className="relative flex max-[900px]:flex-col gap-8 rounded-3xl bg-[#5F81D5] h-[400px] w-full max-[900px]:h-fit shadow-lg">
           <div className="absolute h-[300px] max-[900px]:h-fit w-full rounded-3xl bg-[#7092E6] top-[50px] -right-[40px] -z-10 shadow-lg"></div>
           <div className="w-1/2 max-[900px]:w-full">
@@ -73,7 +73,7 @@ export default function BottomSection() {
                 Your Health is our
                 <br /> Priority
               </p>
-              <p className="text-[20px] max-md:text-[12px] mb-8">
+              <p className="text-[20px] max-md:text-[12px] mb-8 text-[#dcdbdb]">
                 Sign up for our Health Newsletter to get health tips & Benefits,
                 Directly in your Inbox
               </p>
@@ -100,7 +100,8 @@ export default function BottomSection() {
             <Image
               src={Healthpriority}
               alt="Clearline app"
-              className="min-[900px]:absolute bottom-0 h-[500px] max-md:h-[350px] object-auto"
+              // className="min-[900px]:absolute bottom-0 h-[500px] max-md:h-[350px] object-auto"
+              className="h-full object-fill"
             />
           </div>
         </div>
