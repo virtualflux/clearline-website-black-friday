@@ -9,7 +9,7 @@ import {
 import { Rating } from "@mui/material";
 import { useState } from "react";
 
-const RelatedCard = () => {
+const RelatedCard = ({ item }) => {
   const [copyText, setCopyText] = useState("Copy to clipboard");
 
   return (
@@ -25,21 +25,27 @@ const RelatedCard = () => {
         <div className="flex gap-2 justify-between items-end mb-3">
           <div>
             <p className="text-[16px] max-md:text-[12px] font-semibold mb-2">
-              Jama Medical Center
+              {item?.providerName}
             </p>
             <div className="flex items-center gap-2">
               <div className="w-[14px] h-[14px] rounded-full flex justify-center items-center bg-[#E7EEFF]">
-                <Image src={LocationPointer} alt="location" />
+                <Image
+                  src={LocationPointer}
+                  alt="location"
+                  className="w-full h-full"
+                />
               </div>
-              <p className="text-[12px] max-md:text-[10px]">Nigeria</p>
+              <p className="capitalize text-[12px] max-md:text-[10px]">
+                {item?.address}
+              </p>
             </div>
           </div>
-          <div className="tooltip">
+          <div className="w-1/5 tooltip">
             <p className="tooltiptext">{copyText}</p>
             <p
               onClick={() => {
-                navigator.clipboard.writeText("Nigeria");
-                setCopyText("Copied: Nigeria");
+                navigator.clipboard.writeText(item?.address);
+                setCopyText(`Copied: ${item?.address}`);
               }}
               onMouseOut={() => setCopyText("Copy to clipboard")}
               className="cursor-pointer text-[12px] max-md:text-[10px] text-catalineBlue underline"

@@ -15,7 +15,6 @@ export default function Providers() {
     <PageLayout>
       <Banner />
       <SearchHospitals />
-      <RelatedHealthCare />
     </PageLayout>
   );
 }
