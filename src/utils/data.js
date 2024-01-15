@@ -1,3 +1,14 @@
+import {
+  ResAlcohol,
+  ResChildhood,
+  ResCovid,
+  ResHandWashing,
+  ResHepatitis,
+  ResImmune,
+  ResSuperFood,
+  ResWorkplace,
+} from "../../public/assets/images";
+
 export const navLinks = [
   {
     title: "Home",
@@ -1897,5 +1908,493 @@ export const countryList = [
     timezone: "South Africa Standard Time",
     utc: "UTC+02:00",
     mobileCode: "+263",
+  },
+];
+
+export const resourcesData = [
+  {
+    title: "Super Food",
+    slug: "super-food",
+    subtitle: "Why you should eat",
+    imageUrl: "bg-resSuperFood",
+    img: ResSuperFood,
+    article: {
+      imageUrl: "",
+      didYouKnow: {
+        title: "Did You know?",
+        list: [
+          "Moringa is packed with antioxidants, that promote cell repair and boost immunity.",
+          "Shoko leaves are high in fiber which aid digestion and help with weight management.",
+          "Coconut water makes a great drink full of electrolytes which help to rehydrate the body at cellular level",
+          "Studies have shown 2-3 servings of walnut a day can help to reduce cholesterol level and reduce the risk of heart disease.",
+        ],
+      },
+      articleQuestion: "Why you should eat them",
+      text1:
+        "Superfoods, nutrient-packed powerhouses like berries, kale, and quinoa, are culinary superheroes promoting optimal health. Incorporating these nutrient-rich gems into your diet can enhance immunity, boost energy, and support overall well-being, making them a delicious investment in your long-term health.",
+      text2:
+        "Superfoods, nutrient-packed powerhouses like berries, kale, and quinoa, are culinary superheroes promoting optimal health. Incorporating these nutrient-rich gems into your diet can enhance immunity, boost energy, and support overall well-being, making them a delicious investment in your long-term health.",
+      foodList: [
+        {
+          title: "Blueberries",
+          text: "Packed with antioxidants and vitamins, they are low in calories and high in fiber.",
+        },
+        {
+          title: "Avocado",
+          text: "Rich in healthy monounsaturated fats, avocados offer a creamy texture and essential nutrients.",
+        },
+        {
+          title: "Spinach",
+          text: "A nutrient powerhouse, low in calories and high in vitamins like A, C, and K, as well as minerals.",
+        },
+        {
+          title: "Quinoa",
+          text: "A complete protein source, quinoa is high in fiber, vitamins, and minerals.",
+        },
+        {
+          title: "Salmon",
+          text: "A fatty fish that provides omega-3 fatty acids and high-quality protein.",
+        },
+        {
+          title: "Kale",
+          text: "A leafy green loaded with vitamins, minerals, and antioxidants, while being low in calories.",
+        },
+        {
+          title: "Chia Seeds",
+          text: "Packed with fiber, omega-3 fatty acids, and various micronutrients.",
+        },
+        {
+          title: "Broccoli",
+          text: "A cruciferous vegetable rich in vitamins, minerals, and antioxidants.",
+        },
+        {
+          title: "Sweet Potatoes",
+          text: "A nutrient-dense source of carbohydrates, vitamins, and fiber.",
+        },
+        {
+          title: "Greek Yogurt",
+          text: "High in protein, probiotics, and calcium, with relatively fewer calories compared to some alternatives.",
+        },
+      ],
+    },
+  },
+  {
+    title: "Alcoholism",
+    slug: "alcoholism",
+    subtitle: "How to Avoid/Moderate it",
+    imageUrl: "bg-resAlcohol",
+    img: ResAlcohol,
+    article: {
+      imageUrl: "",
+      didYouKnow: {
+        title: "Did You know?",
+        list: [
+          "Alcoholism is the leading cause of 3 million deaths worldwide annually.",
+          "Alcoholism is a major contributing factor to over 200 diseases and injuries.",
+          "It is better to avoid consuming alcohol altogether.",
+        ],
+      },
+      articleQuestion: "How to Avoid Alcoholism?",
+      text1:
+        "Alcoholism is simply an alcohol addiction. It is a chronic disease that is characterized by one’s inability to control or stop their alcohol intake, regardless of the harmful consequences. When this disease is diagnosed, it is called alcohol use disorder (AUD). Aside from the negative consequences this disease has on the physical body, it also has a profound impact on the mental, professional, and social life of the individual with this problem. This means they will experience difficulty interacting with other individuals, including their loved ones, and will not be able to deliver well at their workplace, which can lead to their layoffs.",
+      text2:
+        "Thankfully, this condition can be treated if the addict can seek help immediately after recognizing the signs. Signs that show one might be suffering from alcoholism include increased tolerance to it, loss of interest in other activities, withdrawal symptoms, and continued consumption despite awareness of the negative effects due to their belief that they cannot function without it.",
+      foodList: [
+        {
+          title: "Avoid hanging out at the bar",
+          text: "I can imagine you rolling your eyes. This is a very obvious technique because more than half of the drinks served in these places are alcoholic, and there is no guarantee you won’t end up not drinking. So, if you want to hang out or socialize with friends and family, opt for activities like sporting activities that involve no drinking.",
+        },
+        {
+          title: "Do not hang out with people that drink",
+          text: "Hanging out with drinkers will definitely make you a drinker one day, no matter how disciplined you are.",
+        },
+        {
+          title: "Keep yourself busy",
+          text: "With activities like exercising or starting a new hobby. This will help distract you from picking up a bottle.",
+        },
+        {
+          title: "Get support from friends and family",
+          text: "By telling them of your resolve not to drink alcohol again. Their support can get you going and also hold you accountable, so you do not turn back on your goal.",
+        },
+        {
+          title: "Know when to stop",
+          text: "This requires you to set the maximum number of drinks you will consume on every occasion and ensure you stick to it. If you are having a hard time deciding what your maximum number of drinks will be, then you can adopt the moderate amount as pointed out earlier, and recognize the amount you can handle.",
+        },
+        {
+          title: "Avoid binge drinking",
+          text: "flying through drinks in one go at an alarming rate. Instead, you can alternate the alcohol with water or other non-alcoholic beverages. This will not only keep you hydrated (very necessary by the way as alcohol is very dehydrating to the body) but help you get full quickly which will prevent you from consuming too much alcohol.",
+        },
+        {
+          title: "Do not have alcohol in your house",
+          text: "This will help limit your alcohol intake, as having it on hand will encourage more consumption.",
+        },
+        {
+          title: "Do not drink based on your emotions",
+          text: "Drinking anytime you feel a negative feeling like sadness or depression can make you very dependent on alcohol, which won’t help you achieve your goal of consuming a moderate amount of alcohol. Another reason is that alcohol does not help your negative feelings; rather, it worsens them due to it being a depressant.",
+        },
+      ],
+    },
+  },
+  {
+    title: "Living with covid",
+    slug: "living-with-covid",
+    subtitle: "Put on your nose masks",
+    imageUrl: "bg-resCovid",
+    img: ResCovid,
+    article: {
+      imageUrl: "",
+      didYouKnow: {
+        title: "Did You know?",
+        list: [
+          "Alcoholism is the leading cause of 3 million deaths worldwide annually.",
+          "Alcoholism is a major contributing factor to over 200 diseases and injuries.",
+          "It is better to avoid consuming alcohol altogether.",
+        ],
+      },
+      articleQuestion: "How to Avoid Alcoholism?",
+      text1:
+        "Alcoholism is simply an alcohol addiction. It is a chronic disease that is characterized by one’s inability to control or stop their alcohol intake, regardless of the harmful consequences. When this disease is diagnosed, it is called alcohol use disorder (AUD). Aside from the negative consequences this disease has on the physical body, it also has a profound impact on the mental, professional, and social life of the individual with this problem. This means they will experience difficulty interacting with other individuals, including their loved ones, and will not be able to deliver well at their workplace, which can lead to their layoffs.",
+      text2:
+        "Thankfully, this condition can be treated if the addict can seek help immediately after recognizing the signs. Signs that show one might be suffering from alcoholism include increased tolerance to it, loss of interest in other activities, withdrawal symptoms, and continued consumption despite awareness of the negative effects due to their belief that they cannot function without it.",
+      foodList: [
+        {
+          title: "Avoid hanging out at the bar",
+          text: "I can imagine you rolling your eyes. This is a very obvious technique because more than half of the drinks served in these places are alcoholic, and there is no guarantee you won’t end up not drinking. So, if you want to hang out or socialize with friends and family, opt for activities like sporting activities that involve no drinking.",
+        },
+        {
+          title: "Do not hang out with people that drink",
+          text: "Hanging out with drinkers will definitely make you a drinker one day, no matter how disciplined you are.",
+        },
+        {
+          title: "Keep yourself busy",
+          text: "With activities like exercising or starting a new hobby. This will help distract you from picking up a bottle.",
+        },
+        {
+          title: "Get support from friends and family",
+          text: "By telling them of your resolve not to drink alcohol again. Their support can get you going and also hold you accountable, so you do not turn back on your goal.",
+        },
+        {
+          title: "Know when to stop",
+          text: "This requires you to set the maximum number of drinks you will consume on every occasion and ensure you stick to it. If you are having a hard time deciding what your maximum number of drinks will be, then you can adopt the moderate amount as pointed out earlier, and recognize the amount you can handle.",
+        },
+        {
+          title: "Avoid binge drinking",
+          text: "flying through drinks in one go at an alarming rate. Instead, you can alternate the alcohol with water or other non-alcoholic beverages. This will not only keep you hydrated (very necessary by the way as alcohol is very dehydrating to the body) but help you get full quickly which will prevent you from consuming too much alcohol.",
+        },
+        {
+          title: "Do not have alcohol in your house",
+          text: "This will help limit your alcohol intake, as having it on hand will encourage more consumption.",
+        },
+        {
+          title: "Do not drink based on your emotions",
+          text: "Drinking anytime you feel a negative feeling like sadness or depression can make you very dependent on alcohol, which won’t help you achieve your goal of consuming a moderate amount of alcohol. Another reason is that alcohol does not help your negative feelings; rather, it worsens them due to it being a depressant.",
+        },
+      ],
+    },
+  },
+  {
+    title: "Boosting your Immune system",
+    slug: "boosting-your-immune-system",
+    subtitle: "Eat healthy stay healthy",
+    imageUrl: "bg-resImmune",
+    img: ResImmune,
+    article: {
+      imageUrl: "",
+      didYouKnow: {
+        title: "Did You know?",
+        list: [
+          "Alcoholism is the leading cause of 3 million deaths worldwide annually.",
+          "Alcoholism is a major contributing factor to over 200 diseases and injuries.",
+          "It is better to avoid consuming alcohol altogether.",
+        ],
+      },
+      articleQuestion: "How to Avoid Alcoholism?",
+      text1:
+        "Alcoholism is simply an alcohol addiction. It is a chronic disease that is characterized by one’s inability to control or stop their alcohol intake, regardless of the harmful consequences. When this disease is diagnosed, it is called alcohol use disorder (AUD). Aside from the negative consequences this disease has on the physical body, it also has a profound impact on the mental, professional, and social life of the individual with this problem. This means they will experience difficulty interacting with other individuals, including their loved ones, and will not be able to deliver well at their workplace, which can lead to their layoffs.",
+      text2:
+        "Thankfully, this condition can be treated if the addict can seek help immediately after recognizing the signs. Signs that show one might be suffering from alcoholism include increased tolerance to it, loss of interest in other activities, withdrawal symptoms, and continued consumption despite awareness of the negative effects due to their belief that they cannot function without it.",
+      foodList: [
+        {
+          title: "Avoid hanging out at the bar",
+          text: "I can imagine you rolling your eyes. This is a very obvious technique because more than half of the drinks served in these places are alcoholic, and there is no guarantee you won’t end up not drinking. So, if you want to hang out or socialize with friends and family, opt for activities like sporting activities that involve no drinking.",
+        },
+        {
+          title: "Do not hang out with people that drink",
+          text: "Hanging out with drinkers will definitely make you a drinker one day, no matter how disciplined you are.",
+        },
+        {
+          title: "Keep yourself busy",
+          text: "With activities like exercising or starting a new hobby. This will help distract you from picking up a bottle.",
+        },
+        {
+          title: "Get support from friends and family",
+          text: "By telling them of your resolve not to drink alcohol again. Their support can get you going and also hold you accountable, so you do not turn back on your goal.",
+        },
+        {
+          title: "Know when to stop",
+          text: "This requires you to set the maximum number of drinks you will consume on every occasion and ensure you stick to it. If you are having a hard time deciding what your maximum number of drinks will be, then you can adopt the moderate amount as pointed out earlier, and recognize the amount you can handle.",
+        },
+        {
+          title: "Avoid binge drinking",
+          text: "flying through drinks in one go at an alarming rate. Instead, you can alternate the alcohol with water or other non-alcoholic beverages. This will not only keep you hydrated (very necessary by the way as alcohol is very dehydrating to the body) but help you get full quickly which will prevent you from consuming too much alcohol.",
+        },
+        {
+          title: "Do not have alcohol in your house",
+          text: "This will help limit your alcohol intake, as having it on hand will encourage more consumption.",
+        },
+        {
+          title: "Do not drink based on your emotions",
+          text: "Drinking anytime you feel a negative feeling like sadness or depression can make you very dependent on alcohol, which won’t help you achieve your goal of consuming a moderate amount of alcohol. Another reason is that alcohol does not help your negative feelings; rather, it worsens them due to it being a depressant.",
+        },
+      ],
+    },
+  },
+  {
+    title: "Hand Washing",
+    slug: "hand-washing",
+    subtitle: "Wash your hand",
+    imageUrl: "bg-resHandWashing",
+    img: ResHandWashing,
+    article: {
+      didYouKnow: {
+        title: "Did You know?",
+        list: [
+          "A million deaths can be avoided each year if everyone washed their hands frequently.",
+          "After using the toilet, less than 75% of women and 50% of men wash their hands.",
+        ],
+      },
+      articleQuestion: "When To Wash Your Hands",
+      text1:
+        "Hand washing is a very basic and easy habit that has a big impact on both your health and the health of others. Although this action may seem little to you, the Centre for Disease Control and Prevention (CDC) claims that it is a very effective means of reducing the spread of infectious diseases. Further research shows that washing your hands reduces your risk of getting respiratory illnesses like colds by 16-21%. In fact, this simple act was said to help prevent the spread of the virus that caused COVID-19. ",
+      text2:
+        "Frequent handwashing is crucial due to the ease with which harmful germs and bacteria can be transmitted into our bodies through our hands. Being the most utilized part of our body, hands are highly exposed to these pathogens through interpersonal interactions such as hugging, handshakes, and touches, as well as contact with contaminated surfaces like tables, door knobs, or railings.",
+      foodList: [
+        {
+          title: "After using the toilet",
+          text: "Many people are guilty of not washing their hands after using the toilet. Desist from this act! If you are outside and don’t have access to soap and water, then ensure you have hand sanitizer with at least 60% alcohol when you go out.",
+        },
+        {
+          title: "After cleaning up your child who used the toilet",
+          text: "Get them to also wash their hands. It’s never too early to instill good hygiene practices in them.",
+        },
+        {
+          title: "Before, during and after preparing a meal",
+          text: "This is very important to avoid contaminating the food you cooked to prevent food poisoning or diarrhea.",
+        },
+        {
+          title: "Before and after eating your food",
+          text: "Important for the same reason in number 2.",
+        },
+        {
+          title: "After touching the dustbin.",
+        },
+        {
+          title:
+            "After you sneeze, cough, or blow your nose when you are sick, prevent transmitting it to another person.",
+        },
+        {
+          title: "After handling money and receipts",
+          text: "This is too important, especially the money part because you do not know where the money has been.",
+        },
+        {
+          title: "Before and after touching your phone",
+          text: "You should also use disinfectant wipes to clean your phone to eliminate germs that have settled on it.",
+        },
+      ],
+      articleQuestion1: "How To Wash Your Hands Properly",
+      foodList1: [
+        {
+          title: "Wet Your Hands",
+          text: "Wet your hands by placing them under running, clean water.",
+        },
+        {
+          title: "Apply Soap over Hands and Wrists",
+          text: "Apply soap, either liquid or bar soap, over your hands and wrists.",
+        },
+        {
+          title: "Lather and Scrub thoroughly",
+          text: "Apply soap to your hands and wrists, lather, and thoroughly scrub. Ensure you scrub the front and back of your hands, in between fingers, the back of fingers, around each thumb, under fingernails, and around each wrist.",
+        },
+        {
+          title: "Rinse",
+          text: "Rinse your hands by placing them back under running water.",
+        },
+        {
+          title: "Dry with Paper Towel or Tissue Paper",
+          text: "Dry your hands with a paper towel or tissue, then dispose of it. If using a towel, ensure it's clean, as a used towel may harbor bacteria, undermining the purpose of washing.",
+        },
+      ],
+    },
+  },
+  {
+    title: "Workplace Ergonomics",
+    slug: "workplace-ergonomics",
+    subtitle: "Workplace Ergonomics",
+    imageUrl: "bg-resWorkplace",
+    img: ResWorkplace,
+    article: {
+      imageUrl: "",
+      didYouKnow: {
+        title: "Did You know?",
+        list: [
+          "Alcoholism is the leading cause of 3 million deaths worldwide annually.",
+          "Alcoholism is a major contributing factor to over 200 diseases and injuries.",
+          "It is better to avoid consuming alcohol altogether.",
+        ],
+      },
+      articleQuestion: "How to Avoid Alcoholism?",
+      text1:
+        "Alcoholism is simply an alcohol addiction. It is a chronic disease that is characterized by one’s inability to control or stop their alcohol intake, regardless of the harmful consequences. When this disease is diagnosed, it is called alcohol use disorder (AUD). Aside from the negative consequences this disease has on the physical body, it also has a profound impact on the mental, professional, and social life of the individual with this problem. This means they will experience difficulty interacting with other individuals, including their loved ones, and will not be able to deliver well at their workplace, which can lead to their layoffs.",
+      text2:
+        "Thankfully, this condition can be treated if the addict can seek help immediately after recognizing the signs. Signs that show one might be suffering from alcoholism include increased tolerance to it, loss of interest in other activities, withdrawal symptoms, and continued consumption despite awareness of the negative effects due to their belief that they cannot function without it.",
+      foodList: [
+        {
+          title: "Avoid hanging out at the bar",
+          text: "I can imagine you rolling your eyes. This is a very obvious technique because more than half of the drinks served in these places are alcoholic, and there is no guarantee you won’t end up not drinking. So, if you want to hang out or socialize with friends and family, opt for activities like sporting activities that involve no drinking.",
+        },
+        {
+          title: "Do not hang out with people that drink",
+          text: "Hanging out with drinkers will definitely make you a drinker one day, no matter how disciplined you are.",
+        },
+        {
+          title: "Keep yourself busy",
+          text: "With activities like exercising or starting a new hobby. This will help distract you from picking up a bottle.",
+        },
+        {
+          title: "Get support from friends and family",
+          text: "By telling them of your resolve not to drink alcohol again. Their support can get you going and also hold you accountable, so you do not turn back on your goal.",
+        },
+        {
+          title: "Know when to stop",
+          text: "This requires you to set the maximum number of drinks you will consume on every occasion and ensure you stick to it. If you are having a hard time deciding what your maximum number of drinks will be, then you can adopt the moderate amount as pointed out earlier, and recognize the amount you can handle.",
+        },
+        {
+          title: "Avoid binge drinking",
+          text: "flying through drinks in one go at an alarming rate. Instead, you can alternate the alcohol with water or other non-alcoholic beverages. This will not only keep you hydrated (very necessary by the way as alcohol is very dehydrating to the body) but help you get full quickly which will prevent you from consuming too much alcohol.",
+        },
+        {
+          title: "Do not have alcohol in your house",
+          text: "This will help limit your alcohol intake, as having it on hand will encourage more consumption.",
+        },
+        {
+          title: "Do not drink based on your emotions",
+          text: "Drinking anytime you feel a negative feeling like sadness or depression can make you very dependent on alcohol, which won’t help you achieve your goal of consuming a moderate amount of alcohol. Another reason is that alcohol does not help your negative feelings; rather, it worsens them due to it being a depressant.",
+        },
+      ],
+    },
+  },
+  {
+    title: "Hepatitis",
+    slug: "hepatitis",
+    subtitle: "Stay safe",
+    imageUrl: "bg-resHepatitis",
+    img: ResHepatitis,
+    article: {
+      imageUrl: "",
+      didYouKnow: {
+        title: "Did You know?",
+        list: [
+          "Alcoholism is the leading cause of 3 million deaths worldwide annually.",
+          "Alcoholism is a major contributing factor to over 200 diseases and injuries.",
+          "It is better to avoid consuming alcohol altogether.",
+        ],
+      },
+      articleQuestion: "How to Avoid Alcoholism?",
+      text1:
+        "Alcoholism is simply an alcohol addiction. It is a chronic disease that is characterized by one’s inability to control or stop their alcohol intake, regardless of the harmful consequences. When this disease is diagnosed, it is called alcohol use disorder (AUD). Aside from the negative consequences this disease has on the physical body, it also has a profound impact on the mental, professional, and social life of the individual with this problem. This means they will experience difficulty interacting with other individuals, including their loved ones, and will not be able to deliver well at their workplace, which can lead to their layoffs.",
+      text2:
+        "Thankfully, this condition can be treated if the addict can seek help immediately after recognizing the signs. Signs that show one might be suffering from alcoholism include increased tolerance to it, loss of interest in other activities, withdrawal symptoms, and continued consumption despite awareness of the negative effects due to their belief that they cannot function without it.",
+      foodList: [
+        {
+          title: "Avoid hanging out at the bar",
+          text: "I can imagine you rolling your eyes. This is a very obvious technique because more than half of the drinks served in these places are alcoholic, and there is no guarantee you won’t end up not drinking. So, if you want to hang out or socialize with friends and family, opt for activities like sporting activities that involve no drinking.",
+        },
+        {
+          title: "Do not hang out with people that drink",
+          text: "Hanging out with drinkers will definitely make you a drinker one day, no matter how disciplined you are.",
+        },
+        {
+          title: "Keep yourself busy",
+          text: "With activities like exercising or starting a new hobby. This will help distract you from picking up a bottle.",
+        },
+        {
+          title: "Get support from friends and family",
+          text: "By telling them of your resolve not to drink alcohol again. Their support can get you going and also hold you accountable, so you do not turn back on your goal.",
+        },
+        {
+          title: "Know when to stop",
+          text: "This requires you to set the maximum number of drinks you will consume on every occasion and ensure you stick to it. If you are having a hard time deciding what your maximum number of drinks will be, then you can adopt the moderate amount as pointed out earlier, and recognize the amount you can handle.",
+        },
+        {
+          title: "Avoid binge drinking",
+          text: "flying through drinks in one go at an alarming rate. Instead, you can alternate the alcohol with water or other non-alcoholic beverages. This will not only keep you hydrated (very necessary by the way as alcohol is very dehydrating to the body) but help you get full quickly which will prevent you from consuming too much alcohol.",
+        },
+        {
+          title: "Do not have alcohol in your house",
+          text: "This will help limit your alcohol intake, as having it on hand will encourage more consumption.",
+        },
+        {
+          title: "Do not drink based on your emotions",
+          text: "Drinking anytime you feel a negative feeling like sadness or depression can make you very dependent on alcohol, which won’t help you achieve your goal of consuming a moderate amount of alcohol. Another reason is that alcohol does not help your negative feelings; rather, it worsens them due to it being a depressant.",
+        },
+      ],
+    },
+  },
+  {
+    title: "Childhood Obesity",
+    slug: "childhood-obesity",
+    subtitle: "Getting in shape",
+    imageUrl: "bg-resChildhood",
+    res: ResChildhood,
+    article: {
+      imageUrl: "",
+      didYouKnow: {
+        title: "Did You know?",
+        list: [
+          "Alcoholism is the leading cause of 3 million deaths worldwide annually.",
+          "Alcoholism is a major contributing factor to over 200 diseases and injuries.",
+          "It is better to avoid consuming alcohol altogether.",
+        ],
+      },
+      articleQuestion: "How to Avoid Alcoholism?",
+      text1:
+        "Alcoholism is simply an alcohol addiction. It is a chronic disease that is characterized by one’s inability to control or stop their alcohol intake, regardless of the harmful consequences. When this disease is diagnosed, it is called alcohol use disorder (AUD). Aside from the negative consequences this disease has on the physical body, it also has a profound impact on the mental, professional, and social life of the individual with this problem. This means they will experience difficulty interacting with other individuals, including their loved ones, and will not be able to deliver well at their workplace, which can lead to their layoffs.",
+      text2:
+        "Thankfully, this condition can be treated if the addict can seek help immediately after recognizing the signs. Signs that show one might be suffering from alcoholism include increased tolerance to it, loss of interest in other activities, withdrawal symptoms, and continued consumption despite awareness of the negative effects due to their belief that they cannot function without it.",
+      foodList: [
+        {
+          title: "Avoid hanging out at the bar",
+          text: "I can imagine you rolling your eyes. This is a very obvious technique because more than half of the drinks served in these places are alcoholic, and there is no guarantee you won’t end up not drinking. So, if you want to hang out or socialize with friends and family, opt for activities like sporting activities that involve no drinking.",
+        },
+        {
+          title: "Do not hang out with people that drink",
+          text: "Hanging out with drinkers will definitely make you a drinker one day, no matter how disciplined you are.",
+        },
+        {
+          title: "Keep yourself busy",
+          text: "With activities like exercising or starting a new hobby. This will help distract you from picking up a bottle.",
+        },
+        {
+          title: "Get support from friends and family",
+          text: "By telling them of your resolve not to drink alcohol again. Their support can get you going and also hold you accountable, so you do not turn back on your goal.",
+        },
+        {
+          title: "Know when to stop",
+          text: "This requires you to set the maximum number of drinks you will consume on every occasion and ensure you stick to it. If you are having a hard time deciding what your maximum number of drinks will be, then you can adopt the moderate amount as pointed out earlier, and recognize the amount you can handle.",
+        },
+        {
+          title: "Avoid binge drinking",
+          text: "flying through drinks in one go at an alarming rate. Instead, you can alternate the alcohol with water or other non-alcoholic beverages. This will not only keep you hydrated (very necessary by the way as alcohol is very dehydrating to the body) but help you get full quickly which will prevent you from consuming too much alcohol.",
+        },
+        {
+          title: "Do not have alcohol in your house",
+          text: "This will help limit your alcohol intake, as having it on hand will encourage more consumption.",
+        },
+        {
+          title: "Do not drink based on your emotions",
+          text: "Drinking anytime you feel a negative feeling like sadness or depression can make you very dependent on alcohol, which won’t help you achieve your goal of consuming a moderate amount of alcohol. Another reason is that alcohol does not help your negative feelings; rather, it worsens them due to it being a depressant.",
+        },
+      ],
+    },
   },
 ];

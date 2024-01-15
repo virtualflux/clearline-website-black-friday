@@ -11,6 +11,7 @@ import {
   rjolad,
 } from "../../../public/assets/images";
 import Image from "next/image";
+import FAQ from "@/components/about/FAQs";
 
 export const metadata = {
   title: "About us - Clearline HMO",
@@ -38,6 +39,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <FAQ />
       <AboutBottom />
     </PageLayout>
   );

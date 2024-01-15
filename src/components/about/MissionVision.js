@@ -20,15 +20,13 @@ const MissionVision = () => {
           Our Mission
         </p>
         <p className="text-boulder text-[24px] max-md:text-[14px] mb-6">
-          To provide access to prompt, qualitative and value-added medical care
-          for our clients using healthcare financing management and other
-          multi-disciplinary techniques.
+          To provide quality and accessible healthcare to all.
         </p>
         <p className="text-catalineBlue font-bold text-[40px] max-lg:text-[30px] max-md:text-[24px]">
           Our Vision
         </p>
         <p className="text-boulder text-[24px] max-md:text-[14px] mb-6">
-          To be the most responsive HMO.
+          To redefine healthcare for a healthier future.
         </p>
         <div className="flex justify-between gap-8 max-md:gap-4">
           <div className="w-1/3">

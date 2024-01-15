@@ -3,7 +3,6 @@ import SectionOne from "../components/home/SectionOne";
 import HealthPlans from "../components/home/HealthPlanComps/HealthPlans";
 import Network from "../components/home/Network";
 import Sponsors from "../components/home/Sponsors";
-import FAQ from "../components/home/FAQs";
 import BottomSection from "../components/home/BottomSection";
 import PageLayout from "@/layout";
 import Testimonial from "@/components/home/Testimonial";
@@ -24,7 +23,6 @@ export default function Home() {
       <Network />
       <Testimonial />
       <Sponsors />
-      <FAQ />
       <BottomSection />
     </PageLayout>
   );

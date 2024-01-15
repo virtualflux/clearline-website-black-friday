@@ -131,30 +131,6 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
-              Identification
-            </p>
-            <input
-              type="text"
-              name="identification"
-              placeholder="NIN/Passport"
-              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
-            />
-          </div>
-          <div className="w-[30%] max-md:w-full">
-            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
-              Address
-            </p>
-            <input
-              type="text"
-              name="address"
-              placeholder="Enter address"
-              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
-            />
-          </div>
-        </div>
-        <div className="flex flex-wrap gap-3 mb-3">
-          <div className="w-[30%] max-md:w-full">
-            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
               State of residence
             </p>
             <select className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]">
@@ -316,70 +292,16 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
-              Local Govt Area
-            </p>
-            <select className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]">
-              {[,].map((item, idx) => (
-                <option key={idx} className="" value={item.title}>
-                  {item.title}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="w-[30%] max-md:w-full">
-            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
-              Hospital
-            </p>
-            <select className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]">
-              {[].map((item, idx) => (
-                <option key={idx} className="" value={item.title}>
-                  {item.title}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-        <div className="flex flex-wrap gap-3 mb-3">
-          <div className="w-[30%] max-md:w-full">
-            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
-              Any Chronic Illness?
-            </p>
-            <div className="flex gap-12">
-              <div>
-                <input
-                  type="radio"
-                  id="illness1"
-                  name="illness"
-                  value="yes"
-                  className="mr-2"
-                />
-                <label for="illness1">Yes</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="illness2"
-                  name="illness"
-                  value="no"
-                  className="mr-2"
-                />
-                <label for="illness2">No</label>
-              </div>
-            </div>
-          </div>
-          <div className="w-[30%] max-md:w-full">
-            <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
-              If yes, please state
+              Address
             </p>
             <input
               type="text"
-              name="illnessState"
-              placeholder="Enter illness"
+              name="address"
+              placeholder="Enter address"
               className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
             />
           </div>
         </div>
-
         <div className="flex justify-center pt-6">
           <div className="w-1/2">
             <Button

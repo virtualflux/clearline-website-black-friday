@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Button from "@/shared/Button";
 import PageLayout from "@/layout";
+import { resourcesData } from "@/utils/data";
 
 export const metadata = {
   title: "Our Resources - Clearline HMO",
@@ -10,49 +11,6 @@ export const metadata = {
 };
 
 const Resources = () => {
-  const resourcesData = [
-    {
-      title: "Super Food",
-      subtitle: "Why you should eat",
-      imageUrl: "bg-resSuperFood",
-    },
-    {
-      title: "Alcoholism",
-      subtitle: "How to Avoid/Moderate it",
-      imageUrl: "bg-resAlcohol",
-    },
-    {
-      title: "Living with covid",
-      subtitle: "Put on your nose masks",
-      imageUrl: "bg-resCovid",
-    },
-    {
-      title: "Boosting your Immune system",
-      subtitle: "Eat healthy stay healthy",
-      imageUrl: "bg-resImmune",
-    },
-    {
-      title: "Hand Washing",
-      subtitle: "Wash your hand",
-      imageUrl: "bg-resHandWashing",
-    },
-    {
-      title: "Workplace Ergonomics",
-      subtitle: "Workplace Ergonomics",
-      imageUrl: "bg-resWorkplace",
-    },
-    {
-      title: "Hepatitis",
-      subtitle: "Stay safe",
-      imageUrl: "bg-resHepatitis",
-    },
-    {
-      title: "Childhood Obesity",
-      subtitle: "Getting in shape",
-      imageUrl: "bg-resChildhood",
-    },
-  ];
-
   return (
     <PageLayout>
       <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24 mb-12">
@@ -66,7 +24,7 @@ const Resources = () => {
         </div>
         <div>
           <div className="flex gap-x-4 gap-y-8 max-md:gap-y-4 flex-wrap">
-            {resourcesData.map(({ title, subtitle, imageUrl }, idx) => (
+            {resourcesData.map(({ title, subtitle, imageUrl, slug }, idx) => (
               <div
                 key={idx}
                 className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg ${imageUrl} bg-no-repeat bg-cover bg-center flex items-end`}
@@ -78,7 +36,7 @@ const Resources = () => {
                   <p className="text-[20px] max-lg:text-[14px] max-md:text-[11px] text-[#F4F4F4] mb-4">
                     {subtitle}
                   </p>
-                  <Link href={`/resources/${title}`}>
+                  <Link href={`/resources/${slug}`}>
                     <Button
                       type={"button"}
                       className={

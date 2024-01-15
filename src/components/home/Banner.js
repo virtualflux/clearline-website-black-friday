@@ -10,7 +10,6 @@ import {
 import { ArrowRight } from "../../../public/assets/svgs";
 import { useEffect, useMemo, useRef, useState } from "react";
 import BuyPlanModal from "../Modal/BuyPlan";
-import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 import "animate.css";
 
 export default function Banner() {
@@ -124,10 +123,6 @@ export default function Banner() {
           </div>
         </div>
       </div>
-      <TawkMessengerReact
-        propertyId={process.env.NEXT_PUBLIC_TAWK_PROPERTYID}
-        widgetId={process.env.NEXT_PUBLIC_TAWK_WIDGETID}
-      />
     </div>
   );
 }

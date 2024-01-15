@@ -4,6 +4,7 @@ import { useState } from "react";
 import Business from "./Business";
 import Family from "./Family";
 import Individual from "./Individual";
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
 export const Package = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -19,6 +20,10 @@ export const Package = () => {
 
   return (
     <div className="px-16 max-lg:px-12 max-md:px-8 pt-12">
+      <TawkMessengerReact
+        propertyId={process.env.NEXT_PUBLIC_TAWK_PROPERTYID}
+        widgetId={process.env.NEXT_PUBLIC_TAWK_WIDGETID}
+      />
       <div className="flex flex-col items-center mb-12">
         <p className="text-[40px] max-md:text-[24px] font-bold mb-6">
           Our Plan Bouquet
