@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ResourcesImage } from "../../../../public/assets/images";
 import PageLayout from "@/layout";
 import { resourcesData } from "@/utils/data";
 

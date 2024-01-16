@@ -96,7 +96,7 @@ export default function BottomSection() {
               </div>
             </div>
           </div>
-          <div className="max-[900px]:hidden w-1/2 max-[900px]:w-full relative">
+          <div className="max-[900px]:hidden w-1/3 max-[900px]:w-full relative">
             <Image
               src={Healthpriority}
               alt="Clearline app"

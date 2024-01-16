@@ -2345,7 +2345,7 @@ export const resourcesData = [
     slug: "childhood-obesity",
     subtitle: "Getting in shape",
     imageUrl: "bg-resChildhood",
-    res: ResChildhood,
+    img: ResChildhood,
     article: {
       imageUrl: "",
       didYouKnow: {
