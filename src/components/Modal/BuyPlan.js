@@ -1,7 +1,67 @@
+"use client";
+
 import CLearlineModal from "@/layout/Modal";
 import { Button } from "@mui/material";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import ButtonLoader from "@/shared/ButtonLoader";
+import { toast } from "react-toastify";
 
 const BuyPlanModal = ({ isOpen, setIsOpen }) => {
+  const form = useRef();
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [plan, setPlan] = useState("");
+  const [email, setEmail] = useState("");
+  const [surname, setSurname] = useState("");
+  const [names, setNames] = useState("");
+  const [gender, setGender] = useState("");
+  const [title, setTitle] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [dob, setDob] = useState("");
+  const [state, setState] = useState("");
+  const [address, setAddress] = useState("");
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      await emailjs
+        .sendForm(
+          "contact_service",
+          "contact_form",
+          form.current,
+          "OTdU-O6vdb3nS4UFz"
+        )
+        .then(
+          ({ status }) => {
+            if (status === 200) {
+              setIsOpen(false);
+              toast.success("Plan purchase sent successfully!");
+              setPlan("");
+              setEmail("");
+              setSurname("");
+              setNames("");
+              setGender("");
+              setTitle("");
+              setPhoneNumber("");
+              setDob("");
+              setState("");
+              setAddress("");
+            }
+          },
+          (error) => {
+            toast.error(`Oh no, ${error.text}!`);
+          }
+        );
+    } catch (error) {
+      console.log(error);
+    }
+
+    setIsLoading(false);
+  };
+
   return (
     <CLearlineModal isOpen={isOpen} onClose={() => setIsOpen(false)}>
       <div className="flex justify-center">
@@ -16,19 +76,25 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
             Make sure you input the correct information in these sections
           </p>
           <div className="my-4">
-            <select className="rounded-2xl font-semibold text-catalineBlue border-2 border-[#008BE9] py-2 px-4">
+            <select
+              value={plan}
+              required
+              onChange={(e) => setPlan(e.target.value)}
+              className="rounded-2xl font-semibold text-catalineBlue border-2 border-[#008BE9] py-2 px-4"
+            >
               {[
-                { title: "Silver plan" },
-                { title: "Bronze plan" },
-                { title: "Gold plan" },
-                { title: "Gold plus plan" },
-                { title: "Platinum plan" },
-                { title: "Platinum plus plan" },
+                { title: "Choose plan", value: "" },
+                { title: "Silver plan", value: "Silver" },
+                { title: "Bronze plan", value: "Bronze" },
+                { title: "Gold plan", value: "Gold" },
+                { title: "Gold plus plan", value: "Plus" },
+                { title: "Platinum plan", value: "Platinum" },
+                { title: "Platinum plus plan", value: "Plus" },
               ].map((item, idx) => (
                 <option
                   key={idx}
                   className="font-semibold text-catalineBlue"
-                  value={item.title}
+                  value={item.value}
                 >
                   {item.title}
                 </option>
@@ -37,7 +103,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
           </div>
         </div>
       </div>
-      <form>
+      <form ref={form} onSubmit={sendEmail}>
         <div className="flex flex-wrap gap-3 mb-3">
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
@@ -48,6 +114,9 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               name="surname"
               placeholder="Eg ...John"
               className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
+              value={surname}
+              onChange={(e) => setSurname(e.target.value)}
+              required
             />
           </div>
           <div className="w-[30%] max-md:w-full">
@@ -59,19 +128,27 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               name="otherNames"
               placeholder="Eg ...Snow"
               className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
+              value={names}
+              onChange={(e) => setNames(e.target.value)}
+              required
             />
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
               Gender
             </p>
-            <select className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]">
+            <select
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+              required
+              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]"
+            >
               {[
-                { title: "-Select gender-" },
-                { title: "Male" },
-                { title: "Female" },
+                { title: "-Select gender-", value: "" },
+                { title: "Male", value: "male" },
+                { title: "Female", value: "female" },
               ].map((item, idx) => (
-                <option key={idx} className="" value={item.title}>
+                <option key={idx} className="" value={item.value}>
                   {item.title}
                 </option>
               ))}
@@ -83,13 +160,18 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
               Title
             </p>
-            <select className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]">
+            <select
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              required
+              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]"
+            >
               {[
-                { title: "-Select title-" },
-                { title: "Mr" },
-                { title: "Mrs" },
+                { title: "-Select title-", value: "" },
+                { title: "Mr", value: "mr" },
+                { title: "Mrs", value: "mrs" },
               ].map((item, idx) => (
-                <option key={idx} className="" value={item.title}>
+                <option key={idx} className="" value={item.value}>
                   {item.title}
                 </option>
               ))}
@@ -100,10 +182,13 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               Phone number
             </p>
             <input
-              type="text"
+              type="number"
               name="phoneNumber"
-              placeholder="+23494888992938"
+              placeholder="23494888992938"
               className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              required
             />
           </div>
           <div className="w-[30%] max-md:w-full">
@@ -114,6 +199,9 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               type="date"
               name="dob"
               className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
+              value={dob}
+              onChange={(e) => setDob(e.target.value)}
+              required
             />
           </div>
         </div>
@@ -127,13 +215,21 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               name="email"
               placeholder="you@company.com"
               className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
               State of residence
             </p>
-            <select className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]">
+            <select
+              value={state}
+              onChange={(e) => setState(e.target.value)}
+              required
+              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]"
+            >
               {[
                 {
                   title: "-Select state-",
@@ -284,7 +380,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
                   value: "zamfara",
                 },
               ].map((item, idx) => (
-                <option key={idx} className="" value={item.title}>
+                <option key={idx} className="" value={item.value}>
                   {item.title}
                 </option>
               ))}
@@ -299,18 +395,21 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               name="address"
               placeholder="Enter address"
               className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              required
             />
           </div>
         </div>
         <div className="flex justify-center pt-6">
           <div className="w-1/2">
             <Button
-              type={"button"}
+              type={"submit"}
               className={
                 "!w-full !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
               }
             >
-              Proceed
+              {isLoading ? <ButtonLoader /> : "Proceed"}
             </Button>
           </div>
         </div>

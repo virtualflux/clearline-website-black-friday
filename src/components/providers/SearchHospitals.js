@@ -8,6 +8,7 @@ import useIsVisible from "@/hooks/useIsVisible";
 import { useRef, useState } from "react";
 import "animate.css";
 import RelatedHealthCare from "./Related";
+import ButtonLoader from "@/shared/ButtonLoader";
 
 const SearchHospitals = () => {
   const [keyword, setKeyword] = useState("");
@@ -131,7 +132,7 @@ const SearchHospitals = () => {
               className={"!w-full !rounded-lg px-4 !text-white bg-catalineBlue"}
             >
               <p className="text-[14px] max-md:text-[12px]">
-                {isLoading ? "Loading..." : "Search"}
+                {isLoading ? <ButtonLoader /> : "Search"}
               </p>
             </Button>
           </div>

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.12.1",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.2",
@@ -21,6 +22,7 @@
     "react-burger-menu": "^3.0.9",
     "react-countup": "^6.5.0",
     "react-dom": "^18",
+    "react-toastify": "^10.0.1",
     "react-visibility-sensor": "^5.1.1",
     "recompose": "^0.30.0"
   },

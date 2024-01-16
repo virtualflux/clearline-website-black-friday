@@ -6,6 +6,8 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const PageLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -16,6 +18,18 @@ const PageLayout = ({ children }) => {
 
   return (
     <div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <TawkMessengerReact
         propertyId={process.env.NEXT_PUBLIC_TAWK_PROPERTYID}
         widgetId={process.env.NEXT_PUBLIC_TAWK_WIDGETID}
