@@ -3,7 +3,12 @@
 import Image from "next/image";
 import { SearchIcon } from "../../../public/assets/svgs";
 import Button from "@/shared/Button";
-import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  Marker,
+  useJsApiLoader,
+  InfoWindow,
+} from "@react-google-maps/api";
 import useIsVisible from "@/hooks/useIsVisible";
 import { useRef, useState } from "react";
 import "animate.css";
@@ -152,7 +157,7 @@ const SearchHospitals = () => {
             <GoogleMap
               mapContainerStyle={{ width: "100%", height: "100%" }}
               center={center}
-              zoom={12}
+              zoom={8}
               options={{
                 styles: [
                   {
@@ -170,19 +175,13 @@ const SearchHospitals = () => {
                 zoomControl: true,
               }}
             >
-              {[
-                {
-                  title: "hospital 1",
-                  location: { lat: 6.634347899999999, lng: 3.3848981 },
-                },
-                {
-                  title: "hospital 2",
-                  location: { lat: 6.534347, lng: 3.4848981 },
-                },
-              ].map((hospital, idx) => (
+              {result?.map((item, idx) => (
                 <Marker
                   key={idx}
-                  position={hospital.location}
+                  position={{
+                    lat: Number(item?.latitude),
+                    lng: Number(item?.longitude),
+                  }}
                   icon="/assets/images/home_loc.png"
                 />
               ))}

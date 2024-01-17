@@ -2351,48 +2351,50 @@ export const resourcesData = [
       didYouKnow: {
         title: "Did You know?",
         list: [
-          "Alcoholism is the leading cause of 3 million deaths worldwide annually.",
-          "Alcoholism is a major contributing factor to over 200 diseases and injuries.",
-          "It is better to avoid consuming alcohol altogether.",
+          "Childhood obesity is one of the most common chronic diseases of childhood.",
+          "Since 1990, there has been a 60% global increase in childhood obesity.",
+          "Children with obesity have a higher likelihood of becoming obese adults.",
         ],
       },
-      articleQuestion: "How to Avoid Alcoholism?",
+      articleQuestion: "How To Get Your Child in Shape?",
       text1:
-        "Alcoholism is simply an alcohol addiction. It is a chronic disease that is characterized by one’s inability to control or stop their alcohol intake, regardless of the harmful consequences. When this disease is diagnosed, it is called alcohol use disorder (AUD). Aside from the negative consequences this disease has on the physical body, it also has a profound impact on the mental, professional, and social life of the individual with this problem. This means they will experience difficulty interacting with other individuals, including their loved ones, and will not be able to deliver well at their workplace, which can lead to their layoffs.",
+        "Childhood obesity is a serious medical condition whereby a child is overweight for his or her height and age. This condition has become a pressing global concern with the increasing number of children dealing with weight-related issues. As a result of this condition, children now suffer illnesses like diabetes and hypertension, which were thought to be only adult problems. The shift towards a more sedentary lifestyle, coupled with dietary habits that lean towards unhealthy and processed food, has led to the rising rate of childhood obesity around the world. Children now spend a lot of time indoors and are inactive, either watching TV or playing games. Other factors that cause child obesity include genetic, hormonal, metabolic, psychological, and cultural factors.",
       text2:
-        "Thankfully, this condition can be treated if the addict can seek help immediately after recognizing the signs. Signs that show one might be suffering from alcoholism include increased tolerance to it, loss of interest in other activities, withdrawal symptoms, and continued consumption despite awareness of the negative effects due to their belief that they cannot function without it.",
+        "To know if your child is obese, you have to see a doctor. The doctor will measure the child's height, weight, and age. They will also calculate their body mass index and compare it to standards. This condition can be very difficult to treat, so it is better to prevent it altogether. Do you have a child and are wondering how we can prevent this condition? Keep reading because, in this article, we’ll be discussing how to get your child in shape—applicable to adults as well—to reduce the rising rate of child obesity and its related illnesses around the world.",
       foodList: [
         {
-          title: "Avoid hanging out at the bar",
-          text: "I can imagine you rolling your eyes. This is a very obvious technique because more than half of the drinks served in these places are alcoholic, and there is no guarantee you won’t end up not drinking. So, if you want to hang out or socialize with friends and family, opt for activities like sporting activities that involve no drinking.",
+          title:
+            "Provide your child (or children) with a balanced and nutritious diet",
+          text: "Ensure that the meal you serve them has 30% or fewer calories. You can achieve this by limiting the frequency of eating fast or processed food.",
         },
         {
-          title: "Do not hang out with people that drink",
-          text: "Hanging out with drinkers will definitely make you a drinker one day, no matter how disciplined you are.",
+          title:
+            "Encourage your child (or children) to be more involved in physical activities",
+          text: "You can do this by taking them to the park or playground, or by creating a play space in your home and engaging in playtime with them. They will be more motivated to participate as a result of seeing you do it. As you might notice, children are excellent imitators.",
         },
         {
-          title: "Keep yourself busy",
-          text: "With activities like exercising or starting a new hobby. This will help distract you from picking up a bottle.",
+          title: "Limit screen time for your child (or children)",
+          text: "Ensure they do not watch TV during meal or snack time.",
         },
         {
-          title: "Get support from friends and family",
-          text: "By telling them of your resolve not to drink alcohol again. Their support can get you going and also hold you accountable, so you do not turn back on your goal.",
+          title:
+            "Do not force your child (or children) to finish off their food",
+          text: "Allow them to eat until they are okay. Respect this, and subsequently serve them portions that they can finish. Avoid overfeeding your child (or children).",
         },
         {
-          title: "Know when to stop",
-          text: "This requires you to set the maximum number of drinks you will consume on every occasion and ensure you stick to it. If you are having a hard time deciding what your maximum number of drinks will be, then you can adopt the moderate amount as pointed out earlier, and recognize the amount you can handle.",
+          title: "Ensure that you feed your child fruits and vegetables",
+          text: "Make it easily accessible to them, so they can take it themselves.",
         },
         {
-          title: "Avoid binge drinking",
-          text: "flying through drinks in one go at an alarming rate. Instead, you can alternate the alcohol with water or other non-alcoholic beverages. This will not only keep you hydrated (very necessary by the way as alcohol is very dehydrating to the body) but help you get full quickly which will prevent you from consuming too much alcohol.",
+          title:
+            "After each meal, do not give your child (or children) a sweet dessert that has no nutritional value and is just filled with sugar and calories. Instead, you can give them  healthy snacks like plain yogurt, nuts, and fruits covered with dark chocolate",
         },
         {
-          title: "Do not have alcohol in your house",
-          text: "This will help limit your alcohol intake, as having it on hand will encourage more consumption.",
+          title: "Feed your child (or children) enough fiber.",
         },
         {
-          title: "Do not drink based on your emotions",
-          text: "Drinking anytime you feel a negative feeling like sadness or depression can make you very dependent on alcohol, which won’t help you achieve your goal of consuming a moderate amount of alcohol. Another reason is that alcohol does not help your negative feelings; rather, it worsens them due to it being a depressant.",
+          title: "Create a nighttime routine for your child (or children)",
+          text: "This ensures they have good sleeping habits. Do not put a TV, computer, or anything else that can prevent them from falling asleep in their room.",
         },
       ],
     },
