@@ -1,9 +1,50 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "../../public/assets/svgs";
 import { ClearlineWhiteLogo } from "../../public/assets/images";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import ButtonLoader from "@/shared/ButtonLoader";
+import { toast } from "react-toastify";
 
 export default function Footer() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const form = useRef();
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      await emailjs
+        .sendForm(
+          "contact_service",
+          "contact_form",
+          form.current,
+          "OTdU-O6vdb3nS4UFz"
+        )
+        .then(
+          ({ status }) => {
+            if (status === 200) {
+              toast.success("Thank you for subscribing to our newsletter!");
+              setEmail("");
+            }
+          },
+          (error) => {
+            toast.error(`Oh no, ${error.text}!`);
+          }
+        );
+    } catch (error) {
+      console.log(error);
+    }
+
+    setIsLoading(false);
+  };
+
   return (
     <div className="text-white bg-catalineBlue px-16 max-lg:px-12 max-md:px-8 pt-12 mt-12 pb-12">
       <div className="flex justify-between flex-wrap gap-8">
@@ -70,17 +111,28 @@ export default function Footer() {
             To receive update via our newsletter, kindly input your email
             address in the tab below:
           </p>
-          <div className="relative">
+          <form ref={form} onSubmit={sendEmail} className="relative">
             <input
-              type="text"
+              type="email"
               name="email"
               placeholder="Email address"
               className="w-full rounded-lg text-[14px] h-[60px] focus:outline-none text-black placeholder:text-xs placeholder:text-black pl-2 pr-12"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
-            <div className="absolute right-4 bottom-4 bg-catalineBlue w-[28px] h-[28px] flex justify-center items-center rounded-lg p-2">
-              <Image src={ArrowRight} alt="email address" />
-            </div>
-          </div>
+            <button>
+              <div className="absolute right-4 bottom-4 bg-catalineBlue w-[35px] h-[35px] flex justify-center items-center rounded-lg p-2">
+                <div className="flex justify-center items-center">
+                  {isLoading ? (
+                    <ButtonLoader />
+                  ) : (
+                    <Image src={ArrowRight} alt="email address" />
+                  )}
+                </div>
+              </div>
+            </button>
+          </form>
         </div>
         <div className="w-1/5 max-lg:w-fit flex flex-col gap-5">
           <p className="text-[24px] max-md:text-[16px] font-bold">Contact us</p>

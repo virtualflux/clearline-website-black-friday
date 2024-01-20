@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   tripleGreenArrowLeft,
@@ -10,8 +12,47 @@ import {
   PhonesImage,
   PlayStoreLogo,
 } from "../../../public/assets/images";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import ButtonLoader from "@/shared/ButtonLoader";
+import { toast } from "react-toastify";
 
 export default function BottomSection() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const form = useRef();
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      await emailjs
+        .sendForm(
+          "contact_service",
+          "contact_form",
+          form.current,
+          "OTdU-O6vdb3nS4UFz"
+        )
+        .then(
+          ({ status }) => {
+            if (status === 200) {
+              toast.success("Thank you for subscribing to our newsletter!");
+              setEmail("");
+            }
+          },
+          (error) => {
+            toast.error(`Oh no, ${error.text}!`);
+          }
+        );
+    } catch (error) {
+      console.log(error);
+    }
+
+    setIsLoading(false);
+  };
+
   return (
     <div>
       <div className="bg-catalineBlue h-[350px] max-[1000px]:h-fit px-16 max-lg:px-12 max-md:px-8 mb-12 min-[900px]:mt-[300px] mt-12">
@@ -78,19 +119,32 @@ export default function BottomSection() {
                 Directly in your Inbox
               </p>
               <div>
-                <form>
+                <form ref={form} onSubmit={sendEmail}>
                   <div className="relative w-full">
                     <input
-                      type="text"
+                      type="email"
                       name="email"
                       placeholder="Email address"
                       className="w-full rounded-lg text-[14px] h-[60px] focus:outline-none text-black placeholder:text-xs placeholder:text-black pl-2 pr-12"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
                     />
-                    <div className="absolute right-4 bottom-3 bg-catalineBlue flex justify-center items-center rounded-lg p-2">
-                      <p className="text-[16px] max-md:text-[12px]">
-                        Subscribe
-                      </p>
-                    </div>
+                    <button>
+                      {true ? (
+                        <div className="absolute right-4 bottom-3 bg-catalineBlue flex justify-center items-center rounded-lg p-2">
+                          <div className="w-[75px] max-md:w-[50px] h-[20px] flex justify-center items-center">
+                            <ButtonLoader />
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="absolute right-4 bottom-3 bg-catalineBlue flex justify-center items-center rounded-lg p-2">
+                          <p className="text-[16px] max-md:text-[12px]">
+                            Subscribe
+                          </p>
+                        </div>
+                      )}
+                    </button>
                   </div>
                 </form>
               </div>
