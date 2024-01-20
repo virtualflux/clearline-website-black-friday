@@ -131,7 +131,7 @@ export default function BottomSection() {
                       required
                     />
                     <button>
-                      {true ? (
+                      {isLoading ? (
                         <div className="absolute right-4 bottom-3 bg-catalineBlue flex justify-center items-center rounded-lg p-2">
                           <div className="w-[75px] max-md:w-[50px] h-[20px] flex justify-center items-center">
                             <ButtonLoader />
