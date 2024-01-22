@@ -7,13 +7,13 @@ const RelatedHealthCare = ({ className, result }) => {
         Related Healthcare Centers
       </p>
       {result?.length ? (
-        <div className="flex gap-3 flex-wrap">
+        <div className="flex gap-3 flex-wrap max-md:justify-center">
           {result?.map((item, index) => (
             <RelatedCard item={item} key={index} />
           ))}
         </div>
       ) : (
-        <div className="flex gap-3 flex-wrap">
+        <div className="flex gap-3 flex-wrap max-md:justify-center">
           {[
             {
               providerName: "New Era Hospital Ltd Umuahia",
