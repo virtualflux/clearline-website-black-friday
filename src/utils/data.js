@@ -2237,48 +2237,37 @@ export const resourcesData = [
       didYouKnow: {
         title: "Did You know?",
         list: [
-          "Alcoholism is the leading cause of 3 million deaths worldwide annually.",
-          "Alcoholism is a major contributing factor to over 200 diseases and injuries.",
-          "It is better to avoid consuming alcohol altogether.",
+          "The term 'ergonomics' was first coined in 1949 by a British scientist named Murrell L. Barrington. It comes from the Greek words 'ergon' (meaning work) and 'nomos' (meaning natural law).",
+          "Sitting for too long is now the new smoking.",
+          "Workplace ergonomics isn't just about physical health - it can also affect your mental well-being.",
+          "Workplace injury is one of the most common injuries.",
         ],
       },
-      articleQuestion: "How to Avoid Alcoholism?",
+      articleQuestion: "Workplace Ergonomics Tips",
       text1:
-        "Alcoholism is simply an alcohol addiction. It is a chronic disease that is characterized by one’s inability to control or stop their alcohol intake, regardless of the harmful consequences. When this disease is diagnosed, it is called alcohol use disorder (AUD). Aside from the negative consequences this disease has on the physical body, it also has a profound impact on the mental, professional, and social life of the individual with this problem. This means they will experience difficulty interacting with other individuals, including their loved ones, and will not be able to deliver well at their workplace, which can lead to their layoffs.",
+        "In today's fast-paced world, most of us spend a significant amount of time sitting at our desks. While this may seem like a harmless activity, prolonged sitting can put a lot of stress on our bodies and lead to various health issues like lower back pain   and other musculoskeletal disorders. This is where workplace ergonomics comes in.",
       text2:
-        "Thankfully, this condition can be treated if the addict can seek help immediately after recognizing the signs. Signs that show one might be suffering from alcoholism include increased tolerance to it, loss of interest in other activities, withdrawal symptoms, and continued consumption despite awareness of the negative effects due to their belief that they cannot function without it.",
+        "Ergonomics refers to the science of designing the workplace to fit the needs of employees. It aims to reduce the risk of injuries and illnesses by making the workplace more comfortable and efficient. This not only benefits the employees but also the employers, as employees are healthy and more productive at their work, which will reflect positively on the company’s performance..",
       foodList: [
         {
-          title: "Avoid hanging out at the bar",
-          text: "I can imagine you rolling your eyes. This is a very obvious technique because more than half of the drinks served in these places are alcoholic, and there is no guarantee you won’t end up not drinking. So, if you want to hang out or socialize with friends and family, opt for activities like sporting activities that involve no drinking.",
+          title: "Adjust your chair and desk",
+          text: "Make sure your chair and desk are at the right height and distance from each other. Your feet should be flat on the floor, and your arms should be at a 90-degree angle when typing.",
         },
         {
-          title: "Do not hang out with people that drink",
-          text: "Hanging out with drinkers will definitely make you a drinker one day, no matter how disciplined you are.",
+          title: "Take regular breaks",
+          text: "Sitting for prolonged periods can cause stiffness and pain in your neck, shoulders, and back. Taking short breaks every 30 minutes or so can help you stretch your muscles and improve blood flow.",
         },
         {
-          title: "Keep yourself busy",
-          text: "With activities like exercising or starting a new hobby. This will help distract you from picking up a bottle.",
+          title: "Use proper lighting:",
+          text: "Poor lighting can cause eye strain, headaches, and fatigue. Make sure your workspace is well-lit, and use task lighting if necessary",
         },
         {
-          title: "Get support from friends and family",
-          text: "By telling them of your resolve not to drink alcohol again. Their support can get you going and also hold you accountable, so you do not turn back on your goal.",
+          title: "Invest in ergonomic equipment",
+          text: "Consider investing in an ergonomic keyboard, mouse, or standing desk to reduce strain on your wrists, arms, and back.",
         },
         {
-          title: "Know when to stop",
-          text: "This requires you to set the maximum number of drinks you will consume on every occasion and ensure you stick to it. If you are having a hard time deciding what your maximum number of drinks will be, then you can adopt the moderate amount as pointed out earlier, and recognize the amount you can handle.",
-        },
-        {
-          title: "Avoid binge drinking",
-          text: "flying through drinks in one go at an alarming rate. Instead, you can alternate the alcohol with water or other non-alcoholic beverages. This will not only keep you hydrated (very necessary by the way as alcohol is very dehydrating to the body) but help you get full quickly which will prevent you from consuming too much alcohol.",
-        },
-        {
-          title: "Do not have alcohol in your house",
-          text: "This will help limit your alcohol intake, as having it on hand will encourage more consumption.",
-        },
-        {
-          title: "Do not drink based on your emotions",
-          text: "Drinking anytime you feel a negative feeling like sadness or depression can make you very dependent on alcohol, which won’t help you achieve your goal of consuming a moderate amount of alcohol. Another reason is that alcohol does not help your negative feelings; rather, it worsens them due to it being a depressant.",
+          title: "Stay active",
+          text: "Incorporate physical activity into your workday. Take a walk during your lunch break, use the stairs instead of the elevator, or do some stretches at your desk.",
         },
       ],
     },
@@ -2294,48 +2283,39 @@ export const resourcesData = [
       didYouKnow: {
         title: "Did You know?",
         list: [
-          "Alcoholism is the leading cause of 3 million deaths worldwide annually.",
-          "Alcoholism is a major contributing factor to over 200 diseases and injuries.",
-          "It is better to avoid consuming alcohol altogether.",
+          "Hepatitis is classified into two: viral and non-viral hepatitis.",
+          "Viral hepatitis has 5 variants. They are A, B, C, D, and E.",
+          "Hepatitis B and C can lead to chronic hepatitis, which can cause liver damage and even liver cancer.",
+          "Hepatitis A and E are spread through contaminated food or water, while hepatitis B, C, and D are spread through blood-to-blood contact or sexual contact with an infected person.",
+          "Over 300 million people globally live with viral hepatitis.",
+          "Over 1.5 Million people die of viral hepatitis every year.",
         ],
       },
-      articleQuestion: "How to Avoid Alcoholism?",
+      articleQuestion: "How To Stay Safe?",
       text1:
-        "Alcoholism is simply an alcohol addiction. It is a chronic disease that is characterized by one’s inability to control or stop their alcohol intake, regardless of the harmful consequences. When this disease is diagnosed, it is called alcohol use disorder (AUD). Aside from the negative consequences this disease has on the physical body, it also has a profound impact on the mental, professional, and social life of the individual with this problem. This means they will experience difficulty interacting with other individuals, including their loved ones, and will not be able to deliver well at their workplace, which can lead to their layoffs.",
+        "Hepatitis is the inflammation of the liver. This inflammation is caused by various factors, including infectious viruses and non-infectious agents. The non-infectious agents that cause hepatitis include drugs, medicine, and excessive consumption of alcohol. This type of hepatitis caused by these non-infectious agents is referred to as non-viral hepatitis. On the other hand, the infectious viruses that cause hepatitis are A, B, C, D, and E. These varying strains of viruses cause hepatitis, but they are different in the way they are transmitted, the way they can be prevented, where they can be found, and their severity. Hepatitis caused by viruses is referred to as viral hepatitis, which is our focus in this article.",
       text2:
-        "Thankfully, this condition can be treated if the addict can seek help immediately after recognizing the signs. Signs that show one might be suffering from alcoholism include increased tolerance to it, loss of interest in other activities, withdrawal symptoms, and continued consumption despite awareness of the negative effects due to their belief that they cannot function without it.",
+        "Viral hepatitis poses a significant threat to the world, affecting millions of people worldwide. If not handled or taken care of properly, this condition can lead to severe complications like cirrhosis and liver cancer which can lead to death. This makes it very crucial for everyone to adopt measures that promote prevention and overall well-being. Keep reading to find out measures to protect you and your community from this illness.",
       foodList: [
         {
-          title: "Avoid hanging out at the bar",
-          text: "I can imagine you rolling your eyes. This is a very obvious technique because more than half of the drinks served in these places are alcoholic, and there is no guarantee you won’t end up not drinking. So, if you want to hang out or socialize with friends and family, opt for activities like sporting activities that involve no drinking.",
+          title: "Vaccination",
+          text: "Get yourself and your loved ones vaccinated for hepatitis A and B to protect yourselves.",
         },
         {
-          title: "Do not hang out with people that drink",
-          text: "Hanging out with drinkers will definitely make you a drinker one day, no matter how disciplined you are.",
+          title: "Practice good hygiene",
+          text: "Hepatitis A and E are often transmitted through contaminated food and water. So, to prevent it and keep yourself safe, ensure you wash your hands thoroughly before cooking, eating, and after eating. Ensure you wash fruits and vegetables thoroughly with some salt and clean water before you cook or eat them raw. Only drink clean water. If you are not sure how clean the water is, you can boil it and drink it when it is cool.",
         },
         {
-          title: "Keep yourself busy",
-          text: "With activities like exercising or starting a new hobby. This will help distract you from picking up a bottle.",
+          title: "Practice safe sex",
+          text: "Hepatitis B, C, and D can be transmitted through sex. So, to protect yourself, ensure you use a condom when having sex. Also, it won’t hurt for you and your partner to get tested if you both are sexually active.",
         },
         {
-          title: "Get support from friends and family",
-          text: "By telling them of your resolve not to drink alcohol again. Their support can get you going and also hold you accountable, so you do not turn back on your goal.",
+          title: "Avoid sharing needles",
+          text: "Hepatitis B and C can be transmitted from one infected person to another if they both share a needle or any other object that comes in contact with blood. With this in mind, avoid sharing needles, razors, hair clippers, and toothbrushes with  anyone, even if the person is a close family relative. You never really know who has this illness.",
         },
         {
-          title: "Know when to stop",
-          text: "This requires you to set the maximum number of drinks you will consume on every occasion and ensure you stick to it. If you are having a hard time deciding what your maximum number of drinks will be, then you can adopt the moderate amount as pointed out earlier, and recognize the amount you can handle.",
-        },
-        {
-          title: "Avoid binge drinking",
-          text: "flying through drinks in one go at an alarming rate. Instead, you can alternate the alcohol with water or other non-alcoholic beverages. This will not only keep you hydrated (very necessary by the way as alcohol is very dehydrating to the body) but help you get full quickly which will prevent you from consuming too much alcohol.",
-        },
-        {
-          title: "Do not have alcohol in your house",
-          text: "This will help limit your alcohol intake, as having it on hand will encourage more consumption.",
-        },
-        {
-          title: "Do not drink based on your emotions",
-          text: "Drinking anytime you feel a negative feeling like sadness or depression can make you very dependent on alcohol, which won’t help you achieve your goal of consuming a moderate amount of alcohol. Another reason is that alcohol does not help your negative feelings; rather, it worsens them due to it being a depressant.",
+          title: "Adopt a healthy lifestyle",
+          text: "Finally, maintain a healthy lifestyle to support and improve your liver function. This includes eating well-balanced meals, regularly exercising, and avoiding excessive consumption of alcohol or avoiding it altogether.",
         },
       ],
     },
