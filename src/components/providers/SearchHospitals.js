@@ -32,8 +32,8 @@ const SearchHospitals = () => {
   });
 
   const center = {
-    lat: 6.534347899999999,
-    lng: 3.3848981,
+    lat: 6.934347899999999,
+    lng: 5.5848981,
   };
 
   const callAPI = async (e) => {
@@ -94,12 +94,12 @@ const SearchHospitals = () => {
             </div>
           </div>
           <div className="w-1/5 max-[970px]:w-full">
-            <p className="text-[14px] font-bold mb-2">Clinic</p>
+            <p className="text-[14px] font-bold mb-2">Provider</p>
             <div className="relative">
               <input
                 type="text"
                 name="clinic"
-                placeholder="Maternity Clinics"
+                placeholder="Providers"
                 className="w-full text-[14px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[14px] placeholder:text-[#6C7780] rounded-lg border border-pigeonPost pl-8"
                 value={clinic}
                 onChange={(e) => setClinic(e.target.value)}

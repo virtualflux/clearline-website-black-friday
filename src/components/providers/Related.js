@@ -7,16 +7,30 @@ const RelatedHealthCare = ({ className, result }) => {
         Related Healthcare Centers
       </p>
       {result?.length ? (
-        <div className="flex gap-3 overflow-x-auto">
+        <div className="flex gap-3 flex-wrap">
           {result?.map((item, index) => (
             <RelatedCard item={item} key={index} />
           ))}
         </div>
       ) : (
-        <div>
-          <p className="text-[20px] max-md:text-[12px]">
-            Search to get related healtcare centers
-          </p>
+        <div className="flex gap-3 flex-wrap">
+          {[
+            {
+              providerName: "New Era Hospital Ltd Umuahia",
+              address:
+                "90b, Oji River Street off Uwalaka/Niger Road, Umuahia, Abia",
+            },
+            {
+              providerName: "Obioma Hospital",
+              address: "21 School Road,Umuahia",
+            },
+            {
+              providerName: "Uche Medicare Clinic",
+              address: "93,Healthcare / Aba Road, Umuahia,",
+            },
+          ]?.map((item, index) => (
+            <RelatedCard item={item} key={index} />
+          ))}
         </div>
       )}
     </div>
