@@ -2046,48 +2046,49 @@ export const resourcesData = [
       didYouKnow: {
         title: "Did You know?",
         list: [
-          "Alcoholism is the leading cause of 3 million deaths worldwide annually.",
-          "Alcoholism is a major contributing factor to over 200 diseases and injuries.",
-          "It is better to avoid consuming alcohol altogether.",
+          "The COVID-19 virus survives for several days on surfaces.",
+          "Some people with COVID-19 never show symptoms.",
+          "You might have been infected with COVID-19 without ever knowing.",
+          "A person cured of COVID-19 can still be re-infected.",
         ],
       },
-      articleQuestion: "How to Avoid Alcoholism?",
+      articleQuestion: "Why Face Masks?",
       text1:
-        "Alcoholism is simply an alcohol addiction. It is a chronic disease that is characterized by one’s inability to control or stop their alcohol intake, regardless of the harmful consequences. When this disease is diagnosed, it is called alcohol use disorder (AUD). Aside from the negative consequences this disease has on the physical body, it also has a profound impact on the mental, professional, and social life of the individual with this problem. This means they will experience difficulty interacting with other individuals, including their loved ones, and will not be able to deliver well at their workplace, which can lead to their layoffs.",
+        "In the wake of the COVID-19 pandemic, our global landscape underwent an unprecedented transformation. The outbreak, caused by the novel SARS-CoV-2 virus, caught the world off guard, leading to a swift declaration of a pandemic by the World Health Organization in March 2020.",
       text2:
-        "Thankfully, this condition can be treated if the addict can seek help immediately after recognizing the signs. Signs that show one might be suffering from alcoholism include increased tolerance to it, loss of interest in other activities, withdrawal symptoms, and continued consumption despite awareness of the negative effects due to their belief that they cannot function without it.",
+        "As the virus rapidly spread across borders, our familiar way of life came to a sudden halt, leaving a profound   impact on countless lives. The gravity of the situation prompted the implementation of preventive measures, with one notable intervention being the widespread use of face masks. In this article, we’ll delve into the reason for the use of a face mask and how it should be worn properly.",
       foodList: [
         {
-          title: "Avoid hanging out at the bar",
-          text: "I can imagine you rolling your eyes. This is a very obvious technique because more than half of the drinks served in these places are alcoholic, and there is no guarantee you won’t end up not drinking. So, if you want to hang out or socialize with friends and family, opt for activities like sporting activities that involve no drinking.",
+          title:
+            "Before touching the face mask, ensure you wash your hands thoroughly with running water and soap.",
         },
         {
-          title: "Do not hang out with people that drink",
-          text: "Hanging out with drinkers will definitely make you a drinker one day, no matter how disciplined you are.",
+          title: "Ensure the face mask is new, clean, and free from any damage",
+          text: "Avoid repeating the  face mask. If it is disposable, dispose of it after one use, and the cloth should be  washed immediately after one use",
         },
         {
-          title: "Keep yourself busy",
-          text: "With activities like exercising or starting a new hobby. This will help distract you from picking up a bottle.",
+          title: "Hold the mask by the ear loops or ties",
+          text: "Do not touch the places that come in contact with your mouth and nose.",
         },
         {
-          title: "Get support from friends and family",
-          text: "By telling them of your resolve not to drink alcohol again. Their support can get you going and also hold you accountable, so you do not turn back on your goal.",
+          title: "Place the masks over your nose, mouth, and chin",
+          text: "Adjust the facemask so that it covers your mouth, nose, and chin completely.",
         },
         {
-          title: "Know when to stop",
-          text: "This requires you to set the maximum number of drinks you will consume on every occasion and ensure you stick to it. If you are having a hard time deciding what your maximum number of drinks will be, then you can adopt the moderate amount as pointed out earlier, and recognize the amount you can handle.",
+          title:
+            "Next, you secure the mask by placing the loops or tying the ties behind your ears, ensuring a snug fit.",
         },
         {
-          title: "Avoid binge drinking",
-          text: "flying through drinks in one go at an alarming rate. Instead, you can alternate the alcohol with water or other non-alcoholic beverages. This will not only keep you hydrated (very necessary by the way as alcohol is very dehydrating to the body) but help you get full quickly which will prevent you from consuming too much alcohol.",
+          title:
+            "As you go on about your day, avoid touching your face mask. If you touch it, wash  your hands immediately.",
         },
         {
-          title: "Do not have alcohol in your house",
-          text: "This will help limit your alcohol intake, as having it on hand will encourage more consumption.",
+          title:
+            "When you get back home, remove the mask by unhooking the loops or untying the ties. Please refrain from touching the front of the mask. Go ahead and get rid of the mask, either by disposing of it or washing it, based on the material it was made of.",
         },
         {
-          title: "Do not drink based on your emotions",
-          text: "Drinking anytime you feel a negative feeling like sadness or depression can make you very dependent on alcohol, which won’t help you achieve your goal of consuming a moderate amount of alcohol. Another reason is that alcohol does not help your negative feelings; rather, it worsens them due to it being a depressant.",
+          title:
+            "Wash your hands thoroughly after you’ve gotten rid of the face mask.",
         },
       ],
     },
