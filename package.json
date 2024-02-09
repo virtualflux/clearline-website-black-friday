@@ -25,7 +25,8 @@
     "react-icons": "^5.0.1",
     "react-toastify": "^10.0.1",
     "react-visibility-sensor": "^5.1.1",
-    "recompose": "^0.30.0"
+    "recompose": "^0.30.0",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

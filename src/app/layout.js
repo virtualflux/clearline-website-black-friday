@@ -27,14 +27,14 @@ const Satoshi = localFont({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://clearline.netlify.app"),
+  metadataBase: new URL("https://clearlinehmo.com"),
   title: "Clearline HMO",
   description: "Health Empowered, Tomorrow Secured.",
   openGraph: {
     title: "Clearline HMO",
     description: "Health Empowered, Tomorrow Secured",
     images: "/assets/images/ClearlineLogo.png",
-    url: "https://clearline.netlify.app",
+    url: "https://clearlinehmo.com",
     siteName: "ClearlineHMO",
     locale: "en_US",
     type: "website",

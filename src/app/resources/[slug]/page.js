@@ -10,6 +10,12 @@ export async function generateMetadata({ params }) {
   };
 }
 
+export async function generateStaticParams() {
+  return resourcesData.map(({ slug }) => ({
+    slug,
+  }));
+}
+
 export default function Page({ params }) {
   const article = resourcesData?.find(({ slug }) => slug === params.slug);
 
