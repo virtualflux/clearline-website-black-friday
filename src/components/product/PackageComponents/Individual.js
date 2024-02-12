@@ -5,66 +5,83 @@ import PackageTable from "../components/PackageTable";
 import { useState } from "react";
 import BuyPlanModal from "@/components/Modal/BuyPlan";
 import Link from "next/link";
+import { zohoFunc } from "@/utils/data";
 
 const Individual = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col items-center">
-      <BuyPlanModal isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />
-      <p className="text-[40px] max-md:text-[24px] font-medium">
-        Individual plan
-      </p>
-      <p className="text-boulder text-[32px] max-md:text-[16px] text-center font-light mb-6">
-        Our individual plans prioritize your health, offering a range of
-        benefits to meet your lifestyle. From routine check-ups to specialized
-        care, ClearLine HMO is your steadfast partner in every step of your
-        health journey. We understand the importance of flexibility, and our
-        plans are designed to provide security without compromising your
-        choices.
-      </p>
-      <div className="flex gap-4 max-sm:flex-col mb-12">
-        <Button
-          type={"button"}
-          className={
-            "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
-          }
-        >
-          Consult an Expert
-        </Button>
-        <Button
-          onClick={() => setIsOpen(true)}
-          type={"button"}
-          className={
-            "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
-          }
-        >
-          Buy a plan online
-        </Button>
+    <div>
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } fixed top-0 z-20 h-full overflow-y-scroll w-full mt-[15%] lg:mt-[5%] rounded-lg shadow-lg bg-white flex flex-col`}
+      >
+        <div
+          className="fixed inset-0 -z-10"
+          onClick={() => setIsOpen(false)}
+        ></div>
+        <div id="zf_div_rsR01cS1IfC6MV9SiPur7GmXGOcnndXI4TGD7kmcQBA"></div>
       </div>
-      <div className="w-full mb-8">
-        <PackageTable />
-      </div>
-      <div className="flex gap-4 max-sm:flex-col mb-12">
-        <Link href="/plan.pdf" target="_blank">
+
+      <div className="flex flex-col items-center">
+        <p className="text-[40px] max-md:text-[24px] font-medium">
+          Individual plan
+        </p>
+        <p className="text-boulder text-[32px] max-md:text-[16px] text-center font-light mb-6">
+          Our individual plans prioritize your health, offering a range of
+          benefits to meet your lifestyle. From routine check-ups to specialized
+          care, ClearLine HMO is your steadfast partner in every step of your
+          health journey. We understand the importance of flexibility, and our
+          plans are designed to provide security without compromising your
+          choices.
+        </p>
+        <div className="flex gap-4 max-sm:flex-col mb-12">
           <Button
             type={"button"}
             className={
               "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
             }
           >
-            View full plan
+            Consult an Expert
           </Button>
-        </Link>
-        <Button
-          onClick={() => setIsOpen(true)}
-          type={"button"}
-          className={
-            "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
-          }
-        >
-          Buy a plan
-        </Button>
+          <Button
+            onClick={() => {
+              setIsOpen(true);
+              zohoFunc();
+            }}
+            type={"button"}
+            className={
+              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
+            }
+          >
+            Buy a plan online
+          </Button>
+        </div>
+        <div className="w-full mb-8">
+          <PackageTable />
+        </div>
+        <div className="flex gap-4 max-sm:flex-col mb-12">
+          <Link href="/plan.pdf" target="_blank">
+            <Button
+              type={"button"}
+              className={
+                "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
+              }
+            >
+              View full plan
+            </Button>
+          </Link>
+          <Button
+            onClick={() => setIsOpen(true)}
+            type={"button"}
+            className={
+              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
+            }
+          >
+            Buy a plan
+          </Button>
+        </div>
       </div>
     </div>
   );

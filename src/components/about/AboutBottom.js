@@ -4,14 +4,24 @@ import Button from "@/shared/Button";
 import Image from "next/image";
 import { AboutBottomBg } from "../../../public/assets/images";
 import { useState } from "react";
-import BuyPlanModal from "../Modal/BuyPlan";
+import { zohoFunc } from "@/utils/data";
 
 const AboutBottom = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="px-16 max-lg:px-12 max-md:px-8 pt-12 max-md:mt-8">
-      <BuyPlanModal isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } fixed top-0 z-20 h-full overflow-y-scroll w-full mt-[15%] lg:mt-[5%] rounded-lg shadow-lg bg-white flex flex-col`}
+      >
+        <div
+          className="fixed inset-0 -z-10"
+          onClick={() => setIsOpen(false)}
+        ></div>
+        <div id="zf_div_rsR01cS1IfC6MV9SiPur7GmXGOcnndXI4TGD7kmcQBA"></div>
+      </div>
       <div className="relative text-white rounded-lg h-[424px] max-md:h-[270px] max-[330px]:h-[300px] flex justify-center items-center">
         <Image
           src={AboutBottomBg}
@@ -23,7 +33,10 @@ const AboutBottom = () => {
             Get started on your path to redefined healthcare with us
           </p>
           <Button
-            onClick={() => setIsOpen(true)}
+            onClick={() => {
+              setIsOpen(true);
+              zohoFunc();
+            }}
             className={
               "!rounded-lg px-4 bg-white !w-[140px] flex justify-center items-center"
             }

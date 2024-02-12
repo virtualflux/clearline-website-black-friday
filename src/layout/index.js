@@ -5,7 +5,6 @@ import { useState } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -29,10 +28,6 @@ const PageLayout = ({ children }) => {
         draggable
         pauseOnHover
         theme="dark"
-      />
-      <TawkMessengerReact
-        propertyId={process.env.NEXT_PUBLIC_TAWK_PROPERTYID}
-        widgetId={process.env.NEXT_PUBLIC_TAWK_WIDGETID}
       />
       <Navbar sidebarOpen={sidebarOpen} handleSidebar={handleSidebar} />
       <Sidebar sidebarOpen={sidebarOpen} handleSidebar={handleSidebar} />
