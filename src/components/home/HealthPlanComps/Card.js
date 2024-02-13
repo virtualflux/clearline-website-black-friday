@@ -9,25 +9,10 @@ import {
 } from "../../../../public/assets/svgs";
 import Image from "next/image";
 import { useState } from "react";
-import { zohoFunc } from "@/utils/data";
 
-const Card = ({ title, list, superb }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Card = ({ title, list, superb, onClick }) => {
   return (
     <div>
-      <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } fixed top-0 left-0 z-20 h-full overflow-y-scroll w-[90%] mt-[15%] lg:mt-[5%] rounded-lg shadow-lg bg-white flex flex-col items-center`}
-      >
-        <div
-          className="fixed inset-0 -z-10"
-          onClick={() => setIsOpen(false)}
-        ></div>
-        <div id="zf_div_rsR01cS1IfC6MV9SiPur7GmXGOcnndXI4TGD7kmcQBA"></div>
-      </div>
-
       <div
         className={`flex flex-col gap-2 border border-[#BACCDF] rounded-[30px] px-16 max-md:px-12 py-8 ${
           superb && "bg-catalineBlue"
@@ -57,10 +42,7 @@ const Card = ({ title, list, superb }) => {
           ))}
         </div>
         <Button
-          onClick={() => {
-            setIsOpen(true);
-            zohoFunc();
-          }}
+          onClick={onClick}
           className={`!w-fit !rounded-lg px-4 ${
             superb ? "bg-white" : "bg-catalineBlue"
           }`}

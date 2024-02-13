@@ -6,14 +6,14 @@ import Sample from "./Sample";
 import "animate.css";
 import useIsVisible from "@/hooks/useIsVisible";
 
-export default function HealthPlans() {
+export default function HealthPlans({ onClick }) {
   const [activeTab, setActiveTab] = useState(0);
   const elemRef = useRef();
   const isVisible = useIsVisible(elemRef);
 
   const healthTabs = healthData.map((health) => ({
     title: health.title,
-    component: <Sample arr={health.arr} />,
+    component: <Sample arr={health.arr} onClick={onClick} />,
   }));
 
   return (

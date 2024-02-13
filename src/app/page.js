@@ -1,11 +1,5 @@
-import Banner from "../components/home/Banner";
-import SectionOne from "../components/home/SectionOne";
-import HealthPlans from "../components/home/HealthPlanComps/HealthPlans";
-import Network from "../components/home/Network";
-import Sponsors from "../components/home/Sponsors";
-import BottomSection from "../components/home/BottomSection";
 import PageLayout from "@/layout";
-import Testimonial from "@/components/home/Testimonial";
+import HomeContainer from "@/components/home";
 
 export const metadata = {
   title: "Clearline HMO - The future of healthcare starts today",
@@ -17,13 +11,7 @@ export const metadata = {
 export default function Home() {
   return (
     <PageLayout>
-      <Banner />
-      <SectionOne />
-      <HealthPlans />
-      <Network />
-      <Testimonial />
-      <Sponsors />
-      <BottomSection />
+      <HomeContainer />
     </PageLayout>
   );
 }

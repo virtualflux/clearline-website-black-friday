@@ -1,10 +1,16 @@
 import Card from "./Card";
 
-const Sample = ({ arr }) => {
+const Sample = ({ arr, onClick }) => {
   return (
     <div className="flex flex-wrap justify-center gap-6">
       {arr?.map(({ list, title, superb }, idx) => (
-        <Card key={idx} title={title} list={list} superb={superb} />
+        <Card
+          key={idx}
+          title={title}
+          list={list}
+          superb={superb}
+          onClick={onClick}
+        />
       ))}
     </div>
   );

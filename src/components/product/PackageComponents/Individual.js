@@ -6,6 +6,8 @@ import { useState } from "react";
 import BuyPlanModal from "@/components/Modal/BuyPlan";
 import Link from "next/link";
 import { zohoFunc } from "@/utils/data";
+import Image from "next/image";
+import { Close } from "../../../../public/assets/svgs";
 
 const Individual = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,12 +17,20 @@ const Individual = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } fixed top-0 z-20 h-full overflow-y-scroll w-full mt-[15%] lg:mt-[5%] rounded-lg shadow-lg bg-white flex flex-col`}
+        } fixed top-0 z-20 h-full overflow-y-scroll w-[90%] mt-[15%] lg:mt-[5%] rounded-lg shadow-lg bg-white flex flex-col`}
       >
         <div
           className="fixed inset-0 -z-10"
           onClick={() => setIsOpen(false)}
         ></div>
+        <div className="flex justify-end py-2">
+          <Image
+            src={Close}
+            alt="close modal"
+            className="cursor-pointer"
+            onClick={() => setIsOpen(false)}
+          />
+        </div>
         <div id="zf_div_rsR01cS1IfC6MV9SiPur7GmXGOcnndXI4TGD7kmcQBA"></div>
       </div>
 

@@ -2389,7 +2389,7 @@ export const zohoFunc = () => {
       "https://forms.zohopublic.com/user164/form/ClearlinePlan/formperma/rsR01cS1IfC6MV9SiPur7GmXGOcnndXI4TGD7kmcQBA?zf_rszfm=1";
     f.style.border = "none";
     f.style.height = "1165px";
-    f.style.width = "90%";
+    f.style.width = "100%";
     f.style.transition = "all 0.5s ease";
     f.setAttribute("aria-label", "Fill\x20in\x20the\x20form");
     var d = document.getElementById(

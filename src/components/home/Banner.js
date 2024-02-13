@@ -10,9 +10,8 @@ import {
 import { ArrowRight } from "../../../public/assets/svgs";
 import { useEffect, useMemo, useRef, useState } from "react";
 import "animate.css";
-import { zohoFunc } from "@/utils/data";
 
-export default function Banner() {
+export default function Banner({ onClick }) {
   const bannerData = useMemo(
     () => [
       {
@@ -43,7 +42,6 @@ export default function Banner() {
     []
   );
 
-  const [isOpen, setIsOpen] = useState(false);
   const [currentData, setCurrentData] = useState(0);
 
   const timeoutRef = useRef(null);
@@ -72,17 +70,6 @@ export default function Banner() {
 
   return (
     <div className="flex gap-8 justify-between max-lg:flex-col max-md:gap-6 px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24">
-      <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } fixed top-0 z-20 h-full overflow-y-scroll w-full mt-[15%] lg:mt-[5%] rounded-lg shadow-lg bg-white flex flex-col`}
-      >
-        <div
-          className="fixed inset-0 -z-10"
-          onClick={() => setIsOpen(false)}
-        ></div>
-        <div id="zf_div_rsR01cS1IfC6MV9SiPur7GmXGOcnndXI4TGD7kmcQBA"></div>
-      </div>
       <div className="w-1/2 max-lg:w-full flex flex-col gap-4">
         <p className="animate__animated animate__jackInTheBox w-fit text-[16px] text-green border border-green bg-sugarCane px-[40px] max-lg:px-[30px] py-3 rounded-lg">
           Health insurance
@@ -98,10 +85,7 @@ export default function Banner() {
         </p>
         <div className="flex gap-3">
           <Button
-            onClick={() => {
-              setIsOpen(true);
-              zohoFunc();
-            }}
+            onClick={onClick}
             className={"!rounded-lg px-4 bg-catalineBlue"}
           >
             <div className="flex gap-4 items-center">

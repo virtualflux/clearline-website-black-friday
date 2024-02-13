@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AboutBottomBg } from "../../../public/assets/images";
 import { useState } from "react";
 import { zohoFunc } from "@/utils/data";
+import { Close } from "../../../public/assets/svgs";
 
 const AboutBottom = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,12 +15,20 @@ const AboutBottom = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } fixed top-0 z-20 h-full overflow-y-scroll w-full mt-[15%] lg:mt-[5%] rounded-lg shadow-lg bg-white flex flex-col`}
+        } fixed top-0 z-20 h-full overflow-y-scroll w-[90%] mt-[15%] lg:mt-[5%] rounded-lg shadow-lg bg-white flex flex-col`}
       >
         <div
           className="fixed inset-0 -z-10"
           onClick={() => setIsOpen(false)}
         ></div>
+        <div className="flex justify-end py-2">
+          <Image
+            src={Close}
+            alt="close modal"
+            className="cursor-pointer"
+            onClick={() => setIsOpen(false)}
+          />
+        </div>
         <div id="zf_div_rsR01cS1IfC6MV9SiPur7GmXGOcnndXI4TGD7kmcQBA"></div>
       </div>
       <div className="relative text-white rounded-lg h-[424px] max-md:h-[270px] max-[330px]:h-[300px] flex justify-center items-center">
