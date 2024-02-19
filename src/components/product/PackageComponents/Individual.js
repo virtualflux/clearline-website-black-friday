@@ -82,7 +82,10 @@ const Individual = () => {
             </Button>
           </Link>
           <Button
-            onClick={() => setIsOpen(true)}
+            onClick={() => {
+              setIsOpen(true);
+              zohoFunc();
+            }}
             type={"button"}
             className={
               "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"

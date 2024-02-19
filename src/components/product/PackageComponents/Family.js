@@ -15,7 +15,7 @@ const Family = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } fixed top-0 z-20 h-full overflow-y-scroll w-[90%] mt-[15%] lg:mt-[5%] rounded-lg shadow-lg flex flex-col`}
+        } fixed top-0 z-20 h-full overflow-y-scroll w-[90%] mt-[15%] lg:mt-[5%] rounded-lg shadow-lg bg-white flex flex-col`}
       >
         <div
           className="fixed inset-0 -z-10"
@@ -77,7 +77,10 @@ const Family = () => {
             View full plan
           </Button>
           <Button
-            onClick={() => setIsOpen(true)}
+            onClick={() => {
+              setIsOpen(true);
+              zohoFunc();
+            }}
             type={"button"}
             className={
               "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
