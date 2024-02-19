@@ -8,7 +8,6 @@ import {
   TickCircle,
 } from "../../../../public/assets/svgs";
 import Image from "next/image";
-import { useState } from "react";
 
 const Card = ({ title, list, superb, onClick }) => {
   return (

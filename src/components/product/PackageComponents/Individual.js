@@ -3,7 +3,6 @@
 import { Button } from "@mui/base";
 import PackageTable from "../components/PackageTable";
 import { useState } from "react";
-import BuyPlanModal from "@/components/Modal/BuyPlan";
 import Link from "next/link";
 import { zohoFunc } from "@/utils/data";
 import Image from "next/image";
