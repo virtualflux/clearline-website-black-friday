@@ -9,7 +9,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
 import { Close } from "../../public/assets/svgs";
-
+import { useSalesIQ } from "@/hooks/useSalesIQ";
 const PageLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -17,14 +17,14 @@ const PageLayout = ({ children }) => {
   const handleSidebar = () => {
     sidebarOpen ? setSidebarOpen(false) : setSidebarOpen(true);
   };
-
+  
   const zohoContact = () => {
     try {
       var f = document.createElement("iframe");
       f.src =
         "https://forms.zohopublic.com/clearlinehmo/form/ConnectwithUsYourQuestionsOurCommitment/formperma/WldfFtbqH-2VwT9PkLXQsj1f9ZT94qQx-rUtFhtAvIE?zf_rszfm=1";
       f.style.border = "none";
-      f.style.height = "1004px";
+      f.style.height = "800px";
       f.style.width = "100%";
       f.style.transition = "all 0.5s ease";
       f.setAttribute(
@@ -68,12 +68,14 @@ const PageLayout = ({ children }) => {
   };
 
   return (
+    <>
+    {useSalesIQ("https://salesiq.zohopublic.com/widget","siq54e6195b138fd09f7c6d4c17ed009c7e9363e42723b6ab9c0c0a82b6142bccda")}
     <div>
       <div className="w-full flex justify-center">
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } fixed top-0 z-20 h-full overflow-y-scroll w-[90%] mt-[15%] lg:mt-[5%] rounded-lg shadow-lg bg-white`}
+          } fixed top-0 z-50 h-full overflow-y-scroll w-[40%] mt-[15%] lg:mt-[4%] rounded-lg shadow-lg bg-white`}
         >
           <div
             className="fixed inset-0 -z-10"
@@ -122,6 +124,8 @@ const PageLayout = ({ children }) => {
       <div className="flex-1 overflow-y-auto h-full">{children}</div>
       <Footer />
     </div>
+    </>
+    
   );
 };
 

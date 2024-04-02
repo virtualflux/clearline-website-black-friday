@@ -14,7 +14,7 @@ const Resources = () => {
   return (
     <PageLayout>
       <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24 mb-12">
-        <div className="mb-6">
+        <div className="mb-6 text-center">
           <p className="text-[48px] max-lg:text-[32px] max-md:text-[24px] font-semibold">
             Resources for you
           </p>
@@ -23,7 +23,7 @@ const Resources = () => {
           </p>
         </div>
         <div>
-          <div className="flex gap-x-4 gap-y-8 max-md:gap-y-4 flex-wrap">
+          <div className="flex gap-x-4 gap-y-8 max-md:gap-y-4 justify-center flex-wrap">
             <div
               className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg bg-resSuperFood bg-no-repeat bg-cover bg-center flex items-end`}
             >

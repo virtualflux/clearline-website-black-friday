@@ -8,7 +8,7 @@ const Banner = () => {
           </p>
           <p className="text-[32px] max-lg:text-[24px] max-md:text-[16px] text-center">
             Request a tailored quote today and embark on a journey towards
-            enhanced employee well-being with ClearLine HMO.
+            enhanced employee well-being with Clearline HMO.
           </p>
         </div>
       </div>

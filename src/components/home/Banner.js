@@ -10,6 +10,7 @@ import {
 import { ArrowRight } from "../../../public/assets/svgs";
 import { useEffect, useMemo, useRef, useState } from "react";
 import "animate.css";
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function Banner({ onClick }) {
   const bannerData = useMemo(
@@ -31,11 +32,11 @@ export default function Banner({ onClick }) {
         img: HomeBanner2,
       },
       {
-        text1: "Fostering Student",
-        text2: "Wellness with",
-        text3: "ClearLine HMO",
+        text1: "Promoting your staff",
+        text2: "Well-being through",
+        text3: "Clearline HMO",
         subtext:
-          "ClearLineHMO promotes student wellness by offering access to a healthcare network, empowering academic success with comprehensive health support.",
+          "By prioritizing employee well-being, organizations can foster a healthier, happier, and more productive workforce",
         img: HomeBanner3,
       },
     ],
@@ -92,7 +93,8 @@ export default function Banner({ onClick }) {
               <p className="text-[14px] max-md:text-[12px] text-white">
                 Buy a plan
               </p>
-              <Image src={ArrowRight} alt="buy a plan" />
+
+              <FaArrowRight size={18}/>
             </div>
           </Button>
         </div>
@@ -108,11 +110,12 @@ export default function Banner({ onClick }) {
             }}
           >
             {bannerData.map(({ img }, idx) => (
-              <div key={idx} className="inline-block w-full whitespace-normal">
+              <div key={idx} className="inline-block w-full h-[640px] max-lg:h-[400px] whitespace-normal relative">
                 <Image
                   src={img}
                   alt="Health Unleashed"
-                  className="w-full h-full max-lg:h-[400px] object-cover"
+                  fill
+                  className="w-full h-full  object-cover"
                   priority={true}
                 />
               </div>

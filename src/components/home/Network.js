@@ -7,6 +7,7 @@ import { BlueArrowRight } from "../../../public/assets/svgs";
 import Link from "next/link";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Network() {
   return (
@@ -42,7 +43,7 @@ export default function Network() {
                 >
                   See our Hospital Network
                 </p>
-                <Image src={BlueArrowRight} alt="buy a plan" />
+                <FaArrowRightLong size={20} className="text-catalineBlue"/>
               </div>
             </Link>
           </Button>

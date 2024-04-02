@@ -1,3 +1,4 @@
+import Individual from "@/components/product/PackageComponents/Individual";
 import {
   ResAlcohol,
   ResChildhood,
@@ -8,6 +9,8 @@ import {
   ResSuperFood,
   ResWorkplace,
 } from "../../public/assets/images";
+import Family from "@/components/product/PackageComponents/Family";
+import Business from "@/components/product/PackageComponents/Business";
 
 export const navLinks = [
   {
@@ -22,7 +25,7 @@ export const navLinks = [
 
 export const healthData = [
   {
-    title: "Individual Plans",
+    title: "Retails",
     arr: [
       {
         title: "Silver",
@@ -67,7 +70,7 @@ export const healthData = [
     ],
   },
   {
-    title: "Plans for Family",
+    title: "Corporate",
     arr: [
       {
         title: "Family Silver",
@@ -112,7 +115,7 @@ export const healthData = [
     ],
   },
   {
-    title: "Corporate/Business Plans",
+    title: "SME",
     arr: [
       {
         title: "Business Silver",
@@ -157,7 +160,180 @@ export const healthData = [
     ],
   },
 ];
-
+export const titleList=[
+  { title: "-Select title-", value: "" },
+  { title: "Mr", value: "mr" },
+  { title: "Mrs", value: "mrs" },
+]
+export const genderList=[
+  { title: "-Select gender-", value: "" },
+  { title: "Male", value: "male" },
+  { title: "Female", value: "female" },
+]
+export const planList=[
+  { title: "Choose plan", value: "" },
+  { title: "Silver plan", value: "PLN_rwihd8oamyibatx" },
+  { title: "Bronze plan", value: "PLN_m0li61t6vy0fl1v" },
+  { title: "Gold plan", value: "PLN_l0ukqpt8lvine8r" },
+  { title: "Gold plus plan", value: "PLN_w9t947irj3dzezd" },
+  { title: "Platinum plan", value: "PLN_kyexrq1nhjacubc" },
+  { title: "Platinum plus plan", value: "PLN_bg455xodeguxi8d" },
+]
+export const packagePlans=[
+    { title: "retail", component: <Individual /> },
+    { title: "corporate", component: <Family /> },
+    { title: "sme", component: <Business /> },
+]
+export const stateList=[
+  {
+    title:"-Select state-" ,
+    value: "",
+  },
+  {
+    title: "Abia",
+    value: "abia",
+  },
+  {
+    title: "Adamawa",
+    value: "adamawa",
+  },
+  {
+    title: "Akwa Ibom",
+    value: "akwa_ibom",
+  },
+  {
+    title: "Anambra",
+    value: "anambra",
+  },
+  {
+    title: "Bauchi",
+    value: "bauchi",
+  },
+  {
+    title: "Bayelsa",
+    value: "bayelsa",
+  },
+  {
+    title: "Benue",
+    value: "benue",
+  },
+  {
+    title: "Borno",
+    value: "borno",
+  },
+  {
+    title: "Cross River",
+    value: "cross_river",
+  },
+  {
+    title: "Delta",
+    value: "delta",
+  },
+  {
+    title: "Ebonyi",
+    value: "ebonyi",
+  },
+  {
+    title: "Edo",
+    value: "edo",
+  },
+  {
+    title: "Ekiti",
+    value: "ekiti",
+  },
+  {
+    title: "Enugu",
+    value: "enugu",
+  },
+  {
+    title: "Gombe",
+    value: "gombe",
+  },
+  {
+    title: "Imo",
+    value: "imo",
+  },
+  {
+    title: "Jigawa",
+    value: "jigawa",
+  },
+  {
+    title: "Kaduna",
+    value: "kaduna",
+  },
+  {
+    title: "Kano",
+    value: "kano",
+  },
+  {
+    title: "Katsina",
+    value: "katsina",
+  },
+  {
+    title: "Kebbi",
+    value: "kebbi",
+  },
+  {
+    title: "Kogi",
+    value: "kogi",
+  },
+  {
+    title: "Kwara",
+    value: "kwara",
+  },
+  {
+    title: "Lagos",
+    value: "lagos",
+  },
+  {
+    title: "Nasarawa",
+    value: "nasarawa",
+  },
+  {
+    title: "Niger",
+    value: "niger",
+  },
+  {
+    title: "Ogun",
+    value: "ogun",
+  },
+  {
+    title: "Ondo",
+    value: "ondo",
+  },
+  {
+    title: "Osun",
+    value: "osun",
+  },
+  {
+    title: "Oyo",
+    value: "oyo",
+  },
+  {
+    title: "Plateau",
+    value: "plateau",
+  },
+  {
+    title: "Rivers",
+    value: "rivers",
+  },
+  {
+    title: "Sokoto",
+    value: "sokoto",
+  },
+  {
+    title: "Taraba",
+    value: "taraba",
+  },
+  {
+    title: "Yobe",
+    value: "yobe",
+  },
+  {
+    title: "Zamfara",
+    value: "zamfara",
+  },
+]
 export const countryList = [
   {
     name: "Afghanistan",

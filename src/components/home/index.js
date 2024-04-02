@@ -11,6 +11,8 @@ import BottomSection from "./BottomSection";
 import { Close } from "../../../public/assets/svgs";
 import Image from "next/image";
 import { zohoFunc } from "@/utils/data";
+import BuyPlanModal from "../Modal/BuyPlan";
+import AboutBottom from "../about/AboutBottom";
 
 const HomeContainer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +29,7 @@ const HomeContainer = () => {
             className="fixed inset-0 -z-10"
             onClick={() => setIsOpen(false)}
           ></div>
+          <BuyPlanModal isOpen={isOpen} setIsOpen={setIsOpen}/>
           <div className="flex justify-end py-2">
             <Image
               src={Close}
@@ -41,16 +44,17 @@ const HomeContainer = () => {
       <Banner
         onClick={() => {
           setIsOpen(true);
-          zohoFunc();
+          // zohoFunc();
         }}
       />
       <SectionOne />
-      <HealthPlans
+      {/* <AboutBottom/> */}
+      {/* <HealthPlans
         onClick={() => {
           setIsOpen(true);
-          zohoFunc();
+          // zohoFunc();
         }}
-      />
+      /> */}
       <Network />
       <Testimonial />
       <Sponsors />

@@ -8,7 +8,8 @@ import {
   TickCircle,
 } from "../../../../public/assets/svgs";
 import Image from "next/image";
-
+import { GoCheckCircle } from "react-icons/go";
+import { FaArrowRight, FaArrowRightLong } from "react-icons/fa6";
 const Card = ({ title, list, superb, onClick }) => {
   return (
     <div>
@@ -29,7 +30,8 @@ const Card = ({ title, list, superb, onClick }) => {
         <div>
           {list.map((item, idx) => (
             <div key={idx} className="flex items-center gap-3">
-              <Image src={superb ? LightTickCircle : TickCircle} alt="item" />
+              {superb?<GoCheckCircle className="text-white" size={23}/>:<GoCheckCircle className="text-catalineBlue" size={23}/>}
+              
               <p
                 className={`text-[20px] max-md:text-[14px] mb-2 font-light ${
                   superb && "text-white"
@@ -54,10 +56,7 @@ const Card = ({ title, list, superb, onClick }) => {
             >
               Buy a plan
             </p>
-            <Image
-              src={superb ? BlueArrowRight : ArrowRight}
-              alt="buy a plan"
-            />
+            {superb?<FaArrowRightLong className="text-catalineBlue" size={18}/>:<FaArrowRightLong className="text-white" size={18}/>}
           </div>
         </Button>
       </div>

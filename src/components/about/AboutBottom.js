@@ -6,6 +6,7 @@ import { AboutBottomBg } from "../../../public/assets/images";
 import { useState } from "react";
 import { zohoFunc } from "@/utils/data";
 import { Close } from "../../../public/assets/svgs";
+import BuyPlanModal from "../Modal/BuyPlan";
 
 const AboutBottom = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ const AboutBottom = () => {
           className="fixed inset-0 -z-10"
           onClick={() => setIsOpen(false)}
         ></div>
+        <BuyPlanModal isOpen={isOpen} setIsOpen={setIsOpen}/>
         <div className="flex justify-end py-2">
           <Image
             src={Close}
@@ -44,7 +46,7 @@ const AboutBottom = () => {
           <Button
             onClick={() => {
               setIsOpen(true);
-              zohoFunc();
+              // zohoFunc();
             }}
             className={
               "!rounded-lg px-4 bg-white !w-[140px] flex justify-center items-center"

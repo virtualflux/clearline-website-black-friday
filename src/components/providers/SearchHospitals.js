@@ -15,6 +15,7 @@ import "animate.css";
 import RelatedHealthCare from "./Related";
 import ButtonLoader from "@/shared/ButtonLoader";
 
+
 const SearchHospitals = () => {
   const [keyword, setKeyword] = useState("");
   const [location, setLocation] = useState("");

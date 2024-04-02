@@ -4,8 +4,12 @@ import Image from "next/image";
 import { MissionImage } from "../../../public/assets/images";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import { Add, Minus } from "../../../out/assets/svgs";
+import { useState } from "react";
+import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const MissionVision = () => {
+  
   return (
     <div className="mt-[400px] max-[1300px]:mt-[500px] max-[1000px]:mt-[400px] max-[900px]:mt-[400px] max-[768px]:mt-[250px] max-[570px]:mt-[300px] max-[490px]:mt-[380px] max-[450px]:mt-[450px] max-[400px]:mt-[500px] max-[330px]:mt-[700px] px-16 max-lg:px-12 max-md:px-8 flex max-[950px]:flex-col justify-between gap-16 max-md:gap-4">
       <div className="w-2/5 max-[950px]:w-full">

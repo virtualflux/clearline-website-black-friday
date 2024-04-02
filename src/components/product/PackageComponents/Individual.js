@@ -7,6 +7,7 @@ import Link from "next/link";
 import { zohoFunc } from "@/utils/data";
 import Image from "next/image";
 import { Close } from "../../../../public/assets/svgs";
+import BuyPlanModal from "@/components/Modal/BuyPlan";
 
 const Individual = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,7 @@ const Individual = () => {
           onClick={() => setIsOpen(false)}
         ></div>
         <div className="flex justify-end py-2">
+        <BuyPlanModal isOpen={isOpen} setIsOpen={setIsOpen}/>
           <Image
             src={Close}
             alt="close modal"
@@ -34,13 +36,10 @@ const Individual = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <p className="text-[40px] max-md:text-[24px] font-medium">
-          Individual plan
-        </p>
         <p className="text-boulder text-[32px] max-md:text-[16px] text-center font-light mb-6">
           Our individual plans prioritize your health, offering a range of
           benefits to meet your lifestyle. From routine check-ups to specialized
-          care, ClearLine HMO is your steadfast partner in every step of your
+          care, Clearline HMO is your steadfast partner in every step of your
           health journey. We understand the importance of flexibility, and our
           plans are designed to provide security without compromising your
           choices.
@@ -57,7 +56,7 @@ const Individual = () => {
           <Button
             onClick={() => {
               setIsOpen(true);
-              zohoFunc();
+              // zohoFunc();
             }}
             type={"button"}
             className={
@@ -84,7 +83,7 @@ const Individual = () => {
           <Button
             onClick={() => {
               setIsOpen(true);
-              zohoFunc();
+              // zohoFunc();
             }}
             type={"button"}
             className={

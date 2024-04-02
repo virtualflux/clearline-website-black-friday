@@ -16,10 +16,10 @@ export default function SectionOne() {
           Here is why Clearline is the Best for you
         </p>
         <div className="min-h-3/5 max-lg:min-h-4/5 flex gap-4">
-          <div className="mt-5 relative w-[30px] bg-zircon min-h-full py-4 ">
-            <div className="absolute top-[20px] -left-[8px] w-[20px] h-[20px] rounded-full bg-catalineBlue"></div>
-            <div className="absolute top-1/2 -left-[8px] w-[20px] h-[20px] rounded-full bg-catalineBlue"></div>
-            <div className="absolute bottom-[20px] -left-[8px] w-[20px] h-[20px] rounded-full bg-catalineBlue"></div>
+          <div className="mt-5 relative w-[9px] bg-zircon min-h-full py-4 shrink-0">
+            <div className="absolute top-[20px] left-1/2 -translate-x-1/2 w-[20px] h-[20px] rounded-full bg-catalineBlue"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[20px] h-[20px] rounded-full bg-catalineBlue"></div>
+            <div className="absolute bottom-[20px] left-1/2 -translate-x-1/2 w-[20px] h-[20px] rounded-full bg-catalineBlue"></div>
           </div>
           <div className="">
             <div className="mb-10 mt-5">
@@ -36,7 +36,7 @@ export default function SectionOne() {
             <div className="mb-10">
               <p className="text-[20px] max-md:text-[16px] text-boulder font-light">
                 <span className="text-catalineBlue font-medium">
-                  Discover personalized health excellence with ClearLine HMO:
+                  Discover personalized health excellence with Clearline HMO:
                 </span>{" "}
                 Tailored plans, a vast provider network, and seamless access to
                 quality care – because your well-being deserves the best.
@@ -45,7 +45,7 @@ export default function SectionOne() {
             <div className="">
               <p className="text-[20px] max-md:text-[16px] text-boulder font-light">
                 <span className="text-catalineBlue font-medium">
-                  Elevate your family&apos;s health with ClearLineHMO:
+                  Elevate your family&apos;s health with Clearline HMO:
                 </span>{" "}
                 Our tailored plans and extensive provider network ensure quality
                 care, because your loved ones deserve the best.

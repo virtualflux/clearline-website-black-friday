@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import Image from "next/image";
 import { GreenArrowLeft, GreenArrowRight } from "../../../public/assets/svgs";
-
+import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
 const Testimonial = () => {
   const testi = [
     {
@@ -98,18 +98,17 @@ const Testimonial = () => {
           {testi.map(({ component }, idx) => (
             <div key={idx} className="inline-block w-full whitespace-normal">
               <div className="flex justify-center">
-                <div className="w-4/5 flex justify-between max-md:w-full">
-                  <Image
-                    src={GreenArrowLeft}
-                    alt="green arrow left"
-                    className="cursor-pointer"
+                <div className="w-4/5 flex justify-between items-center max-md:w-full">
+
+                  <BiSolidLeftArrow
+                    className="cursor-pointer text-catalineBlue"
+                    size={25}
                     onClick={handlePrevClick}
                   />
                   {component}
-                  <Image
-                    src={GreenArrowRight}
-                    alt="green arrow right"
-                    className="cursor-pointer"
+                  <BiSolidRightArrow
+                    className="cursor-pointer text-catalineBlue"
+                    size={25}
                     onClick={handleNextClick}
                   />
                 </div>

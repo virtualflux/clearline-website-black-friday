@@ -145,7 +145,7 @@ export default function Footer() {
             </p>
             <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
               TEL: <span className="underline">0700245245245</span>,{" "}
-              <span className="underline">01-252-2452</span> or{" "}
+              
               <span className="underline">09087792965</span>
             </p>
             <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">

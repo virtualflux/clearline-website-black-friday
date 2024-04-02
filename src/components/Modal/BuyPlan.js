@@ -1,69 +1,81 @@
 "use client";
-
 import CLearlineModal from "@/layout/Modal";
 import { Button } from "@mui/material";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ButtonLoader from "@/shared/ButtonLoader";
 import { toast } from "react-toastify";
-
+import { usePaymentGateway } from "@/hooks/usePaystack";
+import { useFormik } from "formik";
+import { validateForm } from "@/utils/validateForm";
+import { genderList, planList, stateList, titleList } from "@/utils/data";
 const BuyPlanModal = ({ isOpen, setIsOpen }) => {
   const form = useRef();
+  const formik=useFormik({
+    initialValues:{
+      plan:"",
+      email:"",
+      surname:"",
+      otherNames:"",
+      gender:"",
+      title:"",
+      phoneNumber:"",
+      dob:"",
+      state:"",
+      address:"",
 
+    },
+    onSubmit,
+    validate:validateForm
+    
+  })
+  const {initializePayment, onClose, onSuccess}=usePaymentGateway(formik)
   const [isLoading, setIsLoading] = useState(false);
-  const [plan, setPlan] = useState("");
-  const [email, setEmail] = useState("");
-  const [surname, setSurname] = useState("");
-  const [names, setNames] = useState("");
-  const [gender, setGender] = useState("");
-  const [title, setTitle] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [dob, setDob] = useState("");
-  const [state, setState] = useState("");
-  const [address, setAddress] = useState("");
-
-  const sendEmail = async (e) => {
-    e.preventDefault();
+  
+  function onSubmit (values)  {
     setIsLoading(true);
-
-    try {
-      await emailjs
-        .sendForm(
-          "contact_service",
-          "contact_form",
-          form.current,
-          "OTdU-O6vdb3nS4UFz"
-        )
-        .then(
-          ({ status }) => {
-            if (status === 200) {
-              setIsOpen(false);
-              toast.success("Plan purchase sent successfully!");
-              setPlan("");
-              setEmail("");
-              setSurname("");
-              setNames("");
-              setGender("");
-              setTitle("");
-              setPhoneNumber("");
-              setDob("");
-              setState("");
-              setAddress("");
-            }
-          },
-          (error) => {
-            toast.error(`Oh no, ${error.text}!`);
-          }
-        );
-    } catch (error) {
-      console.log(error);
-    }
+    initializePayment(onSuccess, onClose)
+    // try {
+    //   await emailjs
+    //     .sendForm(
+    //       "contact_service",
+    //       "contact_form",
+    //       form.current,
+    //       "OTdU-O6vdb3nS4UFz"
+    //     )
+    //     .then(
+    //       ({ status }) => {
+    //         if (status === 200) {
+    //           setIsOpen(false);
+    //           toast.success("Plan purchase sent successfully!");
+    //           setPlan("");
+    //           setEmail("");
+    //           setSurname("");
+    //           setNames("");
+    //           setGender("");
+    //           setTitle("");
+    //           setPhoneNumber("");
+    //           setDob("");
+    //           setState("");
+    //           setAddress("");
+    //         }
+    //       },
+    //       (error) => {
+    //         toast.error(`Oh no, ${error.text}!`);
+    //       }
+    //     );
+    // } catch (error) {
+    //   console.log(error);
+    // }
 
     setIsLoading(false);
   };
 
   return (
-    <CLearlineModal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+    <CLearlineModal isOpen={isOpen} onClose={() =>{ 
+      setIsOpen(false)
+      formik.resetForm()
+    }}>
       <div className="flex justify-center">
         <div className="w-1/2 flex flex-col items-center">
           <p className="w-fit text-catalineBlue text-[20px] max-md:text-[12px] font-medium mb-3 border border-catalineBlue rounded-[30px] p-2">
@@ -77,24 +89,17 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
           </p>
           <div className="my-4">
             <select
-              value={plan}
-              required
-              onChange={(e) => setPlan(e.target.value)}
-              className="rounded-2xl font-semibold text-catalineBlue border-2 border-[#008BE9] py-2 px-4"
+              name="plan"
+              defaultValue={""}
+              onChange={formik.getFieldProps("plan").onChange}
+              className="rounded-lg font-semibold text-catalineBlue border-2 border-[#008BE9] py-2 px-4"
             >
-              {[
-                { title: "Choose plan", value: "" },
-                { title: "Silver plan", value: "Silver" },
-                { title: "Bronze plan", value: "Bronze" },
-                { title: "Gold plan", value: "Gold" },
-                { title: "Gold plus plan", value: "Plus" },
-                { title: "Platinum plan", value: "Platinum" },
-                { title: "Platinum plus plan", value: "Plus" },
-              ].map((item, idx) => (
+              {planList.map((item, idx) => (
                 <option
                   key={idx}
                   className="font-semibold text-catalineBlue"
                   value={item.value}
+                  disabled={idx==0}
                 >
                   {item.title}
                 </option>
@@ -103,7 +108,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
           </div>
         </div>
       </div>
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={form} onSubmit={formik.handleSubmit}>
         <div className="flex flex-wrap gap-3 mb-3">
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
@@ -112,12 +117,15 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
             <input
               type="text"
               name="surname"
-              placeholder="Eg ...John"
-              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
-              value={surname}
-              onChange={(e) => setSurname(e.target.value)}
-              required
+              placeholder="e.g ...John"
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-4 border ${formik.touched.surname && formik.errors.surname?"border-red-500":"border-[#BACCDF]"} `}
+              {...formik.getFieldProps("surname")}
+              
+             
+             
+              
             />
+          {formik.touched.surname && formik.errors.surname &&<p className="text-red-500 text-xs mt-1">{formik.errors.surname}</p>}
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
@@ -127,32 +135,29 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               type="text"
               name="otherNames"
               placeholder="Eg ...Snow"
-              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
-              value={names}
-              onChange={(e) => setNames(e.target.value)}
-              required
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-4 border ${formik.touched.otherNames && formik.errors.otherNames? "border-red-500":"border-[#BACCDF]"} `}
+              {...formik.getFieldProps("otherNames")}
+              
             />
+            {formik.touched.otherNames && formik.errors.otherNames &&<p className="text-red-500 text-xs mt-1">{formik.errors.otherNames}</p>}
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
               Gender
             </p>
             <select
-              value={gender}
-              onChange={(e) => setGender(e.target.value)}
-              required
-              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]"
+              name="gender"
+              defaultValue={""}
+              onChange={formik.getFieldProps("gender").onChange}
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-2 border ${formik.errors.gender ?"border-red-500":"border-[#BACCDF]"}`}
             >
-              {[
-                { title: "-Select gender-", value: "" },
-                { title: "Male", value: "male" },
-                { title: "Female", value: "female" },
-              ].map((item, idx) => (
-                <option key={idx} className="" value={item.value}>
+              {genderList.map((item, idx) => (
+                <option key={idx} className="" value={item.value} disabled={idx==0}>
                   {item.title}
                 </option>
               ))}
             </select>
+            {formik.errors.gender &&<p className="text-red-500 text-xs mt-1">{formik.errors.gender}</p>}
           </div>
         </div>
         <div className="flex flex-wrap gap-3 mb-3">
@@ -161,35 +166,32 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               Title
             </p>
             <select
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              required
-              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]"
+              name="title"
+              onChange={formik.getFieldProps("title").onChange}
+              defaultValue={""}
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-2 border ${ formik.errors.title ?"border-red-500":"border-[#BACCDF]"}`}
             >
-              {[
-                { title: "-Select title-", value: "" },
-                { title: "Mr", value: "mr" },
-                { title: "Mrs", value: "mrs" },
-              ].map((item, idx) => (
-                <option key={idx} className="" value={item.value}>
+              {titleList.map((item, idx) => (
+                <option key={idx} className="" value={item.value} disabled={idx==0}>
                   {item.title}
                 </option>
               ))}
             </select>
+            {formik.errors.title &&<p className="text-red-500 text-xs mt-1">{formik.errors.title}</p>}
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
               Phone number
             </p>
             <input
-              type="number"
+              type="tel"
               name="phoneNumber"
-              placeholder="23494888992938"
-              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              required
+              placeholder="2349000000000"
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-4 border ${formik.touched.phoneNumber && formik.errors.phoneNumber?"border-red-500": "border-[#BACCDF]"}`}
+              {...formik.getFieldProps("phoneNumber")}
+    
             />
+            {formik.touched.phoneNumber && formik.errors.phoneNumber &&<p className="text-red-500 text-xs mt-1">{formik.errors.phoneNumber}</p>}
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
@@ -198,11 +200,11 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
             <input
               type="date"
               name="dob"
-              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
-              value={dob}
-              onChange={(e) => setDob(e.target.value)}
-              required
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-4 border ${formik.touched.dob && formik.errors.dob?"border-red-500":"border-[#BACCDF]"}`}
+             {...formik.getFieldProps("dob")}
+              
             />
+            {formik.touched.dob && formik.errors.dob &&<p className="text-red-500 text-xs mt-1">{formik.errors.dob}</p>}
           </div>
         </div>
         <div className="flex flex-wrap gap-3 mb-3">
@@ -214,177 +216,30 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               type="email"
               name="email"
               placeholder="you@company.com"
-              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-4 border ${formik.touched.email && formik.errors.email?"border-red-500":"border-[#BACCDF]"}`}
+              {...formik.getFieldProps("email")}
             />
+            {formik.touched.email && formik.errors.email &&<p className="text-red-500 text-xs mt-1">{formik.errors.email}</p>}
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
               State of residence
             </p>
             <select
-              value={state}
-              onChange={(e) => setState(e.target.value)}
-              required
-              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-2 border border-[#BACCDF]"
+              name="state"
+              onChange={formik.getFieldProps("state").onChange}
+              defaultValue={""}
+      
+            
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-2 border ${ formik.errors.state?"border-red-500":"border-[#BACCDF]"}`}
             >
-              {[
-                {
-                  title: "-Select state-",
-                  value: "",
-                },
-                {
-                  title: "Abia",
-                  value: "abia",
-                },
-                {
-                  title: "Adamawa",
-                  value: "adamawa",
-                },
-                {
-                  title: "Akwa Ibom",
-                  value: "akwa_ibom",
-                },
-                {
-                  title: "Anambra",
-                  value: "anambra",
-                },
-                {
-                  title: "Bauchi",
-                  value: "bauchi",
-                },
-                {
-                  title: "Bayelsa",
-                  value: "bayelsa",
-                },
-                {
-                  title: "Benue",
-                  value: "benue",
-                },
-                {
-                  title: "Borno",
-                  value: "borno",
-                },
-                {
-                  title: "Cross River",
-                  value: "cross_river",
-                },
-                {
-                  title: "Delta",
-                  value: "delta",
-                },
-                {
-                  title: "Ebonyi",
-                  value: "ebonyi",
-                },
-                {
-                  title: "Edo",
-                  value: "edo",
-                },
-                {
-                  title: "Ekiti",
-                  value: "ekiti",
-                },
-                {
-                  title: "Enugu",
-                  value: "enugu",
-                },
-                {
-                  title: "Gombe",
-                  value: "gombe",
-                },
-                {
-                  title: "Imo",
-                  value: "imo",
-                },
-                {
-                  title: "Jigawa",
-                  value: "jigawa",
-                },
-                {
-                  title: "Kaduna",
-                  value: "kaduna",
-                },
-                {
-                  title: "Kano",
-                  value: "kano",
-                },
-                {
-                  title: "Katsina",
-                  value: "katsina",
-                },
-                {
-                  title: "Kebbi",
-                  value: "kebbi",
-                },
-                {
-                  title: "Kogi",
-                  value: "kogi",
-                },
-                {
-                  title: "Kwara",
-                  value: "kwara",
-                },
-                {
-                  title: "Lagos",
-                  value: "lagos",
-                },
-                {
-                  title: "Nasarawa",
-                  value: "nasarawa",
-                },
-                {
-                  title: "Niger",
-                  value: "niger",
-                },
-                {
-                  title: "Ogun",
-                  value: "ogun",
-                },
-                {
-                  title: "Ondo",
-                  value: "ondo",
-                },
-                {
-                  title: "Osun",
-                  value: "osun",
-                },
-                {
-                  title: "Oyo",
-                  value: "oyo",
-                },
-                {
-                  title: "Plateau",
-                  value: "plateau",
-                },
-                {
-                  title: "Rivers",
-                  value: "rivers",
-                },
-                {
-                  title: "Sokoto",
-                  value: "sokoto",
-                },
-                {
-                  title: "Taraba",
-                  value: "taraba",
-                },
-                {
-                  title: "Yobe",
-                  value: "yobe",
-                },
-                {
-                  title: "Zamfara",
-                  value: "zamfara",
-                },
-              ].map((item, idx) => (
-                <option key={idx} className="" value={item.value}>
+              {stateList.map((item, idx) => (
+                <option key={idx} className="" value={item.value} disabled={idx==0}>
                   {item.title}
                 </option>
               ))}
             </select>
+            {formik.errors.state &&<p className="text-red-500 text-xs mt-1">{formik.errors.state}</p>}
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
@@ -394,11 +249,11 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               type="text"
               name="address"
               placeholder="Enter address"
-              className="w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-black px-4 border border-[#BACCDF]"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              required
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-4 border ${formik.touched.address && formik.errors.address?"border-red-500":"border-[#BACCDF]"}`}
+              {...formik.getFieldProps("address")}
+  
             />
+            {formik.touched.address && formik.errors.address &&<p className="text-red-500 text-xs mt-1">{formik.errors.address}</p>}
           </div>
         </div>
         <div className="flex justify-center pt-6">

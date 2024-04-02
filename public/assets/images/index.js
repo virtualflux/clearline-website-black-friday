@@ -1,7 +1,7 @@
 import ClearlineLogo from "./ClearlineLogo.png";
 import HomeBanner from "./homeBanner.png";
 import HomeBanner2 from "./homebanner2.png";
-import HomeBanner3 from "./homebanner3.png";
+import HomeBanner3 from "./work.jpg";
 import SectionOneImage from "./SectionOne.png";
 import DoctorSmiling from "./portrait-smiling-doctor.png";
 import AirPeace from "./air-peace.png";
@@ -42,7 +42,7 @@ import QuotationLeft from "./quotation-mark-left.png";
 import QuotationRight from "./quotation-mark-right.png";
 import EbereNwosu from "./EbereNwosu.png";
 import Amaka from "./Amaka-Nwosisi.jpeg";
-import AhmedYakasai from "./AhmedYakasai.jpeg";
+import ChukwukaObiora from "./ChukwukaObiora.jpeg";
 import Chukwuka from "./Chukwuka-Ebuka.jpg";
 import chukwudalu from "./chukwudalu-nwosu.jpg";
 import Ituah from "./Pastor-Ituah-Ighodalo.jpeg";
@@ -94,7 +94,7 @@ export {
   QuotationLeft,
   QuotationRight,
   EbereNwosu,
-  AhmedYakasai,
+  ChukwukaObiora,
   Amaka,
   Chukwuka,
   chukwudalu,

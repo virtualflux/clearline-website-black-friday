@@ -6,6 +6,7 @@ import { useState } from "react";
 import { zohoFunc } from "@/utils/data";
 import Image from "next/image";
 import { Close } from "../../../../public/assets/svgs";
+import BuyPlanModal from "@/components/Modal/BuyPlan";
 
 const Family = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ const Family = () => {
           className="fixed inset-0 -z-10"
           onClick={() => setIsOpen(false)}
         ></div>
+        <BuyPlanModal isOpen={isOpen} setIsOpen={setIsOpen}/>
         <div className="flex justify-end py-2">
           <Image
             src={Close}
@@ -33,11 +35,8 @@ const Family = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <p className="text-[40px] max-md:text-[24px] font-medium">
-          Family plan
-        </p>
         <p className="text-boulder text-[32px] max-md:text-[16px] text-center font-light mb-6">
-          ClearLine HMO understands the importance of family health, and our
+          Clearline HMO understands the importance of family health, and our
           plans reflect this commitment. With access to an extensive network of
           healthcare providers, you can rest easy knowing that each family
           member has the support they need for a healthier, happier life
@@ -54,7 +53,7 @@ const Family = () => {
           <Button
             onClick={() => {
               setIsOpen(true);
-              zohoFunc();
+              // zohoFunc();
             }}
             type={"button"}
             className={
@@ -79,7 +78,7 @@ const Family = () => {
           <Button
             onClick={() => {
               setIsOpen(true);
-              zohoFunc();
+              // zohoFunc();
             }}
             type={"button"}
             className={
