@@ -4,9 +4,7 @@ import Image from "next/image";
 import { MissionImage } from "../../../public/assets/images";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
-import { Add, Minus } from "../../../out/assets/svgs";
-import { useState } from "react";
-import { FaChevronUp, FaChevronDown } from "react-icons/fa";
+
 
 const MissionVision = () => {
   
