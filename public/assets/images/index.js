@@ -42,7 +42,7 @@ import QuotationLeft from "./quotation-mark-left.png";
 import QuotationRight from "./quotation-mark-right.png";
 import EbereNwosu from "./EbereNwosu.png";
 import Amaka from "./Amaka-Nwosisi.jpeg";
-import ChukwukaObiora from "./ChukwukaObiora.jpeg";
+import ChukwukaObiora from "./Chukwukaobiora.jpeg";
 import Chukwuka from "./Chukwuka-Ebuka.jpg";
 import chukwudalu from "./chukwudalu-nwosu.jpg";
 import Ituah from "./Pastor-Ituah-Ighodalo.jpeg";
