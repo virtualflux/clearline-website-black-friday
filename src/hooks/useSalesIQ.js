@@ -12,6 +12,6 @@ export const useSalesIQ = (url, widgetCode) => {
     return () => {
       document.body.removeChild(script);
     }
-  }, [url]);
+  }, [url,widgetCode]);
 };
 
