@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Business from "./Business";
-import Family from "./Family";
-import Individual from "./Individual";
+import Family from "./Retail";
+import Individual from "./Corporate";
 
 export const Package = () => {
   const [activeTab, setActiveTab] = useState(0);

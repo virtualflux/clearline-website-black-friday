@@ -8,7 +8,7 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import ButtonLoader from "@/shared/ButtonLoader";
 import { toast } from "react-toastify";
-
+import Head from "next/head";
 export default function Contact() {
   const elemRef = useRef();
   const form = useRef();
@@ -57,6 +57,7 @@ export default function Contact() {
   };
 
   return (
+    
     <PageLayout>
       <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 flex flex-col items-center">
         <div className="w-3/5 max-md:w-full">

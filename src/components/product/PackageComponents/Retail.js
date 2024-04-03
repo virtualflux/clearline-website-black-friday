@@ -3,13 +3,13 @@
 import { Button } from "@mui/base";
 import PackageTable from "../components/PackageTable";
 import { useState } from "react";
-import Link from "next/link";
 import { zohoFunc } from "@/utils/data";
 import Image from "next/image";
 import { Close } from "../../../../public/assets/svgs";
 import BuyPlanModal from "@/components/Modal/BuyPlan";
+import Link from "next/link";
 
-const Individual = () => {
+const Family = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -23,8 +23,8 @@ const Individual = () => {
           className="fixed inset-0 -z-10"
           onClick={() => setIsOpen(false)}
         ></div>
-        <div className="flex justify-end py-2">
         <BuyPlanModal isOpen={isOpen} setIsOpen={setIsOpen}/>
+        <div className="flex justify-end py-2">
           <Image
             src={Close}
             alt="close modal"
@@ -37,12 +37,10 @@ const Individual = () => {
 
       <div className="flex flex-col items-center">
         <p className="text-boulder text-[32px] max-md:text-[16px] text-center font-light mb-6">
-          Our individual plans prioritize your health, offering a range of
-          benefits to meet your lifestyle. From routine check-ups to specialized
-          care, Clearline HMO is your steadfast partner in every step of your
-          health journey. We understand the importance of flexibility, and our
-          plans are designed to provide security without compromising your
-          choices.
+          Clearline HMO understands the importance of family health, and our
+          plans reflect this commitment. With access to an extensive network of
+          healthcare providers, you can rest easy knowing that each family
+          member has the support they need for a healthier, happier life
         </p>
         <div className="flex gap-4 max-sm:flex-col mb-12">
           <Button
@@ -70,16 +68,16 @@ const Individual = () => {
           <PackageTable />
         </div>
         <div className="flex gap-4 max-sm:flex-col mb-12">
-          <Link href="/plan.pdf" target="_blank">
-            <Button
-              type={"button"}
-              className={
-                "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
-              }
-            >
-              View full plan
-            </Button>
-          </Link>
+        <Link href="/retailplan.pdf" target="_blank">
+          <Button
+            type={"button"}
+            className={
+              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
+            }
+          >
+            View full plan
+          </Button>
+        </Link>
           <Button
             onClick={() => {
               setIsOpen(true);
@@ -98,4 +96,4 @@ const Individual = () => {
   );
 };
 
-export default Individual;
+export default Family;

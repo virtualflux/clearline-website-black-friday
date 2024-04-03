@@ -1,4 +1,4 @@
-import Individual from "@/components/product/PackageComponents/Individual";
+import Corporate from "@/components/product/PackageComponents/Corporate";
 import {
   ResAlcohol,
   ResChildhood,
@@ -9,7 +9,7 @@ import {
   ResSuperFood,
   ResWorkplace,
 } from "../../public/assets/images";
-import Family from "@/components/product/PackageComponents/Family";
+import Retail from "@/components/product/PackageComponents/Retail";
 import Business from "@/components/product/PackageComponents/Business";
 
 export const navLinks = [
@@ -180,8 +180,8 @@ export const planList=[
   { title: "Platinum plus plan", value: "PLN_bg455xodeguxi8d" },
 ]
 export const packagePlans=[
-    { title: "retail", component: <Individual /> },
-    { title: "corporate", component: <Family /> },
+    { title: "retail", component: <Retail /> },
+    { title: "corporate", component: <Corporate /> },
     { title: "sme", component: <Business /> },
 ]
 export const stateList=[
