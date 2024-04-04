@@ -12,7 +12,7 @@ export const metadata = {
 export default function  TheBoard (){
     return(
         <PageLayout>
-            <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24 min-h-screen">
+            <div className="lg:px-12 pt-32 max-md:pt-24 min-h-screen">
             <Directors />
             </div>
         </PageLayout>
