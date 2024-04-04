@@ -65,7 +65,7 @@ const Page=()=>{
             <input
               type="text"
               name="name"
-              placeholder="name"
+              placeholder="Name"
               className={`w-full text-[14px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border  ${formik.touched.name && formik.errors.name?"border-red-500":"border-pigeonPost"}`}
               {...formik.getFieldProps("name")}
             />

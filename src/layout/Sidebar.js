@@ -27,7 +27,7 @@ const Sidebar = ({ sidebarOpen, handleSidebar, onClick }) => {
           >
             <div className="group-hover:text-white text-[16px] p-3 flex justify-between items-center"  onClick={()=>handleTabChange(0)}>
               <span>About</span>
-              <FaChevronRight size={18}/>
+              <FaChevronRight size={16}/>
             </div>
             {activeTab===0&&(
               <div className="absolute flex flex-col top-0 left-0 -translate-x-full bg-white">
@@ -58,18 +58,18 @@ const Sidebar = ({ sidebarOpen, handleSidebar, onClick }) => {
           >
             <div className="group-hover:text-white text-[16px] p-3 flex justify-between items-center"  onClick={()=>handleTabChange(1)}>
               <span>Products</span>
-              <FaChevronRight size={18}/>
+              <FaChevronRight size={16}/>
             </div>
             {activeTab===1&&(
                <div className="absolute flex flex-col top-0 left-0 -translate-x-full bg-white min-w-[80px]">
                <Link
-               href={"/product/corporate"}
+               href={"/products/corporate"}
                className={`group hover:text-white hover:bg-catalineBlue p-3`}
              >
                <p className="text-[16px]">Corporate</p>
              </Link>
                <Link
-               href={"#"}
+               href={"/products/retail"}
                className={`group hover:text-white hover:bg-catalineBlue p-3`}
              >
                <p className="text-[16px]">Retail</p>
@@ -98,7 +98,7 @@ const Sidebar = ({ sidebarOpen, handleSidebar, onClick }) => {
               <span>
                 Providers
                 </span>
-                <FaChevronRight size={18}/>
+                <FaChevronRight size={16}/>
               </div>
             {activeTab===2&&( <div className="absolute flex flex-col top-0 left-0 -translate-x-full bg-white">
             <Link
