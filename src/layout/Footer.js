@@ -56,13 +56,13 @@ export default function Footer() {
             Quick Links
           </p>
           <Link
-            href={"/resources"}
+            href={"/"}
             className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
           >
             Hospital Directory old
           </Link>
           <Link
-            href={"/about"}
+            href={"/our-story"}
             className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
           >
             About us
@@ -79,16 +79,22 @@ export default function Footer() {
             Our Health Plans
           </p>
           <Link
-            href={"/resources"}
+            href={"/products/corporate"}
             className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
           >
-            Corporate Health insurance Scheme
+            Corporate Health insurance Policy
           </Link>
           <Link
-            href={"/about"}
+            href={"/products/retail"}
             className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
           >
-            Individual Policy
+            Retail Health insurance Policy
+          </Link>
+          <Link
+            href={"#"}
+            className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
+          >
+            SME Health insurance Policy
           </Link>
           <Link
             href={"/resources"}
