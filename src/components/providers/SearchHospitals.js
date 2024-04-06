@@ -42,7 +42,7 @@ const SearchHospitals = () => {
     e.preventDefault();
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/providers?keyword=${keyword}&location=${location}&clinic=${clinic}&plan=${plan}`
+        `https://techwave-academy-backend-production.up.railway.app/providers?keyword=${keyword}&location=${location}&clinic=${clinic}&plan=${plan}`
       );
       const { data } = await res.json();
       setResult(data);
