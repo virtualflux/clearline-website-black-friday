@@ -1,8 +1,13 @@
-FROM node:18
+FROM node:latest
 
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
+
+COPY package.json yarn.lock ./
+
+RUN yarn install
+
 COPY . .
-EXPOSE 3000
-CMD npm run dev
+
+RUN yarn build
+
+CMD ["npx", "serve", "out", "-p", "3000"]
