@@ -63,13 +63,13 @@ const Sidebar = ({ sidebarOpen, handleSidebar, onClick }) => {
             {activeTab===1&&(
                <div className="absolute flex flex-col top-0 left-0 -translate-x-full bg-white min-w-[80px]">
                <Link
-               href={"/products/corporate"}
+               href={"/corporate"}
                className={`group hover:text-white hover:bg-catalineBlue p-3`}
              >
                <p className="text-[16px]">Corporate</p>
              </Link>
                <Link
-               href={"/products/retail"}
+               href={"/retail"}
                className={`group hover:text-white hover:bg-catalineBlue p-3`}
              >
                <p className="text-[16px]">Retail</p>

@@ -59,12 +59,12 @@ const [active,setActive]=useState(null);
             <ul className="flex flex-col w-[200px] divide-y-[0.8px] divide-zircon">
                 <li className="py-2 hover:bg-catalineBlue hover:text-white p-4">
                   <NavigationMenuLink asChild>
-                    <Link href="/products/corporate">Corporate</Link>
+                    <Link href="/corporate">Corporate</Link>
                   </NavigationMenuLink>
                 </li>
                 <li className="py-2 hover:bg-catalineBlue hover:text-white p-4">
                   <NavigationMenuLink asChild>
-                    <Link href="/products/retail">Retail</Link>
+                    <Link href="/retail">Retail</Link>
                   </NavigationMenuLink>
                 </li>
                 <li className="py-2 hover:bg-catalineBlue hover:text-white p-4">

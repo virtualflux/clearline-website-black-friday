@@ -79,13 +79,13 @@ export default function Footer() {
             Our Health Plans
           </p>
           <Link
-            href={"/products/corporate"}
+            href={"/corporate"}
             className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
           >
             Corporate Health insurance Policy
           </Link>
           <Link
-            href={"/products/retail"}
+            href={"/retail"}
             className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
           >
             Retail Health insurance Policy
