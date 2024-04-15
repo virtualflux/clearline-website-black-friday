@@ -44,7 +44,7 @@ const [active,setActive]=useState(null);
                 </li>
                 <li className="py-2 hover:bg-catalineBlue hover:text-white p-4">
                   <NavigationMenuLink asChild>
-                    <Link href="#">Management Team</Link>
+                    <Link href="/themanagement">Management Team</Link>
                   </NavigationMenuLink>
                 </li>
               </ul>

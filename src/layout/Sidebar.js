@@ -44,7 +44,7 @@ const Sidebar = ({ sidebarOpen, handleSidebar, onClick }) => {
               <p className="text-[16px]">Board Members</p>
             </Link>
               <Link
-              href={"#"}
+              href={"/themanagement"}
               className={`group hover:text-white hover:bg-catalineBlue p-3`}
             >
               <p className="text-[16px]">Management Team</p>

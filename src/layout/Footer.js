@@ -142,10 +142,10 @@ export default function Footer() {
         </div>
         <div className="w-1/5 max-lg:w-fit flex flex-col gap-5">
           <p className="text-[24px] max-md:text-[16px] font-bold">Contact us</p>
+          <div>
           <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
             Clearline House:
           </p>
-          <div>
             <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
               290 Ikorodu Road, Anthony. Lagos.
             </p>
@@ -154,9 +154,13 @@ export default function Footer() {
               
               <span className="underline">09087792965</span>
             </p>
-            <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
+            <Link href="mailto:hello@clearlinehmo.com" className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
+
               Email: <span className="underline">hello@clearlinehmo.com</span>
-            </p>
+            </Link>
+            {/* <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
+              Email: <span className="underline">hello@clearlinehmo.com</span>
+            </p> */}
           </div>
         </div>
       </div>

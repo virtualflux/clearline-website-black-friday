@@ -41,7 +41,7 @@ import rjolad from "./rjolad.png";
 import QuotationLeft from "./quotation-mark-left.png";
 import QuotationRight from "./quotation-mark-right.png";
 import EbereNwosu from "./EbereNwosu.png";
-import Amaka from "./Amaka-Nwosisi.jpeg";
+import Amaka from "./Amaka-Nwosisi.jpg";
 import ChukwukaObiora from "./Chukwukaobiora.jpeg";
 import Chukwuka from "./Chukwuka-Ebuka.jpg";
 import chukwudalu from "./chukwudalu-nwosu.jpg";
@@ -49,8 +49,19 @@ import Ituah from "./Pastor-Ituah-Ighodalo.jpeg";
 import YAKASAI from "./PHARM.-AHMED-I.-YAKASAI.jpeg";
 import Shailesh from "./Shailesh-Kumar.jpg";
 import ClearlineWhiteLogo from "./clearline-white-logo.png";
-
+import OlubukolaOlaoye from "./laoye.jpg";
+import NnekaAnozie from "./NnekaAnozie.jpg"
+import ChidinmaChigbo from "./chidinmachigbo.jpeg"
+import Olubunmi from "./Olubunmiokubadejo.jpg"
+import FolasadeDosunmu from "./folasadedosunmu.jpg"
+import PraiseDike from "./Barr.-Praise-Dike.jpg"
 export {
+  OlubukolaOlaoye,
+  NnekaAnozie,
+  ChidinmaChigbo,
+  Olubunmi,
+  FolasadeDosunmu,
+  PraiseDike,
   ClearlineLogo,
   HomeBanner,
   SectionOneImage,
