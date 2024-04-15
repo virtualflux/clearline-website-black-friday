@@ -52,7 +52,7 @@ import ClearlineWhiteLogo from "./clearline-white-logo.png";
 import OlubukolaOlaoye from "./laoye.jpg";
 import NnekaAnozie from "./NnekaAnozie.jpg"
 import ChidinmaChigbo from "./chidinmachigbo.jpeg"
-import Olubunmi from "./Olubunmiokubadejo.jpg"
+import Olubunmi from "./olubunmiokubadejo.jpg"
 import FolasadeDosunmu from "./folasadedosunmu.jpg"
 import PraiseDike from "./Barr.-Praise-Dike.jpg"
 export {

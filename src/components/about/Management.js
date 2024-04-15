@@ -10,6 +10,9 @@ function  Management  () {
         <p className="text-catalineBlue text-[48px] max-md:text-[30px] font-bold">
           Management Team
         </p>
+        <p className=" text-[24px] max-md:text-[20px] text-center">
+        Meet our dynamic and ingenious Management team, with over 100 years of joint experience in health management, medical and financial services.
+        </p>
         </div>
         <div className="w-full overflow-x-hidden">
           <div className=" grid grid-cols-[repeat(auto-fit,_minmax(290px,_320px))] justify-center gap-2 md:gap-4 auto-rows-auto">
