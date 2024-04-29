@@ -11,3 +11,5 @@ COPY . .
 RUN yarn build
 
 CMD ["npx", "serve", "out", "-p", "3000"]
+
+From
