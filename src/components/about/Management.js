@@ -37,7 +37,7 @@ function  Management  () {
               },
               {
                 imageUrl: Olubunmi,
-                name: "Olubunmi Okubadejo-Gaji",
+                name: "Oluwabunmi Okubadejo-Gaji",
                 role: "Head, Channel Optimization",
                 link:"https://www.linkedin.com/in/oluwabunmi-okubadejo-gaji-cphrn-mnim-461194142/"
               },
