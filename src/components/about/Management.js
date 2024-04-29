@@ -25,7 +25,7 @@ function  Management  () {
               },
               {
                 imageUrl: NnekaAnozie,
-                name: "Nneka Anozie",
+                name: "Nneka Agunye",
                 role: "Financial Controller",
                 link:"https://www.linkedin.com/in/nneka-agunye-fca-218a92298/"
               },
