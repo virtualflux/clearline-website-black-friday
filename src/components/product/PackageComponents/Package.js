@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Business from "./Business";
+import SME from "./Sme";
 import Family from "./Retail";
 import Individual from "./Corporate";
 
@@ -11,7 +11,7 @@ export const Package = () => {
   const packageTabs = [
     { title: "Individual plan", component: <Individual /> },
     { title: "Plan for Family", component: <Family /> },
-    { title: "Corporate/Business Plans", component: <Business /> },
+    { title: "Corporate/Business Plans", component: <SME /> },
   ].map((health) => ({
     title: health.title,
     component: health.component,

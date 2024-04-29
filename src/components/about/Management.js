@@ -5,7 +5,7 @@ import Link from 'next/link';
 function  Management  () {
   return (
     <div className="px-16 max-lg:px-12 max-md:px-8 pt-12">
-      <div className="mb-12 max-md:mb-6">
+      <div className="mb-16 max-md:mb-10">
         <div className="flex flex-col gap-1 items-center mb-10">
         <p className="text-catalineBlue text-[48px] max-md:text-[30px] font-bold">
           Management Team

@@ -9,14 +9,13 @@ const Page = () => {
     const planDetails=packagePlans.find(({title})=>title==pathname.replace("/",""))
     return (
     <PageLayout>
-      <Banner/>
-      <div className="px-16 max-lg:px-12 max-md:px-8 pt-12">
-      <div className="flex flex-col items-center mb-3">
+      <div className="h-[650px] max-md:h-[450px] px-16 max-lg:px-12 max-md:px-8 py-16 flex flex-col justify-end items-center">
+      <div className="mb-3">
         <p className="text-[40px] max-md:text-[24px] font-bold mb-3 capitalize text-catalineBlue">
           Our {planDetails.title.toUpperCase()} Plan
         </p>
       </div>
-      <div>{planDetails.component}</div>s
+      <div>{planDetails.component}</div>
     </div>
     </PageLayout>
   );

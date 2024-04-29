@@ -105,7 +105,7 @@ export default function BottomSection() {
           </div>
         </div>
       </div>
-      <div className="px-24 max-lg:px-16 max-md:px-12 mt-32 max-lg:mt-16">
+      <div className="px-24 max-lg:px-16 max-md:px-12 mt-32 max-lg:mt-16 pb-16">
         <div className="relative flex max-[900px]:flex-col gap-8 rounded-3xl bg-[#5F81D5] h-[400px] w-full max-[900px]:h-fit shadow-lg">
           <div className="absolute h-[300px] max-[900px]:h-fit w-full rounded-3xl bg-[#7092E6] top-[50px] -right-[40px] -z-10 shadow-lg"></div>
           <div className="w-1/2 max-[900px]:w-full">

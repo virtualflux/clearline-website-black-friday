@@ -43,26 +43,6 @@ const Family = () => {
           member has the support they need for a healthier, happier life
         </p>
         <div className="flex gap-4 max-sm:flex-col mb-12">
-          <Button
-            type={"button"}
-            className={
-              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
-            }
-          >
-            Consult an Expert
-          </Button>
-          <Button
-            onClick={() => {
-              setIsOpen(true);
-              // zohoFunc();
-            }}
-            type={"button"}
-            className={
-              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
-            }
-          >
-            Buy a plan online
-          </Button>
         </div>
         <div className="w-full mb-8">
           <PackageTable />
@@ -89,6 +69,14 @@ const Family = () => {
             }
           >
             Buy a plan
+          </Button>
+          <Button
+            type={"button"}
+            className={
+              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
+            }
+          >
+            Consult an Expert
           </Button>
         </div>
       </div>

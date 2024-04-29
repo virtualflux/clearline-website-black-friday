@@ -17,7 +17,7 @@ const Page = () => {
           Our {planDetails.title.toUpperCase()} Plan
         </p>
       </div>
-      <div>{planDetails.component}</div>s
+      <div>{planDetails.component}</div>
     </div>
     </PageLayout>
   );

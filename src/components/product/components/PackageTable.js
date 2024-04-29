@@ -35,7 +35,7 @@ const PackageTable = () => {
     },
     {
       id: 3,
-      title: "Cordiologist",
+      title: "General and Specialist Consultations",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),
@@ -49,7 +49,7 @@ const PackageTable = () => {
     },
     {
       id: 4,
-      title: "Cardiothoracic surgeon",
+      title: "Prescribed Medications, Supply of Drugs & Consumables",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),
@@ -63,7 +63,7 @@ const PackageTable = () => {
     },
     {
       id: 5,
-      title: "Dermatologist",
+      title: "Surgeries (Minor and Major)",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),
@@ -77,7 +77,7 @@ const PackageTable = () => {
     },
     {
       id: 6,
-      title: "Dieticician/Nutritionist",
+      title: "Admission and Feeding",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),
@@ -91,7 +91,7 @@ const PackageTable = () => {
     },
     {
       id: 7,
-      title: "Endocrinologist",
+      title: "Maternal Care (Antenatal and Delivery)",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),
@@ -105,7 +105,7 @@ const PackageTable = () => {
     },
     {
       id: 8,
-      title: "ENT Surgeon",
+      title: "Neonatal Care (Immunizations, Circumcision, Piercing, NICU, Phototherapy, Incubator care)",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),
@@ -119,7 +119,7 @@ const PackageTable = () => {
     },
     {
       id: 9,
-      title: "FAMILY Physician",
+      title: "Ear, Nose and Throat (ENT) Services",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),
@@ -133,7 +133,7 @@ const PackageTable = () => {
     },
     {
       id: 10,
-      title: "Gastroenterologist",
+      title: "Psychiatric Treatment",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),
@@ -147,7 +147,7 @@ const PackageTable = () => {
     },
     {
       id: 11,
-      title: "General surgeon",
+      title: "Intensive Care Unit (ICU)",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),
@@ -161,7 +161,7 @@ const PackageTable = () => {
     },
     {
       id: 12,
-      title: "Gynaecologist",
+      title: "Advanced and Complex Investigations (CT Scan, MRI Scan)",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),
@@ -175,7 +175,7 @@ const PackageTable = () => {
     },
     {
       id: 13,
-      title: "Hematologist",
+      title: "Laboratory Investigations",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),
@@ -189,7 +189,7 @@ const PackageTable = () => {
     },
     {
       id: 13,
-      title: "Neonatologist",
+      title: "Radiological Investigations",
       value: (
         <GoCheckCircle className="text-green" size={30}/>
       ),

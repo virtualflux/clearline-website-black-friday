@@ -45,54 +45,21 @@ const Corporate = () => {
           choices.
         </p>
         <div className="flex gap-4 max-sm:flex-col mb-12">
+          <Link href="/request-a-quote">
           <Button
             type={"button"}
             className={
-              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
+              "!rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
             }
           >
-            Consult an Expert
+            Request a quote
           </Button>
-          <Button
-            onClick={() => {
-              setIsOpen(true);
-              // zohoFunc();
-            }}
-            type={"button"}
-            className={
-              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
-            }
-          >
-            Buy a plan online
-          </Button>
+        </Link>
         </div>
         <div className="w-full mb-8">
-          <CorporatePackageTable />
+          {/* <CorporatePackageTable /> */}
         </div>
-        <div className="flex gap-4 max-sm:flex-col mb-12">
-          <Link href="/corporateplan.pdf" target="_blank">
-            <Button
-              type={"button"}
-              className={
-                "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
-              }
-            >
-              View full plan
-            </Button>
-          </Link>
-          <Button
-            onClick={() => {
-              setIsOpen(true);
-              // zohoFunc();
-            }}
-            type={"button"}
-            className={
-              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-catalineblue border-catalineBlue border !bg-[#F6F7FF]"
-            }
-          >
-            Buy a plan
-          </Button>
-        </div>
+      
       </div>
     </div>
   );

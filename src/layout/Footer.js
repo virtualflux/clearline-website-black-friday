@@ -46,7 +46,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="text-white bg-catalineBlue px-16 max-lg:px-12 max-md:px-8 pt-12 mt-12 pb-12">
+    <div className="text-white bg-catalineBlue px-16 max-lg:px-12 max-md:px-8 pt-12 pb-12">
       <div className="flex justify-between flex-wrap gap-8">
         <div className="w-1/5 max-lg:w-fit flex flex-col gap-5 mb-4">
           <div className="mb-4 w-[200px] max-md:w-[120px]">

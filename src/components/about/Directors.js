@@ -14,7 +14,7 @@ import DirectorCard from "./DirectorCard";
 const Directors = () => {
   return (
     <div className="px-16 max-lg:px-12 max-md:px-8 pt-12">
-      <div className="mb-12 max-md:mb-6">
+      <div className="mb-16 max-md:mb-10">
         <div className="flex flex-col gap-1 items-center mb-8">
         <p className="text-boulder text-[36px] max-md:text-[18px] font-medium">
           Board of Directors

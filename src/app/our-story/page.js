@@ -22,7 +22,7 @@ export default function  OurStory (){
     const clients = [rjolad, lagoon, lifeline, evercare, isalu];
     return(
         <PageLayout>
-            <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24 min-h-screen">
+            <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24 min-h-screen pb-16">
             <AboutBanner />
             <MissionVision />
             <div className="bg-zircon px-16 max-lg:px-12 max-md:px-8 py-16 my-24">

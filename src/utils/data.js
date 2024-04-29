@@ -10,7 +10,7 @@ import {
   ResWorkplace,
 } from "../../public/assets/images";
 import Retail from "@/components/product/PackageComponents/Retail";
-import Business from "@/components/product/PackageComponents/Business";
+import Business from "@/components/product/PackageComponents/Sme";
 
 export const navLinks = [
   {
@@ -164,6 +164,7 @@ export const titleList=[
   { title: "-Select title-", value: "" },
   { title: "Mr", value: "mr" },
   { title: "Mrs", value: "mrs" },
+  { title: "Ms", value: "ms" },
 ]
 export const genderList=[
   { title: "-Select gender-", value: "" },
@@ -172,12 +173,9 @@ export const genderList=[
 ]
 export const planList=[
   { title: "Choose plan", value: "" },
-  { title: "Silver plan", value: "PLN_rwihd8oamyibatx" },
-  { title: "Bronze plan", value: "PLN_m0li61t6vy0fl1v" },
-  { title: "Gold plan", value: "PLN_l0ukqpt8lvine8r" },
-  { title: "Gold plus plan", value: "PLN_w9t947irj3dzezd" },
-  { title: "Platinum plan", value: "PLN_kyexrq1nhjacubc" },
-  { title: "Platinum plus plan", value: "PLN_bg455xodeguxi8d" },
+  { title: "Clear Value", value: "PLN_rwihd8oamyibatx" },
+  { title: "Clear Advantage", value: "PLN_m0li61t6vy0fl1v" },
+  { title: "Clear Elite", value: "PLN_l0ukqpt8lvine8r" }
 ]
 export const packagePlans=[
     { title: "retail", component: <Retail /> },
