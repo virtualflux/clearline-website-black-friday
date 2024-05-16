@@ -18,54 +18,54 @@ const PageLayout = ({ children }) => {
     sidebarOpen ? setSidebarOpen(false) : setSidebarOpen(true);
   };
   
-  const zohoContact = () => {
-    try {
-      var f = document.createElement("iframe");
-      f.src =
-        "https://forms.zohopublic.com/clearlinehmo/form/ConnectwithUsYourQuestionsOurCommitment/formperma/WldfFtbqH-2VwT9PkLXQsj1f9ZT94qQx-rUtFhtAvIE?zf_rszfm=1";
-      f.style.border = "none";
-      f.style.height = "800px";
-      f.style.width = "100%";
-      f.style.transition = "all 0.5s ease";
-      f.setAttribute(
-        "aria-label",
-        "Connect\x20with\x20Us\x3A\x20Your\x20Questions,\x20Our\x20Commitment."
-      );
+  // const zohoContact = () => {
+  //   try {
+  //     var f = document.createElement("iframe");
+  //     f.src =
+  //       "https://forms.zohopublic.com/clearlinehmo/form/ConnectwithUsYourQuestionsOurCommitment/formperma/WldfFtbqH-2VwT9PkLXQsj1f9ZT94qQx-rUtFhtAvIE?zf_rszfm=1";
+  //     f.style.border = "none";
+  //     f.style.height = "800px";
+  //     f.style.width = "100%";
+  //     f.style.transition = "all 0.5s ease";
+  //     f.setAttribute(
+  //       "aria-label",
+  //       "Connect\x20with\x20Us\x3A\x20Your\x20Questions,\x20Our\x20Commitment."
+  //     );
 
-      var d = document.getElementById(
-        "zf_div_WldfFtbqH-2VwT9PkLXQsj1f9ZT94qQx-rUtFhtAvIE"
-      );
-      d.appendChild(f);
-      window.addEventListener(
-        "message",
-        function () {
-          var evntData = event.data;
-          if (evntData && evntData.constructor == String) {
-            var zf_ifrm_data = evntData.split("|");
-            if (zf_ifrm_data.length == 2) {
-              var zf_perma = zf_ifrm_data[0];
-              var zf_ifrm_ht_nw = parseInt(zf_ifrm_data[1], 10) + 15 + "px";
-              var iframe = document
-                .getElementById(
-                  "zf_div_WldfFtbqH-2VwT9PkLXQsj1f9ZT94qQx-rUtFhtAvIE"
-                )
-                .getElementsByTagName("iframe")[0];
-              if (
-                iframe.src.indexOf("formperma") > 0 &&
-                iframe.src.indexOf(zf_perma) > 0
-              ) {
-                var prevIframeHeight = iframe.style.height;
-                if (prevIframeHeight != zf_ifrm_ht_nw) {
-                  iframe.style.height = zf_ifrm_ht_nw;
-                }
-              }
-            }
-          }
-        },
-        false
-      );
-    } catch (e) {}
-  };
+  //     var d = document.getElementById(
+  //       "zf_div_WldfFtbqH-2VwT9PkLXQsj1f9ZT94qQx-rUtFhtAvIE"
+  //     );
+  //     d.appendChild(f);
+  //     window.addEventListener(
+  //       "message",
+  //       function () {
+  //         var evntData = event.data;
+  //         if (evntData && evntData.constructor == String) {
+  //           var zf_ifrm_data = evntData.split("|");
+  //           if (zf_ifrm_data.length == 2) {
+  //             var zf_perma = zf_ifrm_data[0];
+  //             var zf_ifrm_ht_nw = parseInt(zf_ifrm_data[1], 10) + 15 + "px";
+  //             var iframe = document
+  //               .getElementById(
+  //                 "zf_div_WldfFtbqH-2VwT9PkLXQsj1f9ZT94qQx-rUtFhtAvIE"
+  //               )
+  //               .getElementsByTagName("iframe")[0];
+  //             if (
+  //               iframe.src.indexOf("formperma") > 0 &&
+  //               iframe.src.indexOf(zf_perma) > 0
+  //             ) {
+  //               var prevIframeHeight = iframe.style.height;
+  //               if (prevIframeHeight != zf_ifrm_ht_nw) {
+  //                 iframe.style.height = zf_ifrm_ht_nw;
+  //               }
+  //             }
+  //           }
+  //         }
+  //       },
+  //       false
+  //     );
+  //   } catch (e) {}
+  // };
 
   return (
     <>
@@ -89,7 +89,9 @@ const PageLayout = ({ children }) => {
               onClick={() => setIsOpen(false)}
             />
           </div>
-          <div id="zf_div_WldfFtbqH-2VwT9PkLXQsj1f9ZT94qQx-rUtFhtAvIE"></div>
+          <div className="w-full">
+          <iframe aria-label='Contact Us' src='https://forms.zohopublic.com/clearlinehmo/form/ContactUs/formperma/E3DxjeB_uLhsVGI3MuDBZAUtK0efN31FRIQ0fyijspQ' className="max-md:w-full w-[99%] h-[780px] border-0"></iframe>
+          </div>
         </div>
       </div>
       <ToastContainer
@@ -109,7 +111,6 @@ const PageLayout = ({ children }) => {
         handleSidebar={handleSidebar}
         onClick={() => {
           setIsOpen(true);
-          zohoContact();
         }}
       />
       <Sidebar

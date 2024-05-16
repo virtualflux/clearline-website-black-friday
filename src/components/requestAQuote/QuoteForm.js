@@ -22,32 +22,31 @@ const QuoteForm = () => {
     onSubmit:sendEmail,
     validate:validateForm
   })
-  const [isLoading, setIsLoading] = useState(false);
+
 
   async function sendEmail (values){
-    setIsLoading(true);
-    try {
-      await emailjs
-        .send(
-          "contact_service",
-          "contact_form",
-          {...values,budget:values.budget.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
-          "OTdU-O6vdb3nS4UFz"
-        )
-        .then(
-          ({ status }) => {
-            if (status === 200) {
-              toast.success("Quote sent successfully!");
-             formik.resetForm()
-            }
-          },
-          (error) => {
-            toast.error(`Oh no, ${error.text}!`);
-          }
-        );
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   await emailjs
+    //     .send(
+    //       "contact_service",
+    //       "contact_form",
+    //       {...values,budget:values.budget.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+    //       "OTdU-O6vdb3nS4UFz"
+    //     )
+    //     .then(
+    //       ({ status }) => {
+    //         if (status === 200) {
+    //           toast.success("Quote sent successfully!");
+    //          formik.resetForm()
+    //         }
+    //       },
+    //       (error) => {
+    //         toast.error(`Oh no, ${error.text}!`);
+    //       }
+    //     );
+    // } catch (error) {
+    //   console.log(error);
+    // }
 
     setIsLoading(false);
   };
@@ -122,7 +121,7 @@ const QuoteForm = () => {
             type="number"
             name="budget"
             placeholder="Budget"
-            className={`w-full text-[14px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border ${formik.touched.budget && formik.errors.budget?"border-red-500":"border-pigeonPost"}`}
+            className={`w-full text-[14px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] px-2 rounded-md border removescroll ${formik.touched.budget && formik.errors.budget?"border-red-500":"border-pigeonPost"}`}
             {...formik.getFieldProps("budget")}
           />
           {formik.touched.budget && formik.errors.budget &&<p className="text-red-500 text-xs mt-1">{formik.errors.budget}</p>}
@@ -134,7 +133,7 @@ const QuoteForm = () => {
             type="text"
             name="message"
             placeholder="Leave us a message..."
-            className="w-full text-[14px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] p-2 rounded-md border border-pigeonPost"
+            className="w-full text-[14px] focus:outline-none text-black font-medium placeholder:text-[16px] placeholder:text-[#BACCDF] p-2 rounded-md border border-pigeonPost resize-none"
            {...formik.getFieldProps("msg")}
           />
         </div>
@@ -145,7 +144,7 @@ const QuoteForm = () => {
               "max-sm:!w-full !w-1/2 !rounded-lg !px-4 !text-white bg-catalineBlue"
             }
           >
-            {isLoading ? <ButtonLoader /> : "Request a quote"}
+            {formik.isSubmitting ? <ButtonLoader /> : "Request a quote"}
           </Button>
         </div>
       </form>

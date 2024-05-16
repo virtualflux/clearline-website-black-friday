@@ -10,7 +10,7 @@ const RelatedCard = ({ item }) => {
   const [copyText, setCopyText] = useState("Copy to clipboard");
 
   return (
-    <div className="w-[280px] max-md:w-[220px] flex-shrink-0 rounded-lg border border-pigeonPost">
+    <div className="w-[280px] max-md:w-[220px] shrink-0 rounded-lg border border-pigeonPost">
       <div className="h-[126px] max-md:h-[70px] w-full border-b p-2">
         <Image
           src={DummyHospital}
@@ -22,7 +22,7 @@ const RelatedCard = ({ item }) => {
         <div className="mb-3">
           <div>
             <p className="text-[16px] max-md:text-[12px] font-semibold mb-2 text-center">
-              {item?.providerName}
+              {item?.providername}
             </p>
             <div className="w-full flex justify-between items-center gap-2">
               <div className="flex items-center gap-2">
@@ -34,7 +34,7 @@ const RelatedCard = ({ item }) => {
                   />
                 </div>
                 <p className="capitalize text-[12px] max-md:text-[10px] text-center">
-                  {item?.address}
+                  {item?.address1}
                 </p>
               </div>
               <div className="tooltip">
@@ -42,7 +42,7 @@ const RelatedCard = ({ item }) => {
                 <FaCopy
                   onClick={() => {
                     navigator.clipboard.writeText(item?.address);
-                    setCopyText(`Copied: ${item?.address}`);
+                    setCopyText(`Copied: ${item?.address1}`);
                   }}
                   onMouseOut={() => setCopyText("Copy to clipboard")}
                   className="cursor-pointer text-catalineBlue"

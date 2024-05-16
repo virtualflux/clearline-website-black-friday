@@ -35,7 +35,7 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="px-16 max-lg:px-12 max-md:px-8">
+    <div className="">
       <div className="flex flex-col items-center pt-16 max-md:pt-8">
         <p className="text-catalineBlue text-[32px] max-md:text-[20px]">FAQ</p>
         <p className="text-[50px] max-lg:text-[32px] max-md:text-[20px] font-bold text-center">
@@ -45,11 +45,11 @@ export default function FAQ() {
           We give answers to various kinds of questions from our users
         </p>
       </div>
-      <div className="mt-12">
+      <div className="mt-10">
         {FAQs.map((item, index) => (
           <div
             key={index}
-            className={`cursor-pointer p-6 max-md:p-3 mb-4 rounded-lg ${
+            className={`cursor-pointer p-6 max-md:p-4 mb-4 rounded-lg ${
               index === activeIndex
                 ? "bg-catalineBlue text-white"
                 : "bg-zircon text-black"
@@ -58,11 +58,11 @@ export default function FAQ() {
           >
             <div className="flex justify-between">
               <div className="max-w-[90%]">
-                <p className="text-[20px] max-md:text-[12px]">
+                <p className="text-xl max-md:text-base">
                   {item.question}
                 </p>
                 {index === activeIndex && (
-                  <p className="pt-4 text-[#DADADA] text-[16px] max-md:text-[10px]">
+                  <p className="pt-4 text-[#DADADA] text-lg max-md:text-base">
                     {item.answer}
                   </p>
                 )}

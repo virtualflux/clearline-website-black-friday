@@ -55,6 +55,8 @@ import ChidinmaChigbo from "./chidinmachigbo.jpeg"
 import Olubunmi from "./olubunmiokubadejo.jpg"
 import FolasadeDosunmu from "./folasadedosunmu.jpg"
 import PraiseDike from "./Barr.-Praise-Dike.jpg"
+import requestQuote from "./requestQuote.jpg"
+import requestQuote2 from "./requestQuote2.jpg"
 export {
   OlubukolaOlaoye,
   NnekaAnozie,
@@ -113,4 +115,6 @@ export {
   YAKASAI,
   Shailesh,
   ClearlineWhiteLogo,
+  requestQuote,
+  requestQuote2
 };

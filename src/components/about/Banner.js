@@ -11,13 +11,13 @@ const AboutBanner = () => {
   const isVisible = useIsVisible(elemRef);
 
   return (
-    <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24">
+    <div className="px-16 max-lg:px-12 max-md:px-4 pt-16 max-md:pt-12">
       <div className="animate__animated animate__slideInDown flex max-sm:flex-col justify-between items-center gap-8 max-md:gap-4 mb-16 max-md:mb-6">
-        <div className="w-2/5 max-sm:w-full text-[40px] max-lg:text-[30px] max-md:text-[24px] font-bold">
+        <div className="w-2/5 max-sm:w-full text-[40px] max-lg:text-[30px] max-md:text-[24px] font-bold max-md:text-center">
           Welcome to
           <br /> ClearlineHMO Limited
         </div>
-        <p className="w-1/2 max-sm:w-full text-boulder text-[24px] max-md:text-[14px]">
+        <p className="w-1/2 max-sm:w-full text-boulder text-[24px] max-md:text-lg">
           At ClearlineHMO Limited, we pride ourselves on offering innovative and
           comprehensive health solutions tailored to meet your unique needs.
         </p>

@@ -16,17 +16,17 @@ const RelatedHealthCare = ({ className, result }) => {
         <div className="flex gap-3 flex-wrap max-md:justify-center">
           {[
             {
-              providerName: "New Era Hospital Ltd Umuahia",
-              address:
+              providername: "New Era Hospital Ltd Umuahia",
+              address1:
                 "90b, Oji River Street off Uwalaka/Niger Road, Umuahia, Abia",
             },
             {
-              providerName: "Obioma Hospital",
-              address: "21 School Road,Umuahia",
+              providername: "Obioma Hospital",
+              address1: "21 School Road,Umuahia",
             },
             {
-              providerName: "Uche Medicare Clinic",
-              address: "93,Healthcare / Aba Road, Umuahia,",
+              providername: "Uche Medicare Clinic",
+              address1: "93,Healthcare / Aba Road, Umuahia,",
             },
           ]?.map((item, index) => (
             <RelatedCard item={item} key={index} />

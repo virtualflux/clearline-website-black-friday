@@ -9,34 +9,11 @@ import Image from "next/image";
 import { Close } from "../../../../public/assets/svgs";
 import BuyPlanModal from "@/components/Modal/BuyPlan";
 
-const Corporate = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Corporate = ({formFunc}) => {
   return (
-    <div>
-      <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } fixed top-0 z-20 h-full overflow-y-scroll w-[90%] mt-[15%] lg:mt-[5%] rounded-lg shadow-lg bg-white flex flex-col`}
-      >
-        <div
-          className="fixed inset-0 -z-10"
-          onClick={() => setIsOpen(false)}
-        ></div>
-        <div className="flex justify-end py-2">
-        <BuyPlanModal isOpen={isOpen} setIsOpen={setIsOpen}/>
-          <Image
-            src={Close}
-            alt="close modal"
-            className="cursor-pointer"
-            onClick={() => setIsOpen(false)}
-          />
-        </div>
-        <div id="zf_div_6lcVClC22qCknyyeB-XS0neYBhj-_VNDvhRDB0Pt0bQ"></div>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <p className="text-boulder text-[32px] max-md:text-[16px] text-center font-light mb-6">
+    
+      <div className="flex flex-col">
+        <p className="text-boulder text-[26px] max-md:text-[18px] font-light mb-6">
           Our corporate plans prioritize your health, offering a range of
           benefits to meet your lifestyle. From routine check-ups to specialized
           care, Clearline HMO is your steadfast partner in every step of your
@@ -44,24 +21,18 @@ const Corporate = () => {
           plans are designed to provide security without compromising your
           choices.
         </p>
-        <div className="flex gap-4 max-sm:flex-col mb-12">
-          <Link href="/request-a-quote">
+        <div className="flex gap-4 max-sm:flex-col">
           <Button
             type={"button"}
+            onClick={formFunc}
             className={
-              "!rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
+              "!rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue max-md:text-base text-[20px] font-light"
             }
           >
             Request a quote
           </Button>
-        </Link>
         </div>
-        <div className="w-full mb-8">
-          {/* <CorporatePackageTable /> */}
-        </div>
-      
-      </div>
-    </div>
+          </div>
   );
 };
 

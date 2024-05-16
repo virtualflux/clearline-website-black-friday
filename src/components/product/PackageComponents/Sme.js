@@ -1,10 +1,11 @@
 import { Button } from "@mui/base";
 import Link from "next/link";
 
-const Business = () => {
+const Business = ({formFunc}) => {
   return (
-    <div className="flex flex-col items-center">
-      <p className="text-boulder text-[32px] max-md:text-[16px] text-center font-light mb-6">
+
+    <div className="flex flex-col">
+      <p className="text-boulder text-[26px] max-md:text-[18px] font-light mb-6">
         Our tailored solutions are designed to elevate not just the health but
         also the productivity and overall morale of your team. With
         comprehensive health coverage, we go beyond the basics, reinforcing a
@@ -13,17 +14,16 @@ const Business = () => {
         in the health and vitality of your workforce, fostering a resilient and
         thriving business environment.
       </p>
-      <div className="">
-        <Link href="/request-a-quote">
+      <div className="flex gap-4 max-sm:flex-col">
           <Button
             type={"button"}
+            onClick={formFunc}
             className={
-              "!rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
+              "!rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue max-md:text-base text-[20px] font-light"
             }
           >
             Request a quote{" "}
           </Button>
-        </Link>
       </div>
     </div>
   );

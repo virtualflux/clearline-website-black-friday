@@ -14,7 +14,7 @@ import { useRef, useState } from "react";
 import "animate.css";
 import RelatedHealthCare from "./Related";
 import ButtonLoader from "@/shared/ButtonLoader";
-
+import { FaHospital } from "react-icons/fa";
 
 const SearchHospitals = () => {
   const [keyword, setKeyword] = useState("");
@@ -46,6 +46,7 @@ const SearchHospitals = () => {
       );
       const { data } = await res.json();
       setResult(data);
+      console.log(data)
     } catch (err) {
       console.log(err);
     }
@@ -135,11 +136,9 @@ const SearchHospitals = () => {
           <div className="w-1/5 max-[970px]:w-full">
             <Button
               type={"submit"}
-              className={"!w-full !rounded-lg px-4 !text-white bg-catalineBlue"}
+              className={"!w-full !rounded-lg px-4 !text-white bg-catalineBlue text-[14px] max-md:text-[12px]"}
             >
-              <p className="text-[14px] max-md:text-[12px]">
                 {isLoading ? <ButtonLoader /> : "Search"}
-              </p>
             </Button>
           </div>
         </div>
@@ -180,10 +179,10 @@ const SearchHospitals = () => {
                 <Marker
                   key={idx}
                   position={{
-                    lat: Number(item?.latitude),
-                    lng: Number(item?.longitude),
+                    lat: Number(6.5244),
+                    lng: Number(3.3792),
                   }}
-                  icon="/assets/images/home_loc.png"
+                  icon={FaHospital}
                 />
               ))}
             </GoogleMap>

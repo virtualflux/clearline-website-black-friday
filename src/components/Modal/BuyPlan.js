@@ -26,15 +26,26 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
 
     },
     onSubmit,
-    validate:validateForm
-    
+    validate:validateForm,
+    initialErrors:{
+      plan:"Select a plan",
+      email:"Please enter your email address",
+      surname:"Please enter surname",
+      otherNames:"Please enter other names",
+      gender:"Please select your gender",
+      title:"Please Select a title",
+      phoneNumber:"Please enter phone number",
+      dob:"Please enter a birth date",
+      state:"Please select a state",
+      address:"Please enter your address"
+    }
   })
   const {initializePayment, onClose, onSuccess}=usePaymentGateway(formik)
-  const [isLoading, setIsLoading] = useState(false);
   
-  function onSubmit (values)  {
-    setIsLoading(true);
-    initializePayment(onSuccess, onClose)
+  async function onSubmit (values)  {
+    await new Promise(resolve=>setTimeout(resolve,3000))
+    alert(JSON.stringify(values))
+    // initializePayment(onSuccess, onClose)
     // try {
     //   await emailjs
     //     .sendForm(
@@ -67,8 +78,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
     // } catch (error) {
     //   console.log(error);
     // }
-
-    setIsLoading(false);
+    setIsOpen(false)
   };
 
   return (
@@ -88,7 +98,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
             Make sure you input the correct information in these sections
           </p>
           <div className="my-4">
-            <select
+          <select
               name="plan"
               defaultValue={""}
               onChange={formik.getFieldProps("plan").onChange}
@@ -105,6 +115,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
                 </option>
               ))}
             </select>
+            {formik.touched.plan && formik.errors.plan &&<p className="text-red-500 text-xs mt-1">{formik.errors.plan}</p>}
           </div>
         </div>
       </div>
@@ -149,7 +160,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               name="gender"
               defaultValue={""}
               onChange={formik.getFieldProps("gender").onChange}
-              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-2 border ${formik.errors.gender ?"border-red-500":"border-[#BACCDF]"}`}
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-2 border ${formik.touched.gender && formik.errors.gender ?"border-red-500":"border-[#BACCDF]"}`}
             >
               {genderList.map((item, idx) => (
                 <option key={idx} className="" value={item.value} disabled={idx==0}>
@@ -157,7 +168,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
                 </option>
               ))}
             </select>
-            {formik.errors.gender &&<p className="text-red-500 text-xs mt-1">{formik.errors.gender}</p>}
+            {formik.touched.gender && formik.errors.gender &&<p className="text-red-500 text-xs mt-1">{formik.errors.gender}</p>}
           </div>
         </div>
         <div className="flex flex-wrap gap-3 mb-3">
@@ -169,7 +180,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               name="title"
               onChange={formik.getFieldProps("title").onChange}
               defaultValue={""}
-              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-2 border ${ formik.errors.title ?"border-red-500":"border-[#BACCDF]"}`}
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-2 border ${formik.touched.tittle && formik.errors.title ?"border-red-500":"border-[#BACCDF]"}`}
             >
               {titleList.map((item, idx) => (
                 <option key={idx} className="" value={item.value} disabled={idx==0}>
@@ -177,7 +188,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
                 </option>
               ))}
             </select>
-            {formik.errors.title &&<p className="text-red-500 text-xs mt-1">{formik.errors.title}</p>}
+            {formik.errors.tittle && formik.errors.title &&<p className="text-red-500 text-xs mt-1">{formik.errors.title}</p>}
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
@@ -231,7 +242,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               defaultValue={""}
       
             
-              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-2 border ${ formik.errors.state?"border-red-500":"border-[#BACCDF]"}`}
+              className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-2 border ${formik.touched.state && formik.errors.state?"border-red-500":"border-[#BACCDF]"}`}
             >
               {stateList.map((item, idx) => (
                 <option key={idx} className="" value={item.value} disabled={idx==0}>
@@ -239,7 +250,7 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
                 </option>
               ))}
             </select>
-            {formik.errors.state &&<p className="text-red-500 text-xs mt-1">{formik.errors.state}</p>}
+            {formik.touched.state && formik.errors.state &&<p className="text-red-500 text-xs mt-1">{formik.errors.state}</p>}
           </div>
           <div className="w-[30%] max-md:w-full">
             <p className="text-[16px] max-md:text-[12px] font-medium mb-2">
@@ -263,8 +274,10 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               className={
                 "!w-full !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
               }
+              disabled={formik.isSubmitting}
+              
             >
-              {isLoading ? <ButtonLoader /> : "Proceed"}
+              {formik.isSubmitting ? <ButtonLoader /> : "Proceed"}
             </Button>
           </div>
         </div>

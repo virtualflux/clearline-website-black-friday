@@ -2,6 +2,7 @@ import Link from "next/link";
 import Button from "@/shared/Button";
 import PageLayout from "@/layout";
 import { resourcesData } from "@/utils/data";
+import Image from "next/image";
 
 export const metadata = {
   title: "Our Resources - Clearline HMO",
@@ -18,188 +19,13 @@ const Resources = () => {
           <p className="text-[48px] max-lg:text-[32px] max-md:text-[24px] font-semibold">
             Resources for you
           </p>
-          <p className="text-boulder text-[32px] max-md:text-[16px]">
+          <p className="text-boulder text-[32px] max-md:text-[18px]">
             Learn something new today from stories and product articles
           </p>
         </div>
         <div>
-          <div className="flex gap-x-4 gap-y-8 max-md:gap-y-4 justify-center flex-wrap">
-            <div
-              className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg bg-resSuperFood bg-no-repeat bg-cover bg-center flex items-end`}
-            >
-              <div className="w-full">
-                <p className="text-[32px] max-lg:text-[24px] max-md:text-[16px] font-semibold text-white">
-                  Super Food
-                </p>
-                <p className="text-[20px] max-lg:text-[14px] max-md:text-[11px] text-[#F4F4F4] mb-4">
-                  Why you should eat
-                </p>
-                <Link href={`/resources/super-food`}>
-                  <Button
-                    type={"button"}
-                    className={
-                      "!w-4/5 !rounded-lg !px-4 !text-catalineBlue !h-[40px] bg-white"
-                    }
-                  >
-                    Read more on this
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div
-              className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg bg-resAlcohol bg-no-repeat bg-cover bg-center flex items-end`}
-            >
-              <div className="w-full">
-                <p className="text-[32px] max-lg:text-[24px] max-md:text-[16px] font-semibold text-white">
-                  Alcoholism
-                </p>
-                <p className="text-[20px] max-lg:text-[14px] max-md:text-[11px] text-[#F4F4F4] mb-4">
-                  subtitle
-                </p>
-                <Link href={`/resources/alcoholism`}>
-                  <Button
-                    type={"button"}
-                    className={
-                      "!w-4/5 !rounded-lg !px-4 !text-catalineBlue !h-[40px] bg-white"
-                    }
-                  >
-                    Read more on this
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div
-              className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg bg-resCovid bg-no-repeat bg-cover bg-center flex items-end`}
-            >
-              <div className="w-full">
-                <p className="text-[32px] max-lg:text-[24px] max-md:text-[16px] font-semibold text-white">
-                  Living with covid
-                </p>
-                <p className="text-[20px] max-lg:text-[14px] max-md:text-[11px] text-[#F4F4F4] mb-4">
-                  Put on your nose masks
-                </p>
-                <Link href={`/resources/living-with-covid`}>
-                  <Button
-                    type={"button"}
-                    className={
-                      "!w-4/5 !rounded-lg !px-4 !text-catalineBlue !h-[40px] bg-white"
-                    }
-                  >
-                    Read more on this
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div
-              className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg bg-resImmune bg-no-repeat bg-cover bg-center flex items-end`}
-            >
-              <div className="w-full">
-                <p className="text-[32px] max-lg:text-[24px] max-md:text-[16px] font-semibold text-white">
-                  Boosting your Immune system
-                </p>
-                <p className="text-[20px] max-lg:text-[14px] max-md:text-[11px] text-[#F4F4F4] mb-4">
-                  Eat healthy stay healthy
-                </p>
-                <Link href={`/resources/boosting-your-immune-system`}>
-                  <Button
-                    type={"button"}
-                    className={
-                      "!w-4/5 !rounded-lg !px-4 !text-catalineBlue !h-[40px] bg-white"
-                    }
-                  >
-                    Read more on this
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div
-              className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg bg-resHandWashing bg-no-repeat bg-cover bg-center flex items-end`}
-            >
-              <div className="w-full">
-                <p className="text-[32px] max-lg:text-[24px] max-md:text-[16px] font-semibold text-white">
-                  Hand Washing
-                </p>
-                <p className="text-[20px] max-lg:text-[14px] max-md:text-[11px] text-[#F4F4F4] mb-4">
-                  Wash your hand
-                </p>
-                <Link href={`/resources/hand-washing`}>
-                  <Button
-                    type={"button"}
-                    className={
-                      "!w-4/5 !rounded-lg !px-4 !text-catalineBlue !h-[40px] bg-white"
-                    }
-                  >
-                    Read more on this
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div
-              className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg bg-resWorkplace bg-no-repeat bg-cover bg-center flex items-end`}
-            >
-              <div className="w-full">
-                <p className="text-[32px] max-lg:text-[24px] max-md:text-[16px] font-semibold text-white">
-                  Workplace Ergonomics
-                </p>
-                <p className="text-[20px] max-lg:text-[14px] max-md:text-[11px] text-[#F4F4F4] mb-4">
-                  Workplace Ergonomics
-                </p>
-                <Link href={`/resources/workplace-ergonomics`}>
-                  <Button
-                    type={"button"}
-                    className={
-                      "!w-4/5 !rounded-lg !px-4 !text-catalineBlue !h-[40px] bg-white"
-                    }
-                  >
-                    Read more on this
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div
-              className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg bg-resHepatitis bg-no-repeat bg-cover bg-center flex items-end`}
-            >
-              <div className="w-full">
-                <p className="text-[32px] max-lg:text-[24px] max-md:text-[16px] font-semibold text-white">
-                  Hepatitis
-                </p>
-                <p className="text-[20px] max-lg:text-[14px] max-md:text-[11px] text-[#F4F4F4] mb-4">
-                  Stay safe
-                </p>
-                <Link href={`/resources/hepatitis`}>
-                  <Button
-                    type={"button"}
-                    className={
-                      "!w-4/5 !rounded-lg !px-4 !text-catalineBlue !h-[40px] bg-white"
-                    }
-                  >
-                    Read more on this
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div
-              className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg bg-resChildhood bg-no-repeat bg-cover bg-center flex items-end`}
-            >
-              <div className="w-full">
-                <p className="text-[32px] max-lg:text-[24px] max-md:text-[16px] font-semibold text-white">
-                  Childhood Obesity
-                </p>
-                <p className="text-[20px] max-lg:text-[14px] max-md:text-[11px] text-[#F4F4F4] mb-4">
-                  Getting in shape
-                </p>
-                <Link href={`/resources/childhood-obesity`}>
-                  <Button
-                    type={"button"}
-                    className={
-                      "!w-4/5 !rounded-lg !px-4 !text-catalineBlue !h-[40px] bg-white"
-                    }
-                  >
-                    Read more on this
-                  </Button>
-                </Link>
-              </div>
-            </div>
+          <div className="flex gap-x-4 gap-y-8 max-md:gap-y-6 justify-center flex-wrap">
+            {resourcesData.map((resource,indx)=><ResourceCard key={indx} resource={resource}/>)}
           </div>
         </div>
       </div>
@@ -208,3 +34,33 @@ const Resources = () => {
 };
 
 export default Resources;
+
+// className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg bg-resSuperFood bg-no-repeat bg-cover bg-center flex items-end`}
+function ResourceCard ({resource}){
+  const {title, subtitle, slug,img}=resource
+  return(
+    <div
+              className={`lg:h-[320px] lg:w-[420px] max-md:h-[300px] max-md:w-full md:w-[340px] md:h-[320px] py-4 px-8 rounded-lg flex items-end overflow-hidden relative`}
+            >
+              <Image src={img} fill className="object-cover -z-10" alt={title} />
+              <div className="w-full">
+                <p className="text-[32px] max-lg:text-[24px] max-md:text-[20px] font-semibold text-white">
+                  {title}
+                </p>
+                <p className="text-[20px] max-lg:text-[14px] max-md:text-base text-[#F4F4F4] mb-4">
+                  {subtitle}
+                </p>
+                <Link href={`/resources/${slug}`}>
+                  <Button
+                    type={"button"}
+                    className={
+                      "!w-full !rounded-lg !px-4 !text-catalineBlue !h-[40px] bg-white"
+                    }
+                  >
+                    Read more on this
+                  </Button>
+                </Link>
+              </div>
+            </div>
+  )
+}
