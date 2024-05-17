@@ -57,6 +57,7 @@ import FolasadeDosunmu from "./folasadedosunmu.jpg"
 import PraiseDike from "./Barr.-Praise-Dike.jpg"
 import requestQuote from "./requestQuote.jpg"
 import requestQuote2 from "./requestQuote2.jpg"
+import hypertension from "./hypertension.jpg"
 export {
   OlubukolaOlaoye,
   NnekaAnozie,
@@ -80,6 +81,7 @@ export {
   MissionImage,
   director1,
   director2,
+  hypertension,
   AboutBottomBg,
   ResourcesImage,
   ResAlcohol,

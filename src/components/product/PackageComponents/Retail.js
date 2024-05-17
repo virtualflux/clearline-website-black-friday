@@ -70,14 +70,6 @@ const Family = () => {
           >
             Buy a plan
           </Button>
-          <Button
-            type={"button"}
-            className={
-              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
-            }
-          >
-            Consult an Expert
-          </Button>
         </div>
       </div>
     </div>

@@ -42,6 +42,7 @@ module.exports = {
         resSuperFood: "url('../../public/assets/images/resSuperFood.png')",
         resWorkplace: "url('../../public/assets/images/resWorkplace.png')",
         providerBanner: "url('../../public/assets/images/providerBanner.png')",
+        hypertension: "url('../../public/assets/images/hypertension.jpg')",
         providerMobileBanner:
           "url('../../public/assets/images/providerMobileBanner.png')",
         quotebanner: "url('../../public/assets/images/quotebanner.png')",

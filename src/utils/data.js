@@ -8,6 +8,7 @@ import {
   ResImmune,
   ResSuperFood,
   ResWorkplace,
+  hypertension,
 } from "../../public/assets/images";
 import Retail from "@/components/product/PackageComponents/Retail";
 import Business from "@/components/product/PackageComponents/Sme";
@@ -2086,6 +2087,62 @@ export const countryList = [
 ];
 
 export const resourcesData = [
+  {
+    title: "Hypertension",
+    slug: "hypertension",
+    subtitle: "Your Blood Presssure Kit: All you need to know about Hypertension",
+    imageUrl: "bg-hypertension",
+    img: hypertension,
+    article: {
+      imageUrl: "",
+      didYouKnow: {
+        title: "Your Blood Presssure Kit: All you need to know about Hypertension",
+        list: [
+          "Today, we bring you crucial information on hypertension—what you must know to keep your heart healthy and your life vibrant."
+,
+        ],
+      },
+      articleQuestion: "Understanding Hypertension",
+      text1:
+        "Hypertension, also known as high blood pressure, is a condition where the force of blood against the walls of your arteries is consistently too high. High blood pressure usually has no obvious symptoms, earning it the nickname “silent killer” because many people don’t realize they have it. Left unmanaged, hypertension can lead to serious health problems, including heart disease, stroke, and kidney failure.",
+      text2:
+        "",
+      foodList: [
+        {
+          title: "Know Your Numbers",
+          text: " Regular blood pressure checks are vital. A normal reading is typically around 120/80 mmHg. If your numbers are consistently higher, it's time to take action. Visit your nearest Clearline HMO health center for a quick and easy blood pressure check.",
+        },
+        {
+          title: "Healthy Diet",
+          text: "Embrace a diet rich in fruits, vegetables, whole grains, and lean proteins. Reduce salt intake as excessive sodium can raise your blood pressure.",
+        },
+        {
+          title: "Exercise Regularly",
+          text: "Aim for at least 30 minutes of moderate exercise most days of the week. Activities like brisk walking, dancing, or even playing football with friends can help lower your blood pressure.",
+        },
+        {
+          title: "Maintain a Healthy Weight",
+          text: "By telling them of your resolve not to drink alcohol again. Their support can get you going and also hold you accountable, so you do not turn back on your goal.",
+        },
+        {
+          title: "Limit Alcohol and Avoid Tobacco",
+          text: "Excessive alcohol and smoking can raise your blood pressure. If you drink, do so in moderation. Seek support if you need help to quit smoking — Clearline HMO is here to guide you.",
+        },
+        {
+          title: "Manage Stress",
+          text: "High stress levels can contribute to hypertension. Find relaxation techniques that work for you, whether it's meditation, deep breathing exercises, or simply taking time to unwind with loved ones",
+        },
+        {
+          title: "Medication Adherence",
+          text: "If you’ve been prescribed medication for hypertension, ensure you take it as directed. Don’t skip doses, and keep your doctor informed about any side effects.",
+        },
+        {
+          title: "Why Should You Care?",
+          text: "In Nigeria, hypertension is a leading cause of heart disease, stroke, and kidney failure. Our fast-paced lifestyle, coupled with poor eating habits and stress, has contributed to a surge in hypertension cases. Understanding and managing your blood pressure is crucial to preventing these life-threatening conditions.",
+        },
+      ],
+    }, 
+  },
   {
     title: "Super Food",
     slug: "super-food",

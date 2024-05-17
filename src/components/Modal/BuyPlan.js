@@ -43,41 +43,30 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
   const {initializePayment, onClose, onSuccess}=usePaymentGateway(formik)
   
   async function onSubmit (values)  {
-    await new Promise(resolve=>setTimeout(resolve,3000))
-    alert(JSON.stringify(values))
-    // initializePayment(onSuccess, onClose)
-    // try {
-    //   await emailjs
-    //     .sendForm(
-    //       "contact_service",
-    //       "contact_form",
-    //       form.current,
-    //       "OTdU-O6vdb3nS4UFz"
-    //     )
-    //     .then(
-    //       ({ status }) => {
-    //         if (status === 200) {
-    //           setIsOpen(false);
-    //           toast.success("Plan purchase sent successfully!");
-    //           setPlan("");
-    //           setEmail("");
-    //           setSurname("");
-    //           setNames("");
-    //           setGender("");
-    //           setTitle("");
-    //           setPhoneNumber("");
-    //           setDob("");
-    //           setState("");
-    //           setAddress("");
-    //         }
-    //       },
-    //       (error) => {
-    //         toast.error(`Oh no, ${error.text}!`);
-    //       }
-    //     );
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    initializePayment(onSuccess, onClose)
+    try {
+      await emailjs
+        .send(
+          "contact_service",
+          "contact_form",
+          {...values},
+          "OTdU-O6vdb3nS4UFz"
+        )
+        .then(
+          ({ status }) => {
+            if (status === 200) {
+              setIsOpen(false);
+              toast.success("Plan purchase sent successfully!");
+              formik.resetForm()
+            }
+          },
+          (error) => {
+            toast.error(`Oh no, ${error.text}!`);
+          }
+        );
+    } catch (error) {
+      console.log(error);
+    }
     setIsOpen(false)
   };
 
