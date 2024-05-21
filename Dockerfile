@@ -13,17 +13,17 @@
 #CMD ["npx", "serve", "out", "-p", "3000"]
 
 
-# Use Node.js LTS version as the base image
+# Use the official Node.js image as base
 FROM node:latest
 
-# Set the working directory in the container
+# Set the working directory inside the container
 WORKDIR /app
 
 # Copy package.json and yarn.lock to the working directory
 COPY package.json yarn.lock ./
 
 # Install dependencies
-RUN yarn install --frozen-lockfile
+RUN yarn install
 
 # Copy the rest of the application code
 COPY . .
@@ -31,17 +31,8 @@ COPY . .
 # Build the Next.js application
 RUN yarn build
 
-# Start a new stage to keep the final image slim
-FROM node:lts-slim
-
-# Set the working directory
-WORKDIR /app
-
-# Copy built files from the previous stage
-COPY --from=builder /app/out ./out
-
-# Expose the port that Next.js uses (default is 3000)
+# Expose port 3000 to the outside world
 EXPOSE 3000
 
-# Start the Next.js app
-CMD ["node", "./out/server.js"]
+# Define the command to run the Next.js server
+CMD ["yarn", "start"]
