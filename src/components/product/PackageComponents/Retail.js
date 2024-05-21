@@ -40,7 +40,7 @@ const Family = () => {
           Clearline HMO understands the importance of family health, and our
           plans reflect this commitment. With access to an extensive network of
           healthcare providers, you can rest easy knowing that each family
-          member has the support they need for a healthier, happier life
+          member has the support they need for a healthier, happier life.
         </p>
         <div className="flex gap-4 max-sm:flex-col mb-12">
         </div>

@@ -46,7 +46,8 @@ module.exports = {
         providerMobileBanner:
           "url('../../public/assets/images/providerMobileBanner.png')",
         quotebanner: "url('../../public/assets/images/quotebanner.png')",
-        networkBanner:"url('../../public/assets/images/network.jpg')"
+        networkBanner:"url('../../public/assets/images/network.jpg')",
+        requestQuoteBanner:"url('../../public/assets/images/requestQuote.jpg')"
       },
       keyframes: {
         "accordion-down": {

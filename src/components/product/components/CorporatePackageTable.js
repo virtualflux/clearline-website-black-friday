@@ -5,14 +5,14 @@ const PackageTable = () => {
   const tableArray = [
     {
       id: 1,
-      premium: "Premium",
-      bronze: "N48,000",
-      silver: "N60,000",
-      gold: "N79,000",
-      goldplus: "N120,000",
-      platinum: "N300,000",
-      platinumPlus: "N120,000",
-      platinumEvercare: "N300,000",
+      premium: "Out-Patient limit",
+      bronze: " UP TO N162,000",
+      silver: "UP TO N219,000",
+      gold: "UP TO N210,000",
+      goldplus: "UP TO N426,000",
+      platinum: "UP TO N564,000",
+      platinumPlus: "UP TO N840,000",
+      platinumEvercare: "UP TO N1,200,000",
     },
     {
       id: 2,
@@ -242,7 +242,7 @@ const PackageTable = () => {
   ];
 
   return (
-    <div className="w-full overflow-x-auto">
+    <div className="w-full max-md:overflow-x-scroll">
       <table className="w-full">
         <thead>
           <tr className="text-[20px] max-md:text-[12px]">

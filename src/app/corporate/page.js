@@ -31,34 +31,30 @@ const Page = () => {
           />
         </div>
         <div className="w-full"> 
-        <iframe aria-label='Request a Quote on Corporate'   src='https://forms.zohopublic.com/clearlinehmo/form/RequestaQuoteonCorporate1/formperma/rLmDb3ZoGt7PatQB5t-wWR6KitVTjBexJN0fggVboW0' className="max-md:w-full w-[99%] h-[932px] border-0"></iframe>
+        <iframe aria-label='Request a Quote on Corporate' src='https://forms.zohopublic.com/clearlinehmo/form/RequestaQuoteonCorporate1/formperma/rLmDb3ZoGt7PatQB5t-wWR6KitVTjBexJN0fggVboW0' className="max-md:w-full w-[99%] h-[932px] border-0"></iframe>
         </div>
       </div>
     <PageLayout>
-      <div className="min-h-screen px-16 max-lg:px-12 max-md:px-8 pt-16 flex max-md:flex-col flex-row-reverse justify-center max-md:gap-10 gap-12 items-center mb-8">
-      <div className="flex flex-col gap-3 w-2/3 max-md:w-full">
-        <p className="text-7xl max-md:text-[40px] font-bold mb-3 capitalize text-catalineBlue">
+    <div className="h-[650px] max-md:h-[450px] bg-requestQuoteBanner bg-no-repeat bg-cover bg-center px-16 max-lg:px-12 max-md:px-8 bg-blend-soft-light bg-opacity-60 bg-catalineBlue">
+      <div className="h-full flex flex-col justify-center text-white">
+        <p className="text-[64px] max-lg:text-[50px] max-md:text-[32px] font-bold">
+          Our Plans
+        </p>
+        <p className="text-[32px] max-lg:text-[24px] max-md:text-[16px]">
+          We have the best plans for you
+        </p>
+      </div>
+    </div>
+      <div className="px-16 max-lg:px-12 max-md:px-8 pt-12 mb-8">
+      <div className="flex flex-col items-center gap-3">
+        <p className="text-[40px] max-md:text-[30px] font-bold mb-3 capitalize text-center text-catalineBlue">
           Our {planDetails.title} Plan
         </p>
         <Corporate formFunc={()=>{
           setOpenCorpQuote(true)
         }}/>
       </div>
-      <div className="max-md:w-full w-[35%] aspect-video shrink-0 relative max-md:overflow-hidden">
-      
-      <div className="w-full absolute top-1/2 -translate-y-1/2 left-0 aspect-square rounded-md overflow-clip grid grid-cols-3 auto-rows-auto">
-        <Image src={"/assets/images/requestQuote.jpg"} className="object-cover -z-10" fill alt="coporate-plan"/>
-       <div className="border-2 border-t-0 border-l-0 border-white"></div>
-       <div className="border-2 border-t-0 border-white"></div>
-       <div className="border-2 border-t-0 border-r-0 border-white"></div>
-       <div className="border-2 border-l-0 border-white"></div>
-       <div className="border-2 border-white"></div>
-       <div className="border-2 border-r-0 border-white"></div>
-       <div className="border-2 border-b-0 border-l-0 border-white"></div>
-       <div className="border-2 border-b-0  border-white"></div>
-       <div className="border-2 border-b-0 border-r-0 border-white"></div>
-      </div>
-      </div>
+     
     </div>
     </PageLayout>
       </>
