@@ -36,7 +36,6 @@ export const post = {
       name:"publishedAt",
       title:"PublishedAt",
       type:"datetime",
-      readOnly:true,
       validation:(val)=>val.required()
     },
     {
