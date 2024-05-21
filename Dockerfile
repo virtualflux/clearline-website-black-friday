@@ -6,6 +6,9 @@ COPY package.json yarn.lock ./
 
 RUN yarn install
 
+# Install required modules
+RUN yarn add next-sanity
+
 COPY . .
 
 RUN yarn build
