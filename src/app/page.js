@@ -1,5 +1,6 @@
 import PageLayout from "@/layout";
 import HomeContainer from "@/components/home";
+import { client } from "../../sanity/lib/client";
 
 export const metadata = {
   title: "Clearline HMO - The future of healthcare starts today",
@@ -8,7 +9,8 @@ export const metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+
   return (
     <PageLayout>
       <HomeContainer />

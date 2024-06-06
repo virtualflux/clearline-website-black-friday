@@ -15,7 +15,7 @@ import "animate.css";
 import RelatedHealthCare from "./Related";
 import ButtonLoader from "@/shared/ButtonLoader";
 import { FaHospital } from "react-icons/fa";
-
+import { stateList } from "@/utils/data";
 const SearchHospitals = () => {
   const [keyword, setKeyword] = useState("");
   const [location, setLocation] = useState("");
@@ -40,11 +40,18 @@ const SearchHospitals = () => {
   const callAPI = async (e) => {
     setIsLoading(true);
     e.preventDefault();
+    
     try {
       const res = await fetch(
-        `https://techwave-academy-backend-production.up.railway.app/providers?keyword=${keyword}&location=${location}&clinic=${clinic}&plan=${plan}`
+        `https://clearlinehmoapp.com/intermediary/api/planprovider?plancode=${plan}&grouplegacyid=18757&covtypeid=2&stateid=${location}`,{
+          headers:{
+            username:process.env.NEXT_PUBLIC_CLEARLINE_USERNAME,
+            password:process.env.NEXT_PUBLIC_CLEARLINE_PASSWORD
+          }
+        }
+      //   `https://techwave-academy-backend-production.up.railway.app/providers?keyword=${keyword}&location=${location}&clinic=${clinic}&plan=${plan}`
       );
-      const { data } = await res.json();
+      const data = await res.json();
       setResult(data);
       console.log(data)
     } catch (err) {
@@ -63,7 +70,7 @@ const SearchHospitals = () => {
         } px-16 max-[970px]:px-0`}
       >
         <div className="w-full max-[970px]:mb-10 relative -top-[60px] max-[970px]:top-0 bg-white rounded-lg shadow-lg flex max-[970px]:flex-col max-[970px]:items-start items-end gap-3 p-8">
-          <div className="w-1/5 max-[970px]:w-full">
+          {/* <div className="w-1/5 max-[970px]:w-full">
             <p className="text-[14px] font-bold mb-2">Search</p>
             <div className="relative">
               <input
@@ -78,24 +85,17 @@ const SearchHospitals = () => {
                 <Image src={SearchIcon} alt="Search keyword" />
               </div>
             </div>
-          </div>
-          <div className="w-1/5 max-[970px]:w-full">
+          </div> */}
+          <div className="w-1/4 max-[970px]:w-full">
             <p className="text-[14px] font-bold mb-2">Location</p>
             <div className="relative">
-              <input
-                type="text"
-                name="location"
-                placeholder="Location"
-                className="w-full text-[14px] h-[50px] focus:outline-none text-black font-medium placeholder:text-[14px] placeholder:text-[#6C7780] rounded-lg border border-pigeonPost pl-8"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-              />
-              <div className="absolute left-2 bottom-4">
-                <Image src={SearchIcon} alt="Search keyword" />
-              </div>
+              <select defaultValue={""} onChange={(e)=>setLocation(e.target.value)}  className="w-full text-[14px] h-[50px] focus:outline-none font-medium placeholder:text-[14px] placeholder:text-[#6C7780] rounded-lg border border-pigeonPost pl-2">
+              {stateList.map((state,indx)=><option key={indx} disabled={indx==0} value={state.id}>{state.title}</option>)}
+              </select>
+
             </div>
           </div>
-          <div className="w-1/5 max-[970px]:w-full">
+          <div className="w-1/4 max-[970px]:w-full">
             <p className="text-[14px] font-bold mb-2">Provider</p>
             <div className="relative">
               <input
@@ -111,7 +111,7 @@ const SearchHospitals = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/5 max-[970px]:w-full">
+          <div className="w-1/4 max-[970px]:w-full">
             <p className="text-[14px] font-bold mb-2">Plans</p>
             <select
               value={plan}
@@ -120,12 +120,12 @@ const SearchHospitals = () => {
             >
               {[
                 { title: "Choose plan", value: "" },
-                { title: "Silver plan", value: "Silver" },
+                { title: "Silver plan", value: "SIL" },
                 { title: "Bronze plan", value: "Bronze" },
-                { title: "Gold plan", value: "Gold" },
-                { title: "Gold plus plan", value: "Plus" },
-                { title: "Platinum plan", value: "Platinum" },
-                { title: "Platinum plus plan", value: "Plus" },
+                { title: "Gold plan", value: "GOL" },
+                { title: "Gold plus plan", value: "GOLP" },
+                { title: "Platinum plan", value: "PLAT" },
+                { title: "Platinum plus plan", value: "PLATP" },
               ].map((item, idx) => (
                 <option key={idx} value={item.value}>
                   {item.title}
@@ -150,42 +150,11 @@ const SearchHospitals = () => {
         } px-16 max-lg:px-12 max-md:px-8 mb-8`}
       >
         <p className="text-[32px] max-md:text-[24px] font-bold">
-          Hospitals near you
+          Providers near you
         </p>
-        <div className="w-full h-[800px] max-md:h-[500px]">
+        <div className="mt-3">
           {isLoaded ? (
-            <GoogleMap
-              mapContainerStyle={{ width: "100%", height: "100%" }}
-              center={center}
-              zoom={8}
-              options={{
-                styles: [
-                  {
-                    featureType: "poi",
-                    elementType: "labels",
-                    stylers: [{ visibility: "off" }],
-                  },
-                  {
-                    featureType: "transit",
-                    elementType: "labels",
-                    stylers: [{ visibility: "off" }],
-                  },
-                ],
-                disableDefaultUI: true,
-                zoomControl: true,
-              }}
-            >
-              {result?.map((item, idx) => (
-                <Marker
-                  key={idx}
-                  position={{
-                    lat: Number(6.5244),
-                    lng: Number(3.3792),
-                  }}
-                  icon={FaHospital}
-                />
-              ))}
-            </GoogleMap>
+            <RelatedHealthCare result={result} />
           ) : (
             <div className="h-full flex justify-center items-center">
               <p>Loading...</p>
@@ -193,7 +162,6 @@ const SearchHospitals = () => {
           )}
         </div>
       </div>
-      <RelatedHealthCare result={result} />
     </div>
   );
 };

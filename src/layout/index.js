@@ -10,7 +10,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
 import { Close } from "../../public/assets/svgs";
 import { useSalesIQ } from "@/hooks/useSalesIQ";
-import { useGoogleAds } from "@/hooks/useGoogleAds";
 const PageLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -71,13 +70,12 @@ const PageLayout = ({ children }) => {
   return (
     <>
     {useSalesIQ("https://salesiq.zohopublic.com/widget","siq54e6195b138fd09f7c6d4c17ed009c7e9363e42723b6ab9c0c0a82b6142bccda")}
-    {useGoogleAds()}
     <div>
       <div className="w-full flex justify-center">
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } fixed top-0 z-50 h-full overflow-y-scroll w-[40%] mt-[15%] lg:mt-[4%] rounded-lg shadow-lg bg-white`}
+          } fixed top-0 left-1/2 -translate-x-1/2 z-30 h-full overflow-y-scroll w-[80%]  mt-[15%] lg:mt-[4%] rounded-lg shadow-lg bg-white`}
         >
           <div
             className="fixed inset-0 -z-10"

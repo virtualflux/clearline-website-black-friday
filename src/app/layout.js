@@ -1,5 +1,5 @@
 import "./globals.css";
-
+import {GoogleAnalytics} from "@next/third-parties/google"
 import localFont from "next/font/local";
 const Satoshi = localFont({
   src: [
@@ -44,7 +44,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={Satoshi.className}>{children}</body>
+      <body className={Satoshi.className}>
+        <GoogleAnalytics gaId="G-Y62EZR4VWP"/>
+        {children}
+        </body>
     </html>
   );
 }

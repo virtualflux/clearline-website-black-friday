@@ -3,6 +3,8 @@ import Button from "@/shared/Button";
 import PageLayout from "@/layout";
 import { resourcesData } from "@/utils/data";
 import Image from "next/image";
+import { client } from "../../../sanity/lib/client";
+import { urlForImage } from "../../../sanity/lib/image";
 
 export const metadata = {
   title: "Our Resources - Clearline HMO",
@@ -11,6 +13,11 @@ export const metadata = {
   },
 };
 
+const blogPosts=await client.fetch (`*[_type=='post']`,{
+  next:{
+    revalidate:0
+  }
+})
 const Resources = () => {
   return (
     <PageLayout>
@@ -25,7 +32,7 @@ const Resources = () => {
         </div>
         <div>
           <div className="flex gap-x-4 gap-y-8 max-md:gap-y-6 justify-center flex-wrap">
-            {resourcesData.map((resource,indx)=><ResourceCard key={indx} resource={resource}/>)}
+            {blogPosts.map((resource)=><ResourceCard key={resource._id} resource={resource}/>)}
           </div>
         </div>
       </div>
@@ -37,20 +44,20 @@ export default Resources;
 
 // className={`h-[320px] w-[420px] max-lg:w-[300px] max-lg:h-[200px] py-4 px-8 rounded-lg bg-resSuperFood bg-no-repeat bg-cover bg-center flex items-end`}
 function ResourceCard ({resource}){
-  const {title, subtitle, slug,img}=resource
+  const {title, author, slug:{current},mainImage:{alt,asset}}=resource
   return(
     <div
               className={`lg:h-[320px] lg:w-[420px] max-md:h-[300px] max-md:w-full md:w-[340px] md:h-[320px] py-4 px-8 rounded-lg flex items-end overflow-hidden relative`}
             >
-              <Image src={img} fill className="object-cover -z-10" alt={title} />
+              <Image src={urlForImage(asset)} fill className="object-cover -z-10" alt={alt} />
               <div className="w-full">
                 <p className="text-[32px] max-lg:text-[24px] max-md:text-[20px] font-semibold text-white">
                   {title}
                 </p>
                 <p className="text-[20px] max-lg:text-[14px] max-md:text-base text-[#F4F4F4] mb-4">
-                  {subtitle}
+                  {author}
                 </p>
-                <Link href={`/resources/${slug}`}>
+                <Link href={`/resources/${current}`}>
                   <Button
                     type={"button"}
                     className={

@@ -187,151 +187,193 @@ export const stateList=[
   {
     title:"-Select state-" ,
     value: "",
+    id:""
   },
   {
     title: "Abia",
     value: "abia",
+    id:3
   },
   {
     title: "Adamawa",
     value: "adamawa",
+    id:4
   },
   {
     title: "Akwa Ibom",
     value: "akwa_ibom",
+    id:5
   },
   {
     title: "Anambra",
     value: "anambra",
+    id:6
   },
   {
     title: "Bauchi",
     value: "bauchi",
+    id:7
   },
   {
     title: "Bayelsa",
     value: "bayelsa",
+    id:8
   },
   {
     title: "Benue",
     value: "benue",
+    id:9
   },
   {
     title: "Borno",
     value: "borno",
+    id:10
   },
   {
     title: "Cross River",
     value: "cross_river",
+    id:11
   },
   {
     title: "Delta",
     value: "delta",
+    id:12
   },
   {
     title: "Ebonyi",
     value: "ebonyi",
+    id:13
   },
   {
     title: "Edo",
     value: "edo",
+    id:14
   },
   {
     title: "Ekiti",
     value: "ekiti",
+    id:15
   },
   {
     title: "Enugu",
     value: "enugu",
+    id:16
   },
   {
     title: "Gombe",
     value: "gombe",
+    id:17
   },
   {
     title: "Imo",
     value: "imo",
+    id:18
   },
   {
     title: "Jigawa",
     value: "jigawa",
+    id:19
   },
   {
     title: "Kaduna",
     value: "kaduna",
+    id:20
   },
   {
     title: "Kano",
     value: "kano",
+    id:21
   },
   {
     title: "Katsina",
     value: "katsina",
+    id:22
   },
   {
     title: "Kebbi",
     value: "kebbi",
+    id:23
   },
   {
     title: "Kogi",
     value: "kogi",
+    id:24
   },
   {
     title: "Kwara",
     value: "kwara",
+    id:25
   },
   {
     title: "Lagos",
     value: "lagos",
+    id:26
   },
   {
     title: "Nasarawa",
     value: "nasarawa",
+    id:27
   },
   {
     title: "Niger",
     value: "niger",
+    id:28
   },
   {
     title: "Ogun",
     value: "ogun",
+    id:29
   },
   {
     title: "Ondo",
     value: "ondo",
+    id:30
   },
   {
     title: "Osun",
     value: "osun",
+    id:31
   },
   {
     title: "Oyo",
     value: "oyo",
+    id:32
   },
   {
     title: "Plateau",
     value: "plateau",
+    id:33
   },
   {
     title: "Rivers",
     value: "rivers",
+    id:34
   },
   {
     title: "Sokoto",
     value: "sokoto",
+    id:35
   },
   {
     title: "Taraba",
     value: "taraba",
+    id:36
   },
   {
     title: "Yobe",
     value: "yobe",
+    id:37
   },
   {
     title: "Zamfara",
     value: "zamfara",
+    id:38
   },
+  {
+    title:'Abuja',
+    value:'abuja',
+    id:39
+  }
 ]
 export const countryList = [
   {
