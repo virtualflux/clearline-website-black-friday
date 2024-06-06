@@ -15,7 +15,7 @@ export const metadata = {
 
 const blogPosts=await client.fetch (`*[_type=='post']`,{
   next:{
-    revalidate:0
+    revalidate:30
   }
 })
 const Resources = () => {
