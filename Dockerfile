@@ -1,16 +1,15 @@
-FROM node:latest
+FROM node:16-alpine
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY package.json package-lock.json ./
 
-RUN yarn install
-
-# Install required modules
-RUN yarn add next-sanity
+RUN npm install
 
 COPY . .
 
-RUN yarn build
+RUN npm run build
 
-CMD ["npx", "serve", "out", "-p", "3000"]
+EXPOSE 3000
+
+CMD ["npx", "sanity", "start"]
