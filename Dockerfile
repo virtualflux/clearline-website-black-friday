@@ -1,16 +1,19 @@
-FROM node:latest
+FROM node:22-alpine
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY package.json package-lock.json ./
 
-RUN yarn install
+RUN npm install --legacy-peer-deps
 
-# Install required modules
-RUN yarn add next-sanity
+RUN npm install --legacy-peer-deps
+
+RUN npm install
 
 COPY . .
 
-RUN yarn build
+RUN npm run build
 
-CMD ["npx", "serve", "out", "-p", "3000"]
+EXPOSE 3000
+
+CMD ["npx", "sanity", "start"]
