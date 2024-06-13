@@ -5,6 +5,7 @@ import { resourcesData } from "@/utils/data";
 import Image from "next/image";
 import { client } from "../../../sanity/lib/client";
 import { urlForImage } from "../../../sanity/lib/image";
+import { unstable_noStore as noStore } from "next/cache";
 
 export const metadata = {
   title: "Our Resources - Clearline HMO",
@@ -12,13 +13,9 @@ export const metadata = {
     canonical: "/resources",
   },
 };
-
-const blogPosts=await client.fetch (`*[_type=='post']`,{
-  next:{
-    revalidate:30
-  }
-})
-const Resources = () => {
+export const revalidate=30
+const Resources = async() => {
+  const blogPosts=await client.fetch (`*[_type=='post'] | order(_createdAt desc)`)
   return (
     <PageLayout>
       <div className="px-16 max-lg:px-12 max-md:px-8 pt-32 max-md:pt-24 mb-12">

@@ -19,12 +19,10 @@ export async function generateMetadata({ params:{slug} }) {
 // }
 
 
-
+export const revalidate=0
 export default async function Page({ params:{slug} }) {
-  // const article = resourcesData?.find(({ slug }) => slug === params.slug);
   const blogpost=await client.fetch(`*[_type=='post' && slug.current=='${slug}'][0]`)
   const {mainImage:{asset,alt},title,body}=blogpost
-  console.log(asset)
 
   return (
     <PageLayout>
