@@ -7,11 +7,13 @@ export const post = {
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation:(val)=>val.required()
     },
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      validation:(val)=>val.required(),
       options: {
         source: 'title',
         maxLength: 96,
@@ -21,11 +23,13 @@ export const post = {
       name: 'author',
       title: 'Author',
       type: 'string',
+      validation:(val)=>val.required()
     },
     {
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
+      validation:(val)=>val.required(),
       options: {
         hotspot: true,
       },
@@ -34,6 +38,7 @@ export const post = {
           name: 'alt',
           type: 'string',
           title: 'Alternative Text',
+          validation:(val)=>val.required()
         }
       ]
     },
@@ -41,11 +46,13 @@ export const post = {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
+      validation:(val)=>val.required()
     },
     {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+      validation:(val)=>val.required()
     },
   ],
 

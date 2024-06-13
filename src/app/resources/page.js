@@ -13,7 +13,7 @@ export const metadata = {
     canonical: "/resources",
   },
 };
-export const revalidate=30
+export const revalidate=0
 const Resources = async() => {
   const blogPosts=await client.fetch (`*[_type=='post'] | order(_createdAt desc)`)
   return (
