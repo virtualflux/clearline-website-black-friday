@@ -5,7 +5,7 @@ import { resourcesData } from "@/utils/data";
 import Image from "next/image";
 import { client } from "../../../sanity/lib/client";
 import { urlForImage } from "../../../sanity/lib/image";
-import { unstable_noStore as noStore } from "next/cache";
+
 
 export const metadata = {
   title: "Our Resources - Clearline HMO",
