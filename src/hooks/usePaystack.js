@@ -7,7 +7,7 @@ export const usePaymentGateway=(formik)=>{
     const config={
         reference: (new Date()).getTime().toString(),
         email:values.email,
-        plan:values.plan,
+        plan: values.plan,
         publicKey: 'pk_live_0170f8a3ba9b37497c43d2baeb36a5819b9d1ae6',
         metadata:{
             name:`${values.surname} ${values.otherNames}`,

@@ -16,6 +16,7 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import ButtonLoader from "@/shared/ButtonLoader";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 export default function BottomSection() {
   const [isLoading, setIsLoading] = useState(false);
@@ -87,20 +88,24 @@ export default function BottomSection() {
               manage your health insurance effortlessly on the go.
             </p>
             <div className="flex gap-8 flex-wrap mt-6">
-              <Button className="!bg-white !text-black !flex !items-center !gap-2 !rounded-lg !py-2 !px-4">
+              <Link href={'https://play.google.com/store/apps/details?id=com.clear.line&hl=en&pli=1'} 
+              target="_blank"
+              className="!bg-white !text-black !flex !items-center !gap-2 !rounded-lg !py-2 !px-4">
                 <Image src={PlayStoreLogo} alt="google play" />
                 <div className="flex flex-col items-start font-semibold">
                   <p className="text-[6px]">GET IT ON</p>
                   <p className="text-[12px]">Google Play</p>
                 </div>
-              </Button>
-              <Button className="!bg-white !text-black !flex !items-center !gap-2 !rounded-lg !py-2 !px-4">
+              </Link>
+              <Link href={'https://apps.apple.com/ng/app/clearline-hmo-mobile/id1612468880'} 
+              target="_blank"
+              className="!bg-white !text-black !flex !items-center !gap-2 !rounded-lg !py-2 !px-4">
                 <Image src={AppleLogo} alt="apple store" />
                 <div className="flex flex-col items-start font-semibold">
                   <p className="text-[6px]">Download on the</p>
                   <p className="text-[12px]">App Store</p>
                 </div>
-              </Button>
+              </Link>
             </div>
           </div>
         </div>

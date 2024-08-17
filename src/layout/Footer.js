@@ -8,6 +8,11 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import ButtonLoader from "@/shared/ButtonLoader";
 import { toast } from "react-toastify";
+import { FaInstagramSquare, FaFacebookSquare, 
+  FaRegHandPointRight, FaLinkedin, FaYoutubeSquare } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import google from '../../public/assets/images/google-play-icon.png'
+import apple from '../../public/assets/images/apple-icon.png'
 
 export default function Footer() {
   const [isLoading, setIsLoading] = useState(false);
@@ -139,6 +144,31 @@ export default function Footer() {
               </div>
             </button>
           </form>
+          <div className='flex flex-col items-center gap-2'>
+                    <h2 className='text-xl text-white font-bold'>
+                        Download Our App
+                    </h2>
+                    <div className='flex items-center gap-1'>
+                        <Link target='_blank' href={'https://play.google.com/store/apps/details?id=com.clear.line&hl=en&pli=1'} 
+                        className='flex items-center gap-2 p-2 px-2 bg-white 
+                        rounded-md shadow-md'>
+                            <Image src={google} width={30} height={30}
+                            className='w-[30px] h-[30px] object-contain'/>
+                            <p className='text-[10px] text-black text-left'>Get it on <br/> 
+                                <span className='text-xs font-semibold'>Google Play</span>
+                            </p>
+                        </Link>
+                        <Link target='_blank' href={'https://apps.apple.com/ng/app/clearline-hmo-mobile/id1612468880'} 
+                        className='flex items-center gap-2 p-2 px-2 bg-white 
+                        rounded-md shadow-md'>
+                            <Image src={apple} width={30} height={30}
+                            className='w-[30px] h-[30px] object-contain'/>
+                            <p className='text-[10px] text-black text-left'>Download on<br/> 
+                                <span className='text-xs font-semibold'>Appstore</span>
+                            </p>
+                        </Link>
+                    </div>
+                </div>
         </div>
         <div className="w-1/5 max-lg:w-fit flex flex-col gap-5">
           <p className="text-[24px] max-md:text-[16px] font-bold">Contact us</p>
@@ -158,9 +188,42 @@ export default function Footer() {
 
               Email: <span className="underline">hello@clearlinehmo.com</span>
             </Link>
-            {/* <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
-              Email: <span className="underline">hello@clearlinehmo.com</span>
-            </p> */}
+              {/* SOCIAL LINKS */}
+              <div className='flex items-center gap-3'>
+                        <FaRegHandPointRight className='text-white text-5xl'/>
+                        <div className='flex flex-col items-start gap-0'>
+                            <h4 className='text-lg text-white'>
+                                Follow Us
+                            </h4>
+                            <div className='flex items-center gap-1'>
+                                <Link href={'https://www.facebook.com/profile.php?id=61556669715106&mibextid=LQQJ4d'} 
+                                target="_blank"
+                                className='text-gray-100 text-base'>
+                                    <FaFacebookSquare size={30}/>
+                                </Link>
+                                <Link href={'https://www.instagram.com/clearlinehmo?utm_source=qr '} 
+                                target='_blank'
+                                className='text-gray-100 text-base'>
+                                    <FaInstagramSquare size={30}/>
+                                </Link>
+                                <Link href={'https://x.com/clearlinehmo1?s=21'} 
+                                target='_blank'
+                                className='text-gray-100 text-base'>
+                                    <FaSquareXTwitter size={30}/>
+                                </Link>
+                                <Link href={'https://www.linkedin.com/company/clearline-hmo/'} 
+                                target='_blank'
+                                className='text-gray-100 text-base'>
+                                    <FaLinkedin size={30}/>
+                                </Link>
+                                <Link href={'https://youtube.com/@clearline_?si=lzMrgPawO2q_f_E8'} 
+                                target='_blank'
+                                className='text-gray-100 text-base'>
+                                    <FaYoutubeSquare size={30}/>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
           </div>
         </div>
       </div>

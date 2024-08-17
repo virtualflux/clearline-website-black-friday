@@ -1,4 +1,5 @@
 "use client";
+
 import CLearlineModal from "@/layout/Modal";
 import { Button } from "@mui/material";
 import emailjs from "@emailjs/browser";
@@ -9,6 +10,7 @@ import { usePaymentGateway } from "@/hooks/usePaystack";
 import { useFormik } from "formik";
 import { validateForm } from "@/utils/validateForm";
 import { genderList, planList, stateList, titleList } from "@/utils/data";
+
 const BuyPlanModal = ({ isOpen, setIsOpen }) => {
   const form = useRef();
   const formik=useFormik({
@@ -23,7 +25,6 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
       dob:"",
       state:"",
       address:"",
-
     },
     onSubmit,
     validate:validateForm,
@@ -40,6 +41,13 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
       address:"Please enter your address"
     }
   })
+  const today = new Date();
+  const minDate = new Date(
+    today.getFullYear() - 18,
+    today.getMonth(),
+    today.getDate()
+  ).toISOString().split("T")[0]; 
+
   const {initializePayment, onClose, onSuccess}=usePaymentGateway(formik)
   
   async function onSubmit (values)  {
@@ -77,7 +85,8 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
     }}>
       <div className="flex justify-center">
         <div className="w-1/2 flex flex-col items-center">
-          <p className="w-fit text-catalineBlue text-[20px] max-md:text-[12px] font-medium mb-3 border border-catalineBlue rounded-[30px] p-2">
+          <p className="w-fit text-catalineBlue text-[20px] max-md:text-[12px] 
+          font-medium mb-3 border border-catalineBlue rounded-[30px] p-2">
             BUY PLAN
           </p>
           <p className="font-bold text-[32px] max-md:text-[24px] text-center mb-2">
@@ -120,10 +129,6 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               placeholder="e.g ...John"
               className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-4 border ${formik.touched.surname && formik.errors.surname?"border-red-500":"border-[#BACCDF]"} `}
               {...formik.getFieldProps("surname")}
-              
-             
-             
-              
             />
           {formik.touched.surname && formik.errors.surname &&<p className="text-red-500 text-xs mt-1">{formik.errors.surname}</p>}
           </div>
@@ -201,8 +206,8 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
               type="date"
               name="dob"
               className={`w-full rounded-lg text-[14px] h-[40px] focus:outline-none text-black placeholder:text-xs placeholder:text-neutral-400 px-4 border ${formik.touched.dob && formik.errors.dob?"border-red-500":"border-[#BACCDF]"}`}
-             {...formik.getFieldProps("dob")}
-              
+              {...formik.getFieldProps("dob")}
+              max={minDate}
             />
             {formik.touched.dob && formik.errors.dob &&<p className="text-red-500 text-xs mt-1">{formik.errors.dob}</p>}
           </div>

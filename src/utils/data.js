@@ -174,9 +174,9 @@ export const genderList=[
 ]
 export const planList=[
   { title: "Choose plan", value: "" },
-  { title: "Clear Value", value: "PLN_rwihd8oamyibatx" },
-  { title: "Clear Advantage", value: "PLN_m0li61t6vy0fl1v" },
-  { title: "Clear Elite", value: "PLN_l0ukqpt8lvine8r" }
+  { title: "Clear Value", value: "PLN_cnmgl4thoy5cgkq" },
+  { title: "Clear Advantage", value: "PLN_y3tzlomkoceq311" },
+  { title: "Clear Elite", value: "PLN_2tn2zm5e04dgl9j" }
 ]
 export const packagePlans=[
     { title: "retail", component: <Retail /> },
