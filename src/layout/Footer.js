@@ -145,26 +145,26 @@ export default function Footer() {
             </button>
           </form>
           <div className='flex flex-col items-center gap-2'>
-                    <h2 className='text-xl text-white font-bold'>
+                    <h2 className='md:text-sm text-xs text-white font-bold'>
                         Download Our App
                     </h2>
                     <div className='flex items-center gap-1'>
                         <Link target='_blank' href={'https://play.google.com/store/apps/details?id=com.clear.line&hl=en&pli=1'} 
-                        className='flex items-center gap-2 p-2 px-2 bg-white 
+                        className='flex items-center gap-2 p-2 bg-white 
                         rounded-md shadow-md'>
-                            <Image src={google} width={30} height={30}
-                            className='w-[30px] h-[30px] object-contain'/>
+                            <Image src={google} width={20} height={20}
+                            className='w-[20px] h-[20px] object-contain'/>
                             <p className='text-[10px] text-black text-left'>Get it on <br/> 
-                                <span className='text-xs font-semibold'>Google Play</span>
+                                <span className='text-[10px] font-semibold'>Google Play</span>
                             </p>
                         </Link>
                         <Link target='_blank' href={'https://apps.apple.com/ng/app/clearline-hmo-mobile/id1612468880'} 
-                        className='flex items-center gap-2 p-2 px-2 bg-white 
+                        className='flex items-center gap-2 p-2 bg-white 
                         rounded-md shadow-md'>
-                            <Image src={apple} width={30} height={30}
-                            className='w-[30px] h-[30px] object-contain'/>
+                            <Image src={apple} width={20} height={20}
+                            className='w-[20px] h-[20px] object-contain'/>
                             <p className='text-[10px] text-black text-left'>Download on<br/> 
-                                <span className='text-xs font-semibold'>Appstore</span>
+                                <span className='text-[10px] font-semibold'>Appstore</span>
                             </p>
                         </Link>
                     </div>
@@ -180,50 +180,44 @@ export default function Footer() {
               290 Ikorodu Road, Anthony. Lagos.
             </p>
             <p className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
-              TEL: <span className="underline">0700245245245</span>,{" "}
+              TEL: <span className="">0700245245245</span>,{" "}
               
-              <span className="underline">09087792965</span>
+              <span className="">09087792965</span>
             </p>
             <Link href="mailto:hello@clearlinehmo.com" className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]">
 
-              Email: <span className="underline">hello@clearlinehmo.com</span>
+              Email: <span className="">hello@clearlinehmo.com</span>
             </Link>
               {/* SOCIAL LINKS */}
-              <div className='flex items-center gap-3'>
-                        <FaRegHandPointRight className='text-white text-5xl'/>
-                        <div className='flex flex-col items-start gap-0'>
-                            <h4 className='text-lg text-white'>
-                                Follow Us
-                            </h4>
-                            <div className='flex items-center gap-1'>
-                                <Link href={'https://www.facebook.com/profile.php?id=61556669715106&mibextid=LQQJ4d'} 
-                                target="_blank"
-                                className='text-gray-100 text-base'>
-                                    <FaFacebookSquare size={30}/>
-                                </Link>
-                                <Link href={'https://www.instagram.com/clearlinehmo?utm_source=qr '} 
-                                target='_blank'
-                                className='text-gray-100 text-base'>
-                                    <FaInstagramSquare size={30}/>
-                                </Link>
-                                <Link href={'https://x.com/clearlinehmo1?s=21'} 
-                                target='_blank'
-                                className='text-gray-100 text-base'>
-                                    <FaSquareXTwitter size={30}/>
-                                </Link>
-                                <Link href={'https://www.linkedin.com/company/clearline-hmo/'} 
-                                target='_blank'
-                                className='text-gray-100 text-base'>
-                                    <FaLinkedin size={30}/>
-                                </Link>
-                                <Link href={'https://youtube.com/@clearline_?si=lzMrgPawO2q_f_E8'} 
-                                target='_blank'
-                                className='text-gray-100 text-base'>
-                                    <FaYoutubeSquare size={30}/>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+              <div className='flex items-center gap-3 mt-6'>
+                  <div className='flex items-center gap-3'>
+                      <Link href={'https://www.facebook.com/profile.php?id=61556669715106&mibextid=LQQJ4d'} 
+                      target="_blank"
+                      className='text-gray-100 text-base'>
+                          <FaFacebookSquare size={20}/>
+                      </Link>
+                      <Link href={'https://www.instagram.com/clearlinehmo?utm_source=qr '} 
+                      target='_blank'
+                      className='text-gray-100 text-base'>
+                          <FaInstagramSquare size={20}/>
+                      </Link>
+                      <Link href={'https://x.com/clearlinehmo1?s=21'} 
+                      target='_blank'
+                      className='text-gray-100 text-base'>
+                          <FaSquareXTwitter size={20}/>
+                      </Link>
+                      <Link href={'https://www.linkedin.com/company/clearline-hmo/'} 
+                      target='_blank'
+                      className='text-gray-100 text-base'>
+                          <FaLinkedin size={20}/>
+                      </Link>
+                      <Link href={'https://youtube.com/@clearline_?si=lzMrgPawO2q_f_E8'} 
+                      target='_blank'
+                      className='text-gray-100 text-base'>
+                          <FaYoutubeSquare size={20}/>
+                      </Link>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
