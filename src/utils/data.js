@@ -183,198 +183,237 @@ export const packagePlans=[
     { title: "corporate", component: <Corporate /> },
     { title: "sme", component: <Business /> },
 ]
-export const stateList=[
+export const stateList = [
   {
-    title:"-Select state-" ,
+    title: "-Select state-",
     value: "",
-    id:""
+    id: "",
+    code: ""
   },
   {
     title: "Abia",
     value: "abia",
-    id:3
+    id: 3,
+    code: "AB"
   },
   {
     title: "Adamawa",
     value: "adamawa",
-    id:4
+    id: 4,
+    code: "AD"
   },
   {
     title: "Akwa Ibom",
     value: "akwa_ibom",
-    id:5
+    id: 5,
+    code: "AK"
   },
   {
     title: "Anambra",
     value: "anambra",
-    id:6
+    id: 6,
+    code: "AN"
   },
   {
     title: "Bauchi",
     value: "bauchi",
-    id:7
+    id: 7,
+    code: "BA"
   },
   {
     title: "Bayelsa",
     value: "bayelsa",
-    id:8
+    id: 8,
+    code: "BY"
   },
   {
     title: "Benue",
     value: "benue",
-    id:9
+    id: 9,
+    code: "BE"
   },
   {
     title: "Borno",
     value: "borno",
-    id:10
+    id: 10,
+    code: "BO"
   },
   {
     title: "Cross River",
     value: "cross_river",
-    id:11
+    id: 11,
+    code: "CR"
   },
   {
     title: "Delta",
     value: "delta",
-    id:12
+    id: 12,
+    code: "DE"
   },
   {
     title: "Ebonyi",
     value: "ebonyi",
-    id:13
+    id: 13,
+    code: "EB"
   },
   {
     title: "Edo",
     value: "edo",
-    id:14
+    id: 14,
+    code: "ED"
   },
   {
     title: "Ekiti",
     value: "ekiti",
-    id:15
+    id: 15,
+    code: "EK"
   },
   {
     title: "Enugu",
     value: "enugu",
-    id:16
+    id: 16,
+    code: "EN"
   },
   {
     title: "Gombe",
     value: "gombe",
-    id:17
+    id: 17,
+    code: "GO"
   },
   {
     title: "Imo",
     value: "imo",
-    id:18
+    id: 18,
+    code: "IM"
   },
   {
     title: "Jigawa",
     value: "jigawa",
-    id:19
+    id: 19,
+    code: "JI"
   },
   {
     title: "Kaduna",
     value: "kaduna",
-    id:20
+    id: 20,
+    code: "KD"
   },
   {
     title: "Kano",
     value: "kano",
-    id:21
+    id: 21,
+    code: "KN"
   },
   {
     title: "Katsina",
     value: "katsina",
-    id:22
+    id: 22,
+    code: "KT"
   },
   {
     title: "Kebbi",
     value: "kebbi",
-    id:23
+    id: 23,
+    code: "KE"
   },
   {
     title: "Kogi",
     value: "kogi",
-    id:24
+    id: 24,
+    code: "KO"
   },
   {
     title: "Kwara",
     value: "kwara",
-    id:25
+    id: 25,
+    code: "KW"
   },
   {
     title: "Lagos",
     value: "lagos",
-    id:26
+    id: 26,
+    code: "LA"
   },
   {
     title: "Nasarawa",
     value: "nasarawa",
-    id:27
+    id: 27,
+    code: "NA"
   },
   {
     title: "Niger",
     value: "niger",
-    id:28
+    id: 28,
+    code: "NI"
   },
   {
     title: "Ogun",
     value: "ogun",
-    id:29
+    id: 29,
+    code: "OG"
   },
   {
     title: "Ondo",
     value: "ondo",
-    id:30
+    id: 30,
+    code: "ON"
   },
   {
     title: "Osun",
     value: "osun",
-    id:31
+    id: 31,
+    code: "OS"
   },
   {
     title: "Oyo",
     value: "oyo",
-    id:32
+    id: 32,
+    code: "OY"
   },
   {
     title: "Plateau",
     value: "plateau",
-    id:33
+    id: 33,
+    code: "PL"
   },
   {
     title: "Rivers",
     value: "rivers",
-    id:34
+    id: 34,
+    code: "RI"
   },
   {
     title: "Sokoto",
     value: "sokoto",
-    id:35
+    id: 35,
+    code: "SO"
   },
   {
     title: "Taraba",
     value: "taraba",
-    id:36
+    id: 36,
+    code: "TA"
   },
   {
     title: "Yobe",
     value: "yobe",
-    id:37
+    id: 37,
+    code: "YO"
   },
   {
     title: "Zamfara",
     value: "zamfara",
-    id:38
+    id: 38,
+    code: "ZA"
   },
   {
-    title:'Abuja',
-    value:'abuja',
-    id:39
+    title: "Abuja",
+    value: "abuja",
+    id: 39,
+    code: "FC"
   }
-]
+];
+
 export const countryList = [
   {
     name: "Afghanistan",
