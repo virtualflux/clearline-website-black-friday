@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
 import { Close } from "../../public/assets/svgs";
 import { useSalesIQ } from "@/hooks/useSalesIQ";
+import Header from '@/components/Header/header'
 const PageLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -70,7 +71,7 @@ const PageLayout = ({ children }) => {
   return (
     <>
     {useSalesIQ("https://salesiq.zohopublic.com/widget","siq54e6195b138fd09f7c6d4c17ed009c7e9363e42723b6ab9c0c0a82b6142bccda")}
-    <div>
+    <div className="w-full flex flex-col relative">
       <div className="w-full flex justify-center">
         <div
           className={`${
@@ -106,6 +107,9 @@ const PageLayout = ({ children }) => {
         pauseOnHover
         theme="dark"
       />
+      
+      <Header/> 
+
       <Navbar
         sidebarOpen={sidebarOpen}
         handleSidebar={handleSidebar}

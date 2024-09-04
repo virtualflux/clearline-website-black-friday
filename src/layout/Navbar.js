@@ -15,7 +15,7 @@ const Navbar = ({ sidebarOpen, handleSidebar, onClick }) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className=" z-20 fixed bg-white w-full px-16 max-lg:px-12 max-md:px-8 py-3 flex justify-between items-center gap-5 shadow-lg">
+    <div className=" z-20 top-10 left-0 fixed bg-white w-full h-fit px-16 max-lg:px-12 max-md:px-8 py-3 flex justify-between items-center gap-5 shadow-lg">
       <div>
         <Logo />
       </div>
