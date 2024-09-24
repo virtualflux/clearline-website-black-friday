@@ -1,0 +1,24 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the 'main' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Log in to Docker Hub
+      run: echo "daXrNR6nEy6Pgq7" | docker login -u "virtualflux" --password-stdin
+
+    - name: Build the Docker image
+      run: docker build . -t your_docker_username/your-image-name:latest
+
+    - name: Push the Docker image to Docker Hub
+      run: docker push your_docker_username/your-image-name:latest
+# Trigger on push to the 'main' branch
