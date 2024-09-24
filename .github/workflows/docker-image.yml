@@ -17,8 +17,8 @@ jobs:
       run: echo "daXrNR6nEy6Pgq7" | docker login -u "virtualflux" --password-stdin
 
     - name: Build the Docker image
-      run: docker build . -t your_docker_username/your-image-name:latest
+      run: docker build . -t virtualflux/clearline-website:latest
 
     - name: Push the Docker image to Docker Hub
-      run: docker push your_docker_username/your-image-name:latest
+      run: docker push virtualflux/clearline-website:latest
 # Trigger on push to the 'main' branch
