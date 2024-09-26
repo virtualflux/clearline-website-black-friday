@@ -10,8 +10,8 @@ COPY . .
 
 RUN yarn build
 
-ENV PORT 3008
+ENV PORT 3000
 
-EXPOSE 3008
+EXPOSE 3000
 
 CMD ["yarn", "start"]
