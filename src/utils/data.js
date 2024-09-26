@@ -20,7 +20,7 @@ export const navLinks = [
   },
   { title: "About us", path: "/about" },
   { title: "Products", path: "/products" },
-  { title: "Resources", path: "/resources" },
+  { title: "Resources", path: "/" },
   { title: "Our providers", path: "/providers" },
 ];
 

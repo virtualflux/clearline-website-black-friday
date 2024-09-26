@@ -79,7 +79,7 @@ const [active,setActive]=useState(null);
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-        <Link href="/resources" legacyBehavior passHref>
+        <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={`${navigationMenuTriggerStyle()} hover:bg-transparent !text-[16px] font-normal`}>
               Resources
             </NavigationMenuLink>

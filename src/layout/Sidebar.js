@@ -85,7 +85,7 @@ const Sidebar = ({ sidebarOpen, handleSidebar, onClick }) => {
            
       </div>
           <Link
-            href={"/resources"}
+            href={""}
             className={` hover:text-white hover:bg-catalineBlue p-3`}
           >
             <p className="text-[16px]">Resources</p>

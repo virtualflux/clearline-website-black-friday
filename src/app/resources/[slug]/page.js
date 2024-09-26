@@ -1,16 +1,14 @@
 import Image from "next/image";
 import PageLayout from "@/layout";
 import { resourcesData } from "@/utils/data";
-import { client } from "../../../../sanity/lib/client";
-import { urlForImage } from "../../../../sanity/lib/image";
 import { PortableText } from "next-sanity";
 
-export async function generateMetadata({ params:{slug} }) {
-  const blogpost=await client.fetch(`*[_type=='post' && slug.current=='${slug}'][0]`)
-  return {
-    title: `${blogpost?.title} - Clearline HMO`,
-  };
-}
+// export async function generateMetadata({ params:{slug} }) {
+//   // const blogpost=await client.fetch(`*[_type=='post' && slug.current=='${slug}'][0]`)
+//   return {
+//     title: `${blogpost?.title} - Clearline HMO`,
+//   };
+// }
 
 // export async function generateStaticParams() {
 //   return resourcesData.map(({ slug }) => ({
@@ -21,8 +19,8 @@ export async function generateMetadata({ params:{slug} }) {
 
 export const revalidate=0
 export default async function Page({ params:{slug} }) {
-  const blogpost=await client.fetch(`*[_type=='post' && slug.current=='${slug}'][0]`)
-  const {mainImage:{asset,alt},title,body}=blogpost
+  // const blogpost=await client.fetch(`*[_type=='post' && slug.current=='${slug}'][0]`)
+  // const {mainImage:{asset,alt},title,body}=blogpost
 
   return (
     <PageLayout>
@@ -30,7 +28,7 @@ export default async function Page({ params:{slug} }) {
         <p className="text-[48px] max-lg:text-[32px] max-md:text-[24px] font-semibold text-catalineBlue">
           Clearline HMO Newsletter
         </p>
-        <div className="flex max-lg:flex-col gap-4 mb-8">
+        {/* <div className="flex max-lg:flex-col gap-4 mb-8">
           <div className="w-1/2 max-lg:w-full">
             <Image
               src={urlForImage(asset)}
@@ -51,7 +49,7 @@ export default async function Page({ params:{slug} }) {
               {body.map(item=><PortableText value={item} key={item._key} />)}
               
           </div>
-        </div>
+        </div> */}
         
       </div>
     </PageLayout>
