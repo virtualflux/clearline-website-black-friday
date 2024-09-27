@@ -79,7 +79,7 @@ const [active,setActive]=useState(null);
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-        <Link href="/" legacyBehavior passHref>
+        <Link href="https://media.clearlinehmo.com/" legacyBehavior passHref>
             <NavigationMenuLink className={`${navigationMenuTriggerStyle()} hover:bg-transparent !text-[16px] font-normal`}>
               Resources
             </NavigationMenuLink>

@@ -73,7 +73,7 @@ export default function Footer() {
             About us
           </Link>
           <Link
-            href={"/resources"}
+            href={"/https://media.clearlinehmo.com/"}
             className="text-[18px] max-md:text-[12px] font-light text-[#dcdbdb]"
           >
             Resources

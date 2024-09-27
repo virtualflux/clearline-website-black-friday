@@ -20,7 +20,7 @@ export const navLinks = [
   },
   { title: "About us", path: "/about" },
   { title: "Products", path: "/products" },
-  { title: "Resources", path: "/" },
+  { title: "Resources", path: "https://media.clearlinehmo.com/" },
   { title: "Our providers", path: "/providers" },
 ];
 
