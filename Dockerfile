@@ -2,18 +2,16 @@ FROM node:22-alpine
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
+COPY package.json ./
 
-RUN npm install --legacy-peer-deps
-
-RUN npm install --legacy-peer-deps
-
-RUN npm install
+RUN yarn install
 
 COPY . .
 
-RUN npm run build
+RUN yarn build
+
+ENV PORT 3000
 
 EXPOSE 3000
 
-CMD ["npx", "sanity", "start"]
+CMD ["yarn", "start"]
