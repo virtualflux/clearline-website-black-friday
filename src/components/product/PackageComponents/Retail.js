@@ -3,7 +3,6 @@
 import { Button } from "@mui/base";
 import PackageTable from "../components/PackageTable";
 import { useState } from "react";
-import { zohoFunc } from "@/utils/data";
 import Image from "next/image";
 import { Close } from "../../../../public/assets/svgs";
 import BuyPlanModal from "@/components/Modal/BuyPlan";
@@ -72,6 +71,10 @@ const Family = () => {
           </Button>
         </div>
       </div>
+
+
+        {/* KIA KIA PLAN */}
+
     </div>
   );
 };

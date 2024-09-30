@@ -85,7 +85,8 @@ const Sidebar = ({ sidebarOpen, handleSidebar, onClick }) => {
            
       </div>
           <Link
-            href={"https://media.clearlinehmo.com/"}
+            href={"https://media.clearlinehmo.com"}
+            target="_self"
             className={` hover:text-white hover:bg-catalineBlue p-3`}
           >
             <p className="text-[16px]">Resources</p>
