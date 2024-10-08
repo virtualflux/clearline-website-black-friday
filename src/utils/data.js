@@ -176,7 +176,8 @@ export const planList=[
   { title: "Choose plan", value: "" },
   { title: "Clear Value", value: "PLN_cnmgl4thoy5cgkq" },
   { title: "Clear Advantage", value: "PLN_y3tzlomkoceq311" },
-  { title: "Clear Elite", value: "PLN_2tn2zm5e04dgl9j" }
+  { title: "Clear Elite", value: "PLN_2tn2zm5e04dgl9j" },
+  { title: "Kia Kia", value: "PLN_be7336wl3i5e44k" },
 ]
 export const packagePlans=[
     { title: "retail", component: <Retail /> },
