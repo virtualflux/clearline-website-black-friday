@@ -14,7 +14,7 @@ const Page = () => {
       <div className="px-16 max-lg:px-12 max-md:px-8 pt-12">
       <div className="flex flex-col items-center mb-3">
         <p className="text-[40px] max-md:text-[24px] font-bold mb-3 capitalize text-catalineBlue">
-          Our {planDetails.title.toUpperCase()} Plan
+          Our {planDetails.title} Plan
         </p>
       </div>
       <div>{planDetails.component}</div>
@@ -22,4 +22,4 @@ const Page = () => {
     </PageLayout>
   );
 };
-export default Page
+export default Page;

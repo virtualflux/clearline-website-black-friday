@@ -6,11 +6,10 @@ const PackageTable = () => {
   const tableArray = [
     {
       id: 1,
-      // premium: "Premium",
-      value: "N50,000",
-      advantage: "N120,000",
-      elite: "N341,087",
-      
+      kiakia: "₦5,000",
+      value: "₦50,000",
+      advantage: "₦120,000",
+      elite: "₦341,087",
     },
     {
       id: 2,
@@ -22,9 +21,9 @@ const PackageTable = () => {
     {
       id: 34,
       title: "Out-patient limit",
-      value: "UPTO N150,000",
-      advantage: "UPTO N250,000",
-      elite: "UPTO N500,000"
+      value: "UP TO N150,000",
+      advantage: "UP TO N250,000",
+      elite: "UP TO N500,000"
     },
     {
       id: 345,
@@ -32,6 +31,132 @@ const PackageTable = () => {
       value: "",
       advantage: "",
       elite: ""
+    },
+    {
+      id: 2,
+      title: "Teleconsultation 24/7 Medical Consult / Chat with Doctors Online",
+      kiakia: (<GoCheckCircle className="text-green" size={30} />),
+      value: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      advantage: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      elite: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+    },
+    {
+      id: 34,
+      title: "Access to Drugs prescription",
+      kiakia:(<GoCheckCircle className="text-green" size={30} />),
+      value: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      advantage: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      elite: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+    },
+    {
+      id: 345,
+      title: "Access to diagnostics laboratory service, medical investigation prescription and reviews",
+      kiakia: (<GoCheckCircle className="text-green" size={30} />),
+      value: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      advantage: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      elite: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+    },
+    {
+      id: 3,
+      title: "Speak to doctors within 20 mins",
+      kiakia:(<GoCheckCircle className="text-green" size={30} />),
+      value: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      advantage: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      elite: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+    },
+    {
+      id: 4,
+      title: "Get prescription for Drugs",
+      kiakia: (<GoCheckCircle className="text-green" size={30} />),
+      value: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      advantage: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      elite: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+    },
+    {
+      id: 5,
+      title: "Reduce spread and exposure to infection",
+      kiakia: (<GoCheckCircle className="text-green" size={30} />),
+      value: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      advantage: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      elite: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+    },
+    {
+      id: 6,
+      title: "Admission and Feeding Early diagnosis and treatment",
+      kiakia: (<GoCheckCircle className="text-green" size={30} />),
+      value: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      advantage: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      elite: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+    },
+    {
+      id: 7,
+      title: "Reduce cost and time to get healthcare",
+      kiakia: (<GoCheckCircle className="text-green" size={30} />),
+      value: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      advantage: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      elite: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+    },
+    {
+      id: 8,
+      title: "Enjoy regular follow up and support",
+      kiakia: (<GoCheckCircle className="text-green" size={30} />),
+      value: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      advantage: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
+      elite: (
+        <GoCheckCircle className="text-green" size={30}/>
+      ),
     },
     {
       id: 3,
@@ -210,6 +335,11 @@ const PackageTable = () => {
         <thead className="">
           <tr className="text-[20px] max-md:text-[12px]">
             <th className="text-left w-[30%]">Package</th>
+            <th className="w-[17%]">
+              <p className="bg-catalineBlue text-white rounded-md px-3 max-md:py-1 py-2">
+               Kia Kia 
+              </p>
+            </th>
             <th >
               <p className="bg-catalineBlue text-white rounded-md px-3 max-md:py-1 py-2">
                 Clear Value
@@ -231,6 +361,7 @@ const PackageTable = () => {
           {tableArray.map((clear, idx) => (
             <tr key={idx} className="h-[60px] text-[20px] max-md:text-[12px]">
               <td >{clear.title}</td>
+              <td className="pl-4" >{clear.kiakia}</td>
               <td className="pl-4" >{clear.value}</td>
               <td className="pl-4" >{clear.advantage}</td>
               <td className="pl-4" >{clear.elite}</td>

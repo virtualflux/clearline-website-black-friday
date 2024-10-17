@@ -2,7 +2,6 @@
 
 import { Button } from "@mui/base";
 import PackageTable from "../components/PackageTable";
-import KiakiaPremium from "../components/KiakiaPremium";
 import { useState } from "react";
 import Image from "next/image";
 import { Close } from "../../../../public/assets/svgs";
@@ -32,11 +31,11 @@ const Family = () => {
             onClick={() => setIsOpen(false)}
           />
         </div>
-        <div id="zf_div_6lcVClC22qCknyyeB-XS0neYBhj-_VNDvhRDB0Pt0bQ"></div>
+        <div></div>
       </div>
 
       <div className="flex flex-col items-center">
-        <p className="text-boulder text-[32px] max-md:text-[16px] text-center font-light mb-6">
+        <p className="text-boulder text-[32px] max-md:text-[16px] text-center mb-6">
           Clearline HMO understands the importance of family health, and our
           plans reflect this commitment. With access to an extensive network of
           healthcare providers, you can rest easy knowing that each family
@@ -48,14 +47,14 @@ const Family = () => {
           <PackageTable />
         </div>
         <div className="flex gap-4 max-sm:flex-col mb-12">
-        <Link href="/retailplan.pdf" target="_blank">
+        <Link href="/kiakia.pdf" target="_blank">
           <Button
             type={"button"}
             className={
               "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
             }
           >
-            View full plan
+            View full Kia Kia plan
           </Button>
         </Link>
           <Button
@@ -70,46 +69,23 @@ const Family = () => {
           >
             Buy a plan
           </Button>
+
+          <Link href="/retailplan.pdf" target="_blank">
+          <Button
+            type={"button"}
+            className={
+              "!w-[200px] !rounded-lg !h-[60px] max-md:!h-[40px] !px-4 !text-white !bg-catalineBlue"
+            }
+          >
+            View full plan
+          </Button>
+        </Link>
         </div>
       </div>
 
-
-        {/* KIA KIA PLAN */}
-        <section>
-       <div className="flex flex-col items-center">
-       <p class="text-[40px] max-md:text-[24px] font-bold mb-3 capitalize text-catalineBlue">KIA KIA PLAN</p>
-        <p className="text-boulder text-[32px] max-md:text-[16px] text-center font-light mb-6">
-        TELECONSULT: This a consultation carried out at home using a computer or mobile phone whereby you have access to speak with a doctor and healthcare professionals  
-        </p>
-        <div className="flex gap-4 max-sm:flex-col mb-12">
-        </div>
-
-        <div className="w-full mb-8">
-          <KiakiaPremium/>
-        </div>
-         {/* Button Section */}
-         <div className="flex gap-4 max-sm:flex-col mb-12 mt-6">
-            <Link href="/kiakia.pdf" target="_blank">
-              <Button
-                type="button"
-                className="w-[200px] rounded-lg h-[60px] max-md:h-[40px] px-4 text-white bg-catalineBlue border border-white"
-              >
-                View full plan
-              </Button>
-            </Link>
-            <Button
-              onClick={() => {
-                setIsOpen(true);
-              }}
-              type="button"
-              className="w-[200px] rounded-lg h-[60px] max-md:h-[40px] px-4 text-catalineBlue border border-catalineBlue bg-[#F6F7FF]"
-            >
-              Buy a plan
-            </Button>
-        </div>
-        </div>
-       </section>
-    </div>
+ 
+     </div>
+ 
   );
 };
 
