@@ -15,13 +15,14 @@ const Navbar = ({ sidebarOpen, handleSidebar, onClick }) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className=" z-20 top-10 left-0 fixed bg-white w-full h-fit px-16 max-lg:px-12 max-md:px-8 py-3 flex justify-between items-center gap-5 shadow-lg">
+    <div className="z-20 top-10 left-0 fixed bg-white w-full h-fit px-16 max-lg:px-12 max-md:px-8 py-3 flex justify-between items-center gap-5 shadow-lg mt-2 max-md:mt-3">
+      {/* The margin-top (mt-16) will create a gap between the header and navbar */}
       <div>
         <Logo />
       </div>
       <div className="flex gap-12 items-center max-[1135px]:hidden">
         <div className="flex gap-8 items-center">
-          <NavigationDropdown/>
+          <NavigationDropdown />
         </div>
       </div>
       <div className="flex gap-3 max-[1135px]:hidden">

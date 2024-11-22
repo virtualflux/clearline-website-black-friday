@@ -331,6 +331,13 @@ const PackageTable = () => {
 
   return (
     <div className="w-full overflow-x-auto">
+      {/* Black Friday Sales Banner */}
+      <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-center text-yellow-400 py-4 mb-6 rounded-md ">
+        <p className="text-2xl sm:text-4xl font-bold animate-bounce text-center sm:text-left">
+          🔥 Black Friday Sales! Don't Miss Out!!! 🔥
+        </p>
+      </div>
+      
       <table className="w-full">
         <thead className="">
           <tr className="text-[20px] max-md:text-[12px]">
@@ -361,10 +368,46 @@ const PackageTable = () => {
           {tableArray.map((clear, idx) => (
             <tr key={idx} className="h-[60px] text-[20px] max-md:text-[12px]">
               <td >{clear.title}</td>
-              <td className="pl-4" >{clear.kiakia}</td>
-              <td className="pl-4" >{clear.value}</td>
-              <td className="pl-4" >{clear.advantage}</td>
-              <td className="pl-4" >{clear.elite}</td>
+              <td className="pl-4">
+                {clear.kiakia === "₦5,000" ? (
+                  <>
+                    <span className="line-through">₦5,000</span>
+                    <span className="ml-2">₦1,000</span>
+                  </>
+                ) : (
+                  clear.kiakia
+                )}
+              </td>
+              <td className="pl-4" >
+               {clear.value === "₦50,000" ? (
+                  <>
+                    <span className="line-through">₦50,000</span>
+                    <span className="ml-2"> ₦45,000</span>
+                  </>
+                ) : (
+                  clear.value
+                )}
+              </td>
+              <td className="pl-4" >
+               {clear.advantage === "₦120,000" ? (
+                  <>
+                    <span className="line-through">₦120,000</span>
+                    <span className="ml-2"> ₦108,000</span>
+                  </>
+                ) : (
+                  clear.advantage
+                )}
+              </td>
+              <td className="pl-4" > 
+               {clear.elite=== "₦341,087" ? (
+                  <>
+                    <span className="line-through">₦341,087</span>
+                    <span className="ml-2"> ₦306,978</span>
+                  </>
+                ) : (
+                  clear.elite
+                )}
+              </td>
             </tr>
           ))}
         </tbody>
