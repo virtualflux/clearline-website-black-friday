@@ -332,7 +332,7 @@ const PackageTable = () => {
   return (
     <div className="w-full overflow-x-auto">
       {/* Black Friday Sales Banner */}
-      <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-center text-yellow-400 py-4 mb-6 rounded-md ">
+      <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-center  py-4 mb-6 border border-sm bg-black text-white border-yellow-700 rounded-md ">
         <p className="text-2xl sm:text-4xl font-bold animate-bounce text-center sm:text-left">
           🔥 Black Friday Sales! Don't Miss Out!!! 🔥
         </p>

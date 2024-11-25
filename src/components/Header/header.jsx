@@ -10,7 +10,7 @@ const Header = () => {
     // Set up an interval to toggle the banner content
     const interval = setInterval(() => {
       setShowBanner((prev) => !prev);
-    }, 2000); // Toggle every 2 seconds
+    }, 5000); // Toggle every 5 seconds
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
