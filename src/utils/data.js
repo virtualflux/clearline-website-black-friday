@@ -172,13 +172,21 @@ export const genderList=[
   { title: "Male", value: "male" },
   { title: "Female", value: "female" },
 ]
+// export const planList=[
+//   { title: "Choose plan", value: "" },
+//   { title: "Clear Value", value: "PLN_cnmgl4thoy5cgkq" },
+//   { title: "Clear Advantage", value: "PLN_y3tzlomkoceq311" },
+//   { title: "Clear Elite", value: "PLN_2tn2zm5e04dgl9j" },
+//   { title: "Kia Kia", value: "PLN_be7336wl3i5e44k" },
+// ]
 export const planList=[
   { title: "Choose plan", value: "" },
-  { title: "Clear Value", value: "PLN_cnmgl4thoy5cgkq" },
-  { title: "Clear Advantage", value: "PLN_y3tzlomkoceq311" },
-  { title: "Clear Elite", value: "PLN_2tn2zm5e04dgl9j" },
-  { title: "Kia Kia", value: "PLN_be7336wl3i5e44k" },
+  { title: "Clear Value", value: "PLN_1qu5nytx857eiwf", amount: '45000' },
+  { title: "Clear Advantage", value: "PLN_ru9q4w07qi17nph", amount: '108000' },
+  { title: "Clear Elite", value: "PLN_rjftiqrgcgcq9k0", amount: '306978' },
+  { title: "Kia Kia", value: "PLN_lmo03nvt3ox17ca", amount: '1000' },
 ]
+
 export const packagePlans=[
     { title: "retail", component: <Retail /> },
     { title: "corporate", component: <Corporate /> },

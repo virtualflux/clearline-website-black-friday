@@ -6,10 +6,10 @@ const PackageTable = () => {
   const tableArray = [
     {
       id: 1,
-      kiakia: "₦5,000",
-      value: "₦50,000",
-      advantage: "₦120,000",
-      elite: "₦341,087",
+      kiakia: "₦1,000",
+      value: "₦45,000",
+      advantage: "₦108,000",
+      elite: "₦306,978",
     },
     {
       id: 2,
@@ -341,7 +341,7 @@ const PackageTable = () => {
       <table className="w-full">
         <thead className="">
           <tr className="text-[20px] max-md:text-[12px]">
-            <th className="text-left w-[30%]">Package</th>
+            <th className="text-left w-[30%]">Packages</th>
             <th className="w-[17%]">
               <p className="bg-catalineBlue text-white rounded-md px-3 max-md:py-1 py-2">
                Kia Kia 
@@ -369,40 +369,40 @@ const PackageTable = () => {
             <tr key={idx} className="h-[60px] text-[20px] max-md:text-[12px]">
               <td >{clear.title}</td>
               <td className="pl-4">
-                {clear.kiakia === "₦5,000" ? (
+                {clear.kiakia === "₦1,000" ? (
                   <>
-                    <span className="line-through">₦5,000</span>
-                    <span className="ml-2">₦1,000</span>
+                    <span className="line-through text-red-600 font-bold">₦5,000</span>
+                    <span className="ml-2 font-bold">₦1,000</span>
                   </>
                 ) : (
                   clear.kiakia
                 )}
               </td>
               <td className="pl-4" >
-               {clear.value === "₦50,000" ? (
+               {clear.value === "₦45,000" ? (
                   <>
-                    <span className="line-through">₦50,000</span>
-                    <span className="ml-2"> ₦45,000</span>
+                    <span className="line-through text-red-600 font-bold">₦50,000</span>
+                    <span className="ml-2 font-bold"> ₦45,000</span>
                   </>
                 ) : (
                   clear.value
                 )}
               </td>
               <td className="pl-4" >
-               {clear.advantage === "₦120,000" ? (
+               {clear.advantage === "₦108,000" ? (
                   <>
-                    <span className="line-through">₦120,000</span>
-                    <span className="ml-2"> ₦108,000</span>
+                    <span className="line-through text-red-600 font-bold">₦120,000</span>
+                    <span className="ml-2 font-bold"> ₦108,000</span>
                   </>
                 ) : (
                   clear.advantage
                 )}
               </td>
               <td className="pl-4" > 
-               {clear.elite=== "₦341,087" ? (
+               {clear.elite=== "₦306,978" ? (
                   <>
-                    <span className="line-through">₦341,087</span>
-                    <span className="ml-2"> ₦306,978</span>
+                    <span className="line-through text-red-600 font-bold">₦341,087</span>
+                    <span className="ml-2 font-bold"> ₦306,978</span>
                   </>
                 ) : (
                   clear.elite

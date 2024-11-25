@@ -91,7 +91,7 @@ export default function Banner({ onClick }) {
           <div className="absolute inset-0 opacity-10 bg-black bg-blend-overlay" />
           <div className="relative z-10 flex flex-col items-center text-center text-white">
             <h1 className="text-[40px] font-extrabold mb-2 uppercase tracking-wide max-md:text-[30px]">
-              Black Friday Offer!!!!
+              Black Friday Offer!!!
             </h1>
             <p className="text-[20px] font-medium mb-6 italic max-md:text-[16px]">
               Grab unbeatable discounts on all health plans. Don’t miss out!
@@ -124,8 +124,8 @@ export default function Banner({ onClick }) {
               </Button>
             </div>
           </div>
-          <div className="absolute -top-8 -right-8 bg-yellow-400 rounded-full w-32 h-32 animate-bounce shadow-lg" />
-          <div className="absolute -bottom-10 -left-10 bg-red-400 rounded-full w-40 h-40 animate-bounce delay-150 shadow-lg" />
+          <div className="absolute -top-8 -right-8 bg-yellow-400 rounded-full w-24 h-24 animate-bounce shadow-lg" />
+          <div className="absolute -bottom-10 -left-10 bg-red-400 rounded-full w-32 h-32 animate-bounce delay-150 shadow-lg" />
         </div>
       </div>
 

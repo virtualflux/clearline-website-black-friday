@@ -21,15 +21,16 @@ const Header = () => {
       <div className="fixed top-0 left-0 w-full bg-catalineBlue text-white py-2 px-3 md:py-3 md:px-8 z-50 mb-2">
         {/* Sliding Content */}
         <div
-          className={`transition-transform duration-500 ${
-            showBanner ? 'translate-x-0' : 'translate-x-full'
-          }`}
+          className={``}
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left text-xs md:text-sm lg:text-base">
-            {/* Black Friday Info */}
-            <div className="font-medium text-xs md:text-lg lg:text-xl md:font-bold">
-              🔥 BLACK FRIDAY OFFER : Up to 10% off. Get KiaKia @ 1k Only🔥.
-            </div>
+            <marquee behavior="scroll" direction="left">
+              {/* Black Friday Info */}
+              <div className="font-medium text-xs md:text-lg lg:text-xl md:font-bold">
+                🔥 BLACK FRIDAY OFFER : Up to 10% off. Get KiaKia @ 1k Only🔥.
+              </div>
+            </marquee>
+
             {/* Contact Info */}
             <div className="flex items-center gap-3 justify-center md:justify-end text-xs md:text-sm">
               <div className="flex items-center gap-1">

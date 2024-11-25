@@ -21,7 +21,9 @@ const [active,setActive]=useState(null);
 
         <NavigationMenuItem>
         <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={`${navigationMenuTriggerStyle()} hover:bg-transparent !text-[16px] font-normal`}>
+            <NavigationMenuLink 
+            className={`${navigationMenuTriggerStyle()} hover:bg-transparent !text-[16px] font-normal`}
+            asChild>
              Home
             </NavigationMenuLink>
           </Link>
@@ -80,7 +82,7 @@ const [active,setActive]=useState(null);
 
         <NavigationMenuItem>
         <Link href="https://media.clearlinehmo.com/" target="_self">
-            <NavigationMenuLink className={`${navigationMenuTriggerStyle()} hover:bg-transparent !text-[16px] font-normal`}>
+            <NavigationMenuLink className={`${navigationMenuTriggerStyle()} hover:bg-transparent !text-[16px] font-normal`} asChild>
               Resources
             </NavigationMenuLink>
           </Link>

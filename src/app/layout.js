@@ -1,6 +1,7 @@
 import "./globals.css";
 import {GoogleAnalytics} from "@next/third-parties/google"
 import localFont from "next/font/local";
+import Script from "next/script";
 const Satoshi = localFont({
   src: [
     {
@@ -47,7 +48,12 @@ export default function RootLayout({ children }) {
       <body className={Satoshi.className}>
         <GoogleAnalytics gaId="G-Y62EZR4VWP"/>
         {children}
+        <Script
+          src="https://js.paystack.co/v1/inline.js"
+          strategy="beforeInteractive" // Ensures the script is loaded before your components
+        />
         </body>
+
     </html>
   );
 }

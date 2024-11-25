@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 import { useEffect, useRef, useState } from "react";
 import ButtonLoader from "@/shared/ButtonLoader";
 import { toast } from "react-toastify";
-import { usePaymentGateway } from "@/hooks/usePaystack";
+import { handlePayment, usePaymentGateway } from "@/hooks/usePaystack";
 import { useFormik } from "formik";
 import { validateForm } from "@/utils/validateForm";
 import { genderList, planList, stateList, titleList } from "@/utils/data";
@@ -48,35 +48,40 @@ const BuyPlanModal = ({ isOpen, setIsOpen }) => {
     today.getDate()
   ).toISOString().split("T")[0]; 
 
-  const {initializePayment, onClose, onSuccess}=usePaymentGateway(formik)
+  const {initializePayment, onClose, onSuccess} = usePaymentGateway(formik)
   
   async function onSubmit (values)  {
-    initializePayment(onSuccess, onClose)
-    try {
-      await emailjs
-        .send(
-          "contact_service",
-          "contact_form",
-          {...values},
-          "OTdU-O6vdb3nS4UFz"
-        )
-        .then(
-          ({ status }) => {
-            if (status === 200) {
-              setIsOpen(false);
-              toast.success("Plan purchase sent successfully!");
-              formik.resetForm()
-            }
-          },
-          (error) => {
-            toast.error(`Oh no, ${error.text}!`);
-          }
-        );
-    } catch (error) {
-      console.log(error);
-    }
+    handlePayment(formik)
+    // initializePayment(onSuccess, onClose)
+    // try {
+    //   await emailjs
+    //     .send(
+    //       "contact_service",
+    //       "contact_form",
+    //       {...values},
+    //       "OTdU-O6vdb3nS4UFz"
+    //     )
+    //     .then(
+    //       ({ status }) => {
+    //         if (status === 200) {
+    //           setIsOpen(false);
+    //           // toast.success("Plan purchase sent successfully!");
+    //           formik.resetForm()
+              
+    //         }
+    //       },
+    //       (error) => {
+    //         toast.error(`Oh no, ${error.text}!`);
+    //         return
+    //       }
+    //     );
+        
+    // } catch (error) {
+    //   console.log(error);
+    // }
     setIsOpen(false)
   };
+
 
   return (
     <CLearlineModal isOpen={isOpen} onClose={() =>{ 
