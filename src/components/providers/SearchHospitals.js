@@ -145,7 +145,7 @@ const SearchHospitals = () => {
 
   useEffect(() => {
     handleSorting()
-  }, [filter, result]);
+  }, [filter, result, handleSorting]);
   
   useEffect(()=>{
     if(filter.state !== 'all'){

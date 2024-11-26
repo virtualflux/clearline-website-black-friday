@@ -54,7 +54,8 @@ const Page = () => {
       <div className="w-full absolute top-1/2 -translate-y-1/2 left-0 aspect-square bg-catalineBlue rounded-md rotate-12 max-md:hidden">
       </div>
       <div className="w-full absolute top-1/2 -translate-y-1/2 left-0 aspect-square rounded-md overflow-clip">
-        <Image src={"/assets/images/requestQuote2.jpg"} fill className="object-cover"/>
+        <Image src={"/assets/images/requestQuote2.jpg"} fill 
+        className="object-cover" alt="object-cover"/>
       </div>
       </div>
     </div>

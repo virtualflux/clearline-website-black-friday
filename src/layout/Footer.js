@@ -153,6 +153,7 @@ export default function Footer() {
                         className='flex items-center gap-2 p-2 bg-white 
                         rounded-md shadow-md'>
                             <Image src={google} width={20} height={20}
+                            alt="google"
                             className='w-[20px] h-[20px] object-contain'/>
                             <p className='text-[10px] text-black text-left'>Get it on <br/> 
                                 <span className='text-[10px] font-semibold'>Google Play</span>
@@ -162,6 +163,7 @@ export default function Footer() {
                         className='flex items-center gap-2 p-2 bg-white 
                         rounded-md shadow-md'>
                             <Image src={apple} width={20} height={20}
+                            alt="apple"
                             className='w-[20px] h-[20px] object-contain'/>
                             <p className='text-[10px] text-black text-left'>Download on<br/> 
                                 <span className='text-[10px] font-semibold'>Appstore</span>
