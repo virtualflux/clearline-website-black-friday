@@ -20,13 +20,11 @@ const [active,setActive]=useState(null);
       <NavigationMenuList>
 
         <NavigationMenuItem>
+            <NavigationMenuLink className={`${navigationMenuTriggerStyle()} hover:bg-transparent !text-[16px] font-normal`} asChild>
         <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink 
-            className={`${navigationMenuTriggerStyle()} hover:bg-transparent !text-[16px] font-normal`}
-            asChild>
              Home
-            </NavigationMenuLink>
           </Link>
+            </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
@@ -81,11 +79,11 @@ const [active,setActive]=useState(null);
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-        <Link href="https://media.clearlinehmo.com/" target="_self">
             <NavigationMenuLink className={`${navigationMenuTriggerStyle()} hover:bg-transparent !text-[16px] font-normal`} asChild>
-              Resources
+              <Link href="https://media.clearlinehmo.com/" target="_self" asChild>
+                  Resources
+              </Link>
             </NavigationMenuLink>
-          </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
